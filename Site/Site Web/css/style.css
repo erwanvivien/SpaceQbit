@@ -1,0 +1,90 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+ol,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* -- Code -- */
+/* -- Global -- */
+html {
+  font-size: 100%;
+  background-color: #fff; }
+
+body {
+  /* Position */
+  /* Box-model */
+  /* Typography */
+  font: normal 16px sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000;
+  /* Visual */
+  background: #fff; }
+
+main,
+nav,
+header,
+footer,
+section {
+  display: block; }
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #4CAF50;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.c-header {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: 150px;
+  vertical-align: middle;
+  text-align: center;
+  clear: both;
+  color: #000;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 4);
+  box-shadow:0 0 5px 0 rgba(0, 0, 0, 4);
+  background-image: linear-gradient(148deg, #999 7%, #bfbfbf 20%, #ccc 27%, #d8d8d8 60%, #e5e5e5, 67%, #f2f2f2 100%); }
+
+  .c-header-title {
+    float:center; }
+  .c-header-head {
+    font: italic 800 60px bauhs93; }
+  .c-header-subhead {
+    font: normal 20px sans-serif; }
