@@ -88,3 +88,16 @@ li a:hover {
     font: italic 800 60px bauhs93; }
   .c-header-subhead {
     font: normal 20px sans-serif; }
+
+.corps {
+  background-color: #000;
+}
+
+.logo {
+
+  position: relative;
+  align-content: center;
+  height: 590px;
+  width: 50%;
+  margin-left: 25%;
+  }
