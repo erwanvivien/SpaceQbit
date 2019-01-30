@@ -33,6 +33,10 @@ sysinfo.txt
 *.info
 *.log
 
+# Executables
+
+exe/
+
 # ============ #
 # OS generated #
 # ============ #
