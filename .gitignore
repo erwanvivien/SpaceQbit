@@ -7,8 +7,8 @@
 /[Bb]uilds/
 /[Ll]ibrary/
 
-/metadata/
-exe/
+*/metadata/
+*/exe/
 
 sysinfo.txt
 *.stackdump
