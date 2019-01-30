@@ -1,36 +1,57 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Diagnostics;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class mvt : MonoBehaviour
 {
+    private bool jump = false;
+    private Rigidbody rigid;
+    public Terrain terrain;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rigid = GetComponent<Rigidbody>();
+        terrain.tag = "Terrain";
+    }
+
+    private void OnCollisionEnter(Collision colli)
+    {
+        if (colli.gameObject.CompareTag(terrain.tag))
+        {
+            jump = false;
+        }
     }
 
     // Update is called once  frame
     void Update()
     {
-        bool jump = false;
-        if(Input.GetKey(KeyCode.Z))
-            gameObject.transform.Translate(Vector3.forward * Time.deltaTime);
-        if(Input.GetKey(KeyCode.Q))
-            gameObject.transform.Translate(Vector3.left * Time.deltaTime);
-        if(Input.GetKey(KeyCode.S))
-            gameObject.transform.Translate(Vector3.back * Time.deltaTime);
-        if(Input.GetKey(KeyCode.D))
-            gameObject.transform.Translate(Vector3.right * Time.deltaTime);
-        if (Input.GetKeyDown(KeyCode.Space) || jump)
+        float dt = Time.deltaTime * 2000;
+        if (Input.GetKey(KeyCode.Z) && !jump)
+        {
+            rigid.AddForce(Vector3.forward * dt);
+        }
+        if (Input.GetKey(KeyCode.Q) && !jump)
+        {
+            rigid.AddForce(Vector3.left * dt);
+        }
+        if (Input.GetKey(KeyCode.S) && !jump)
+        {
+            rigid.AddForce(Vector3.back * dt);
+        }
+        if (Input.GetKey(KeyCode.D) && !jump)
+        {
+            rigid.AddForce(Vector3.right * dt);
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             jump = true;
-        
-            gameObject.transform.Translate(Vector3.up);
+            rigid.AddForce(Vector3.up * 700);
         }
-
         if (Input.GetKeyDown(KeyCode.X))
+        {
             jump = false;
+        }
     }
 }
         
