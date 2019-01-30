@@ -6,6 +6,10 @@
 [Bb]uild
 /[Bb]uilds/
 /[Ll]ibrary/
+
+/metadata/
+exe/
+
 sysinfo.txt
 *.stackdump
 /Assets/AssetStoreTools*
@@ -32,10 +36,6 @@ sysinfo.txt
 *.bin
 *.info
 *.log
-
-# Executables
-
-exe/
 
 # ============ #
 # OS generated #
