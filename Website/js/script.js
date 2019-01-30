@@ -31,3 +31,7 @@ function appearUpdate(elem, ticks) {
 function troll() {
   alert("Eh bah non je t'ai trollé!!!");
 }
+
+setTimeout(function () {
+	$("#gif").attr("src", "images/logofreeze.jpg");
+},7000);
