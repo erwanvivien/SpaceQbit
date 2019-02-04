@@ -7,7 +7,7 @@ public class mvt : MonoBehaviour
     private bool dashable = true;
 
     private float lastTimePressed;
-    public KeyCode lastKeyPressed;
+    private KeyCode lastKeyPressed;
 
     private float lastTimeDash;
     
