@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b5a5d60-ed8e-4a65-aef8-3526aed69861" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Test2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Test2/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Test2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Test2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewBrush.brush" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewBrush.brush.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/follow_cam.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/follow_cam.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/mvt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/mvt.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Graphics/Asset SpaceQbit/Stable build/La classe rodeur 70.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/follow_cam.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/follow_cam.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/mvt.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/mvt.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
@@ -68,22 +69,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="850" />
+          <entry key="cs" value="931" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="850" />
+          <entry key="C#" value="931" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cs" value="8" />
+          <entry key="cs" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="8" />
+          <entry key="C#" value="11" />
         </counts>
       </usages-collector>
     </session>
@@ -91,10 +92,9 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/mvt.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/mvt.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+            <state>
               <folding>
                 <marker date="1549314255340" expanded="false" signature="6:77" ph="..." />
                 <marker date="1549314255340" expanded="true" signature="111:3243" ph="{...}" />
@@ -119,16 +119,21 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/follow_cam.cs">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/follow_cam.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/GetHp.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+            <state relative-caret-position="225">
+              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
               <folding>
-                <marker date="1549315108429" expanded="false" signature="6:78" ph="..." />
-                <marker date="1549315108429" expanded="true" signature="119:468" ph="{...}" />
-                <marker date="1549315108429" expanded="true" signature="243:264" ph="{...}" />
-                <marker date="1549315108429" expanded="true" signature="326:466" ph="{...}" />
+                <marker date="1549316174851" expanded="false" signature="6:78" ph="..." />
+                <marker date="1549316174851" expanded="true" signature="114:335" ph="{...}" />
+                <marker date="1549316174851" expanded="true" signature="186:207" ph="{...}" />
+                <marker date="1549316174851" expanded="true" signature="265:333" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -140,13 +145,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GetHp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B140E050-1769-43F4-A096-6C7CFA9CC579/be/47746856/Canvas.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D616BE05-755D-41A0-8981-0B5C14E4DD50/d2/72d8f547/ScriptableRuntimeReflectionSystemWrapper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/follow_cam.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/mvt.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/follow_cam.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/05523276-EF37-492A-8918-C36E7BB297B4/a8/d2c0aa63/AudioSettings.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AB1A519E-85A0-4DBA-9FEE-68550016F235/3c/2cbac269/Event.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D616BE05-755D-41A0-8981-0B5C14E4DD50/09/4e257e9d/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/mvt.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D616BE05-755D-41A0-8981-0B5C14E4DD50/be/cebccf5f/RenderPipelineManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AB1A519E-85A0-4DBA-9FEE-68550016F235/5f/8f2dc84d/GUIUtility.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -157,6 +163,7 @@
         <option value="$PROJECT_DIR$/Assets/color.cs" />
         <option value="$PROJECT_DIR$/Assets/mvt.cs" />
         <option value="$PROJECT_DIR$/Assets/follow_cam.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GetHp.cs" />
       </list>
     </option>
   </component>
@@ -247,12 +254,12 @@
       <workItem from="1548966272034" duration="209000" />
       <workItem from="1549229355641" duration="2443000" />
       <workItem from="1549232325090" duration="994000" />
-      <workItem from="1549310254246" duration="3750000" />
+      <workItem from="1549310254246" duration="4717000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16977000" />
+    <option name="totallyTimeSpent" value="17944000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -267,13 +274,13 @@
     <frame x="-967" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27242887" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27242887" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39978093" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39978093" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -375,6 +382,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/follow_cam.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" selection-start-line="6" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/follow_cam.cs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/mvt.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
             <marker date="1549314255340" expanded="false" signature="6:77" ph="..." />
             <marker date="1549314255340" expanded="true" signature="111:3243" ph="{...}" />
@@ -398,15 +421,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/follow_cam.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GetHp.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        <state relative-caret-position="225">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
           <folding>
-            <marker date="1549315108429" expanded="false" signature="6:78" ph="..." />
-            <marker date="1549315108429" expanded="true" signature="119:468" ph="{...}" />
-            <marker date="1549315108429" expanded="true" signature="243:264" ph="{...}" />
-            <marker date="1549315108429" expanded="true" signature="326:466" ph="{...}" />
+            <marker date="1549316174851" expanded="false" signature="6:78" ph="..." />
+            <marker date="1549316174851" expanded="true" signature="114:335" ph="{...}" />
+            <marker date="1549316174851" expanded="true" signature="186:207" ph="{...}" />
+            <marker date="1549316174851" expanded="true" signature="265:333" ph="{...}" />
           </folding>
         </state>
       </provider>

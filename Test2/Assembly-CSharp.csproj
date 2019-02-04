@@ -54,8 +54,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\follow_cam.cs" />
-    <Compile Include="Assets\mvt.cs" />
+    <Compile Include="Assets\Scripts\follow_cam.cs" />
+    <Compile Include="Assets\Scripts\GetHp.cs" />
+    <Compile Include="Assets\Scripts\mvt.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Dev/SpaceQbit/Test2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

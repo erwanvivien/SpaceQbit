@@ -4,8 +4,11 @@
     <e p="C:\Dev\SpaceQbit\Test2" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="follow_cam.cs" t="Include" />
-        <e p="mvt.cs" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="follow_cam.cs" t="Include" />
+          <e p="GetHp.cs" t="Include" />
+          <e p="mvt.cs" t="Include" />
+        </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
