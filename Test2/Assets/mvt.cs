@@ -4,54 +4,121 @@ using Debug = UnityEngine.Debug;
 
 public class mvt : MonoBehaviour
 {
-    private bool jump = false;
-    private Rigidbody rigid;
+    private bool dashable = true;
+
+    private float lastTimePressed;
+    public KeyCode lastKeyPressed;
+
+    private float lastTimeDash;
+    
     public Terrain terrain;
 
     // Start is called before the first frame update
     void Start()
     {
-        rigid = GetComponent<Rigidbody>();
-        terrain.tag = "Terrain";
+        
     }
 
     private void OnCollisionEnter(Collision colli)
     {
-        if (colli.gameObject.CompareTag(terrain.tag))
-        {
-            jump = false;
-        }
+        
     }
 
     // Update is called once  frame
     void Update()
     {
-        float dt = Time.deltaTime * 2000;
-        if (Input.GetKey(KeyCode.Z) && !jump)
+        if (lastTimeDash + 5 < Time.time)
         {
-            rigid.AddForce(Vector3.forward * dt);
+            dashable = true;
+        }        
+        
+        
+        float dt = Time.deltaTime;
+        
+        if (Input.GetKey(KeyCode.Z))
+        {            
+            transform.position += (Vector3.forward * dt);
         }
-        if (Input.GetKey(KeyCode.Q) && !jump)
+        if (Input.GetKeyDown(KeyCode.Z))
         {
-            rigid.AddForce(Vector3.left * dt);
+            if (lastKeyPressed == KeyCode.Z &&
+                lastTimePressed < Time.time &&
+                lastTimePressed + 1 > Time.time &&
+                dashable)
+            {
+                transform.position += (Vector3.forward * 0.5f);
+                lastTimeDash = Time.time;
+                dashable = false;
+            }
+                        
+            lastKeyPressed = KeyCode.Z;
+            lastTimePressed = Time.time;         
         }
-        if (Input.GetKey(KeyCode.S) && !jump)
+        
+        
+        
+        if (Input.GetKey(KeyCode.Q))
         {
-            rigid.AddForce(Vector3.back * dt);
+            transform.position += (Vector3.left * dt);
         }
-        if (Input.GetKey(KeyCode.D) && !jump)
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            rigid.AddForce(Vector3.right * dt);
+            if (lastKeyPressed == KeyCode.Q &&
+                lastTimePressed < Time.time &&
+                lastTimePressed + 1 > Time.time &&
+                dashable)
+            {
+                transform.position += (Vector3.left * 0.5f);
+                lastTimeDash = Time.time;
+                dashable = false;
+            }
+                        
+            lastKeyPressed = KeyCode.Q;
+            lastTimePressed = Time.time;         
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        
+        if (Input.GetKey(KeyCode.S))
         {
-            jump = true;
-            rigid.AddForce(Vector3.up * 700);
+            transform.position += (Vector3.back* dt);
         }
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.S))
         {
-            jump = false;
+            if (lastKeyPressed == KeyCode.S &&
+                lastTimePressed < Time.time &&
+                lastTimePressed + 1 > Time.time &&
+                dashable)
+            {
+                transform.position += (Vector3.back * 0.5f);
+                lastTimeDash = Time.time;
+                dashable = false;
+            }
+                        
+            lastKeyPressed = KeyCode.S;
+            lastTimePressed = Time.time;         
         }
+
+        
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.position += (Vector3.right * dt);
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            if (lastKeyPressed == KeyCode.D &&
+                lastTimePressed < Time.time &&
+                lastTimePressed + 1 > Time.time &&
+                dashable)
+            {
+                transform.position += (Vector3.right * 0.5f);
+                lastTimeDash = Time.time;
+                dashable = false;
+            }
+                        
+            lastKeyPressed = KeyCode.D;
+            lastTimePressed = Time.time;         
+        }
+
     }
 }
         
