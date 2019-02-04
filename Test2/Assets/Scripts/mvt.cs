@@ -9,9 +9,14 @@ public class mvt : MonoBehaviour
     private float lastTimePressed;
     private KeyCode lastKeyPressed;
 
-    private float lastTimeDash;
+    protected float lastTimeDash;
     
     public Terrain terrain;
+
+    public float getLastTimeDash()
+    {
+        return lastTimeDash;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -19,9 +24,9 @@ public class mvt : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision colli)
+    private void OnCollisionEnter(Collision other)
     {
-        
+        throw new System.NotImplementedException();
     }
 
     // Update is called once  frame

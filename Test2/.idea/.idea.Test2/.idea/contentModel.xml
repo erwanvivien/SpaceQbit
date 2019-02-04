@@ -7,6 +7,7 @@
         <e p="Scripts" t="Include">
           <e p="follow_cam.cs" t="Include" />
           <e p="GetHp.cs" t="Include" />
+          <e p="GetLastDash.cs" t="Include" />
           <e p="mvt.cs" t="Include" />
         </e>
       </e>
