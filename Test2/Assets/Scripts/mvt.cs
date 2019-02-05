@@ -9,7 +9,7 @@ public class mvt : MonoBehaviour
     private float lastTimePressed;
     private KeyCode lastKeyPressed;
 
-    protected float lastTimeDash;
+    float lastTimeDash;
     
     public Terrain terrain;
 

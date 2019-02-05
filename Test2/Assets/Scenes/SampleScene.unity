@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: 444795953}
   m_Layer: 5
   m_Name: Moving Frame
-  m_TagString: Untagged
+  m_TagString: Frame
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1091,7 +1091,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e9f0243a5465bb4ea74ea8fa8b34784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perso: {fileID: 385826584}
 --- !u!114 &1411402074
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Terrain
   - Perso
+  - Frame
   layers:
   - Default
   - TransparentFX

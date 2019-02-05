@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class GetLastDash : MonoBehaviour
 {
-    public GameObject perso;
+    private mvt otherScript;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        otherScript = GameObject.FindWithTag("Frame").GetComponent<mvt>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        perso
+        transform.position.Scale(new Vector3(0.8f, 0.1f, 1));
+
+        if (otherScript.getLastTimeDash() < Time.time &&
+            otherScript.getLastTimeDash() + 5 > Time.time)
+        {
+            transform.position.Scale(new Vector3(0.8f, 0.1f, 1));
+        }
     }
 }
