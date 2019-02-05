@@ -38,7 +38,7 @@ public class mvt : MonoBehaviour
         }        
         
         
-        float dt = Time.deltaTime;
+        float dt = Time.deltaTime * 1.2f;
         
         if (Input.GetKey(KeyCode.Z))
         {            
