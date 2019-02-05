@@ -6,22 +6,25 @@ using Debug = UnityEngine.Debug;
 
 public class mvt : MonoBehaviour
 {
-    private float accelerationStraighLine = 1.8f;
+    private float lastTimeDash;
+    private float lastTimePressed;
 
-    
     private bool dashable = true;
 
-    private float lastTimePressed;
     private KeyCode lastKeyPressed;
 
-    float lastTimeDash;
-    
     public Camera mainCam;    
-    public Terrain terrain;
+
+    // ----------------------------
 
     public float getLastTimeDash()
     {
         return lastTimeDash;
+    }
+
+    public bool getDashable()
+    {
+        return dashable;
     }
 
     // Start is called before the first frame update
@@ -40,13 +43,8 @@ public class mvt : MonoBehaviour
     {
         float dt = Time.deltaTime;
 
-        accelerationStraighLine = 1;
-        if (Input.touchCount == 1)
-        {
-            accelerationStraighLine = 1.8f;
-        }
-        
-        float maxTimePressed = lastTimePressed + 0.2f;
+        Vector3 mvt = Vector3.zero;
+                
         if (lastTimeDash + 5 < Time.time && !dashable)
         {
             dashable = true;
@@ -54,29 +52,33 @@ public class mvt : MonoBehaviour
         
         if (Input.GetKey(KeyCode.Z))
         {            
-            transform.position += (Vector3.forward * dt) * accelerationStraighLine;
+            mvt += Vector3.forward;
         }
      
         if (Input.GetKey(KeyCode.Q))
         {
-            transform.position += (Vector3.left * dt) * accelerationStraighLine;
+            mvt += Vector3.left;
         }
         
         if (Input.GetKey(KeyCode.S))
         {
-            transform.position += (Vector3.back* dt) * accelerationStraighLine;
+            mvt += Vector3.back;
         }
         
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += (Vector3.right * dt) * accelerationStraighLine;
+            mvt += Vector3.right;
         }
+        
+        if (mvt.x + mvt.y == 1) 
+            mvt *= 1.42f;
+        transform.position += mvt * dt;
 
         if ((Input.GetKeyDown(KeyCode.LeftShift) || 
              Input.GetKeyDown(KeyCode.RightShift)) && 
              dashable)
         {
-            transform.position += mainCam.velocity * 0.5f;
+            transform.position += mainCam.velocity /** 0.5f*/;
             lastTimeDash = Time.time;
             dashable = false;
         }
@@ -85,7 +87,7 @@ public class mvt : MonoBehaviour
         {
             Ray ray = mainCam.ScreenPointToRay(Input.mousePosition);
             Vector3 tmp = new Vector3(ray.direction.x, 0, ray.direction.z - 0.5f);
-            transform.position += tmp * dt;
+            transform.position += tmp * dt * 2f;
         }
     }
 }

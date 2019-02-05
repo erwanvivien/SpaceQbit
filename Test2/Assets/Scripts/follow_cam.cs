@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class follow_cam : MonoBehaviour
 {
+    private Vector3 b = Vector3.zero;
+
     //public Cube cube;
     public GameObject obj;
 
@@ -16,6 +18,14 @@ public class follow_cam : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = new Vector3(obj.transform.position.x, obj.transform.position.y + 3, obj.transform.position.z - 2);
+        Vector3 targetPosition = obj.transform.position;
+
+        targetPosition += new Vector3(0, 3.43f, -2);
+        
+        transform.position = 
+            Vector3.SmoothDamp(transform.position, 
+                targetPosition, 
+                ref b, 
+                0.5f);
     }
 }

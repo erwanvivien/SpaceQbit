@@ -5,6 +5,8 @@ using UnityEngine;
 public class GetLastDash : MonoBehaviour
 {
     private mvt otherScript;
+    private float Dashed;
+    private bool d;
     
     // Start is called before the first frame update
     void Start()
@@ -13,16 +15,14 @@ public class GetLastDash : MonoBehaviour
     }
 
     // Update is called once per frame
+    // otherScript.getLastTimeDash()
     void Update()
     {
-        float a = (otherScript.getLastTimeDash() + 5 - Time.time) / 5;
-        
-        transform.position.Scale(new Vector3(0, 0.1f, 1));
+        float lastDash = otherScript.getLastTimeDash();
 
-        if (otherScript.getLastTimeDash() < Time.time &&
-            otherScript.getLastTimeDash() + 5 > Time.time)
-        {
-            transform.position.Scale(new Vector3(0.8f * a, 0.1f, 1));
-        }
+        float cooldown = (lastDash + 5 - Time.time) / 5;
+        if (cooldown < 0 || (Time.time <= 5 && otherScript.getDashable())) cooldown = 0;
+
+        transform.localScale = (new Vector3(cooldown, 1, 1));
     }
 }
