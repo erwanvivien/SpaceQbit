@@ -10,7 +10,7 @@ public class follow_cam : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        transform.position = new Vector3(obj.transform.position.x, obj.transform.position.y + 3, obj.transform.position.z - 2);
     }
     
     // Update is called once per frame

@@ -15,12 +15,14 @@ public class GetLastDash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position.Scale(new Vector3(0.8f, 0.1f, 1));
+        float a = (otherScript.getLastTimeDash() + 5 - Time.time) / 5;
+        
+        transform.position.Scale(new Vector3(0, 0.1f, 1));
 
         if (otherScript.getLastTimeDash() < Time.time &&
             otherScript.getLastTimeDash() + 5 > Time.time)
         {
-            transform.position.Scale(new Vector3(0.8f, 0.1f, 1));
+            transform.position.Scale(new Vector3(0.8f * a, 0.1f, 1));
         }
     }
 }

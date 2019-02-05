@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.Experimental.UIElements;
 using Debug = UnityEngine.Debug;
 
 public class mvt : MonoBehaviour
@@ -11,6 +12,7 @@ public class mvt : MonoBehaviour
 
     float lastTimeDash;
     
+    public Camera mainCam;    
     public Terrain terrain;
 
     public float getLastTimeDash()
@@ -32,13 +34,15 @@ public class mvt : MonoBehaviour
     // Update is called once  frame
     void Update()
     {
+        float maxTimePressed = lastTimePressed + 0.2f;
+        
         if (lastTimeDash + 5 < Time.time)
         {
             dashable = true;
         }        
         
         
-        float dt = Time.deltaTime * 1.2f;
+        float dt = Time.deltaTime;
         
         if (Input.GetKey(KeyCode.Z))
         {            
@@ -48,7 +52,7 @@ public class mvt : MonoBehaviour
         {
             if (lastKeyPressed == KeyCode.Z &&
                 lastTimePressed < Time.time &&
-                lastTimePressed + 1 > Time.time &&
+                maxTimePressed > Time.time &&
                 dashable)
             {
                 transform.position += (Vector3.forward * 0.5f);
@@ -70,7 +74,7 @@ public class mvt : MonoBehaviour
         {
             if (lastKeyPressed == KeyCode.Q &&
                 lastTimePressed < Time.time &&
-                lastTimePressed + 1 > Time.time &&
+                maxTimePressed > Time.time &&
                 dashable)
             {
                 transform.position += (Vector3.left * 0.5f);
@@ -91,7 +95,7 @@ public class mvt : MonoBehaviour
         {
             if (lastKeyPressed == KeyCode.S &&
                 lastTimePressed < Time.time &&
-                lastTimePressed + 1 > Time.time &&
+                maxTimePressed > Time.time &&
                 dashable)
             {
                 transform.position += (Vector3.back * 0.5f);
@@ -112,7 +116,7 @@ public class mvt : MonoBehaviour
         {
             if (lastKeyPressed == KeyCode.D &&
                 lastTimePressed < Time.time &&
-                lastTimePressed + 1 > Time.time &&
+                maxTimePressed > Time.time &&
                 dashable)
             {
                 transform.position += (Vector3.right * 0.5f);
@@ -124,6 +128,10 @@ public class mvt : MonoBehaviour
             lastTimePressed = Time.time;         
         }
 
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = mainCam.ScreenPointToRay(Input.mousePosition);
+        }
     }
 }
         
