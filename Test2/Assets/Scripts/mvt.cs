@@ -1,10 +1,14 @@
 ﻿using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Experimental.UIElements;
 using Debug = UnityEngine.Debug;
 
 public class mvt : MonoBehaviour
 {
+    private float accelerationStraighLine = 1.8f;
+
+    
     private bool dashable = true;
 
     private float lastTimePressed;
@@ -34,103 +38,54 @@ public class mvt : MonoBehaviour
     // Update is called once  frame
     void Update()
     {
-        float maxTimePressed = lastTimePressed + 0.2f;
+        float dt = Time.deltaTime;
+
+        accelerationStraighLine = 1;
+        if (Input.touchCount == 1)
+        {
+            accelerationStraighLine = 1.8f;
+        }
         
-        if (lastTimeDash + 5 < Time.time)
+        float maxTimePressed = lastTimePressed + 0.2f;
+        if (lastTimeDash + 5 < Time.time && !dashable)
         {
             dashable = true;
         }        
         
-        
-        float dt = Time.deltaTime;
-        
         if (Input.GetKey(KeyCode.Z))
         {            
-            transform.position += (Vector3.forward * dt);
+            transform.position += (Vector3.forward * dt) * accelerationStraighLine;
         }
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            if (lastKeyPressed == KeyCode.Z &&
-                lastTimePressed < Time.time &&
-                maxTimePressed > Time.time &&
-                dashable)
-            {
-                transform.position += (Vector3.forward * 0.5f);
-                lastTimeDash = Time.time;
-                dashable = false;
-            }
-                        
-            lastKeyPressed = KeyCode.Z;
-            lastTimePressed = Time.time;         
-        }
-        
-        
-        
+     
         if (Input.GetKey(KeyCode.Q))
         {
-            transform.position += (Vector3.left * dt);
+            transform.position += (Vector3.left * dt) * accelerationStraighLine;
         }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            if (lastKeyPressed == KeyCode.Q &&
-                lastTimePressed < Time.time &&
-                maxTimePressed > Time.time &&
-                dashable)
-            {
-                transform.position += (Vector3.left * 0.5f);
-                lastTimeDash = Time.time;
-                dashable = false;
-            }
-                        
-            lastKeyPressed = KeyCode.Q;
-            lastTimePressed = Time.time;         
-        }
-
         
         if (Input.GetKey(KeyCode.S))
         {
-            transform.position += (Vector3.back* dt);
+            transform.position += (Vector3.back* dt) * accelerationStraighLine;
         }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            if (lastKeyPressed == KeyCode.S &&
-                lastTimePressed < Time.time &&
-                maxTimePressed > Time.time &&
-                dashable)
-            {
-                transform.position += (Vector3.back * 0.5f);
-                lastTimeDash = Time.time;
-                dashable = false;
-            }
-                        
-            lastKeyPressed = KeyCode.S;
-            lastTimePressed = Time.time;         
-        }
-
         
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += (Vector3.right * dt);
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            if (lastKeyPressed == KeyCode.D &&
-                lastTimePressed < Time.time &&
-                maxTimePressed > Time.time &&
-                dashable)
-            {
-                transform.position += (Vector3.right * 0.5f);
-                lastTimeDash = Time.time;
-                dashable = false;
-            }
-                        
-            lastKeyPressed = KeyCode.D;
-            lastTimePressed = Time.time;         
+            transform.position += (Vector3.right * dt) * accelerationStraighLine;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if ((Input.GetKeyDown(KeyCode.LeftShift) || 
+             Input.GetKeyDown(KeyCode.RightShift)) && 
+             dashable)
+        {
+            transform.position += mainCam.velocity * 0.5f;
+            lastTimeDash = Time.time;
+            dashable = false;
+        }
+        
+        if (Input.GetMouseButton(0))
         {
             Ray ray = mainCam.ScreenPointToRay(Input.mousePosition);
+            Vector3 tmp = new Vector3(ray.direction.x, 0, ray.direction.z - 0.5f);
+            transform.position += tmp * dt;
         }
     }
 }
