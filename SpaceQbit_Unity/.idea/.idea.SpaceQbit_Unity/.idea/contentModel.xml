@@ -4,6 +4,7 @@
     <e p="C:\Dev\SpaceQbit\SpaceQbit_Unity" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Looking_Direction.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Cam_Follow.cs" t="Include" />
           <e p="GetCooCam.cs" t="Include" />

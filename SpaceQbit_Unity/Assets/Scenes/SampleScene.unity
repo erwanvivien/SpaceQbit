@@ -452,6 +452,7 @@ GameObject:
   - component: {fileID: 385826585}
   - component: {fileID: 385826588}
   - component: {fileID: 385826587}
+  - component: {fileID: 385826589}
   m_Layer: 0
   m_Name: Personnage
   m_TagString: Perso
@@ -566,6 +567,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.48, y: 0.69}
   m_EdgeRadius: 0
+--- !u!114 &385826589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385826584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d856244d9f21d49941159e6d84d11e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &403127290
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,7 +592,7 @@ GameObject:
   - component: {fileID: 403127291}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -735,7 +748,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 444795948}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

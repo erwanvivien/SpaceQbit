@@ -36,7 +36,7 @@ public class Mouvement_player : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 
     // Update is called once  frame
@@ -72,13 +72,15 @@ public class Mouvement_player : MonoBehaviour
         }
         if (Math.Abs(mvt.x) + Math.Abs(mvt.z) == 1)
             mvt *= 1.42f;
-        Debug.Log(mvt);
+        //Debug.Log(mvt);
         transform.position += mvt * dt;
 
         if ((Input.GetKeyDown(KeyCode.LeftShift) || 
              Input.GetKeyDown(KeyCode.RightShift)) && 
              dashable)
         {
+            
+            
             transform.position += mvt;
             lastTimeDash = Time.time;
             dashable = false;
