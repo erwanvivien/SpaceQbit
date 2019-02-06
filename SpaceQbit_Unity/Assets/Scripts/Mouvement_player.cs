@@ -79,8 +79,6 @@ public class Mouvement_player : MonoBehaviour
              Input.GetKeyDown(KeyCode.RightShift)) && 
              dashable)
         {
-            
-            
             transform.position += mvt;
             lastTimeDash = Time.time;
             dashable = false;

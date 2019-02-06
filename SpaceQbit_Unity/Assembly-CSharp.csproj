@@ -54,11 +54,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Looking_Direction.cs" />
     <Compile Include="Assets\Scripts\Cam_Follow.cs" />
-    <Compile Include="Assets\Scripts\GetCooCam.cs" />
-    <Compile Include="Assets\Scripts\GetHp.cs" />
-    <Compile Include="Assets\Scripts\GetLastDash.cs" />
+    <Compile Include="Assets\Scripts\Get_Coo_Cam.cs" />
+    <Compile Include="Assets\Scripts\Get_Hp.cs" />
+    <Compile Include="Assets\Scripts\Get_Last_Dash.cs" />
+    <Compile Include="Assets\Scripts\Looking_Direction.cs" />
     <Compile Include="Assets\Scripts\Mouvement_player.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Dev/SpaceQbit/SpaceQbit_Unity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
