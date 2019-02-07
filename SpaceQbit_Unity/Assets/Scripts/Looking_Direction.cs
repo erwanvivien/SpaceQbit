@@ -7,13 +7,16 @@ using UnityEngine;
 public class Looking_Direction : MonoBehaviour
 {
     public GameObject canvas;
-    private Rigidbody rigid;
     private Animator anm;
+    private Mouvement_player player;
+        
     
     // Start is called before the first frame update
     void Start()
     {
-        rigid = canvas.GetComponent<Rigidbody>();
+        anm = GetComponent<Animator>();
+        
+        player = GameObject.FindWithTag("Frame").GetComponent<Mouvement_player>();
     }
 
     // Update is called once per frame
@@ -22,17 +25,19 @@ public class Looking_Direction : MonoBehaviour
         Vector3 posMouse = Input.mousePosition;
         
         posMouse.y -= 400;
-        posMouse.x -= 960;
+        posMouse.x -= 967;
         
         Debug.Log(posMouse);
 
-        /*if (rigid.velocity == Vector3.zero) ;
-        //anm.Play("player_rest");
+        if (!player.getMoving())
+        {
+            anm.Play("player_rest");
+        }
         else
         {
             if (Math.Abs(posMouse.x) > Math.Abs(posMouse.y))
             {
-                if (posMouse.x > 0)
+                if (posMouse.x < 0)
                     anm.Play("player_left");
                 else
                 {
@@ -48,6 +53,6 @@ public class Looking_Direction : MonoBehaviour
                     anm.Play("player_down");
                 }
             }
-        }*/
+        }
     }
 }

@@ -11,6 +11,7 @@ public class Mouvement_player : MonoBehaviour
     private float lastTimePressed;
 
     private bool dashable = true;
+    private bool moving = false;
 
     private KeyCode lastKeyPressed;
 
@@ -28,6 +29,11 @@ public class Mouvement_player : MonoBehaviour
         return dashable;
     }
 
+    public bool getMoving()
+    {
+        return moving;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +49,6 @@ public class Mouvement_player : MonoBehaviour
     void Update()
     {
         float dt = Time.deltaTime;
-
         Vector3 mvt = Vector3.zero;
                 
         if (lastTimeDash + 5 < Time.time && !dashable)
@@ -54,22 +59,27 @@ public class Mouvement_player : MonoBehaviour
         if (Input.GetKey(KeyCode.Z))
         {            
             mvt += Vector3.forward;
+            moving = true;
         }
      
         if (Input.GetKey(KeyCode.Q))
         {
             mvt += Vector3.left;
+            moving = true;
         }
         
         if (Input.GetKey(KeyCode.S))
         {
             mvt += Vector3.back;
+            moving = true;
         }
         
         if (Input.GetKey(KeyCode.D))
         {
             mvt += Vector3.right;
+            moving = true;
         }
+        
         if (Math.Abs(mvt.x) + Math.Abs(mvt.z) == 1)
             mvt *= 1.42f;
         //Debug.Log(mvt);
@@ -90,6 +100,10 @@ public class Mouvement_player : MonoBehaviour
             Vector3 tmp = new Vector3(ray.direction.x, 0, ray.direction.z - 0.5f);
             transform.position += tmp * dt * 2f;
         }
+        
+        
+        if(mvt == Vector3.zero)
+            moving = false;
     }
 }
         
