@@ -6,10 +6,8 @@ using UnityEngine;
 
 public class Looking_Direction : MonoBehaviour
 {
-    public GameObject canvas;
     private Animator anm;
     private Mouvement_player player;
-        
     
     // Start is called before the first frame update
     void Start()

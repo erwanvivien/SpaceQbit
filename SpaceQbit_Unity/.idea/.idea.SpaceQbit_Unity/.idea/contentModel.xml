@@ -11,6 +11,7 @@
           <e p="Get_Last_Dash.cs" t="Include" />
           <e p="Looking_Direction.cs" t="Include" />
           <e p="Mouvement_player.cs" t="Include" />
+          <e p="Shooting.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

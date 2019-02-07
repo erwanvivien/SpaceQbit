@@ -7,6 +7,8 @@ using Debug = UnityEngine.Debug;
 
 public class Mouvement_player : MonoBehaviour
 {
+    private float CooldownDash;
+    
     private float lastTimeDash;
     private float lastTimePressed;
 
@@ -24,6 +26,11 @@ public class Mouvement_player : MonoBehaviour
         return lastTimeDash;
     }
 
+    public float getCooldownDash()
+    {
+        return CooldownDash;
+    }
+
     public bool getDashable()
     {
         return dashable;
@@ -37,7 +44,7 @@ public class Mouvement_player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        CooldownDash = 1f;
     }
 
     private void OnCollisionEnter(Collision other)
@@ -51,7 +58,7 @@ public class Mouvement_player : MonoBehaviour
         float dt = Time.deltaTime;
         Vector3 mvt = Vector3.zero;
                 
-        if (lastTimeDash + 5 < Time.time && !dashable)
+        if (lastTimeDash + CooldownDash < Time.time && !dashable)
         {
             dashable = true;
         }        
@@ -92,15 +99,7 @@ public class Mouvement_player : MonoBehaviour
             transform.position += mvt;
             lastTimeDash = Time.time;
             dashable = false;
-        }
-        
-        if (Input.GetMouseButton(0))
-        {
-            Ray ray = mainCam.ScreenPointToRay(Input.mousePosition);
-            Vector3 tmp = new Vector3(ray.direction.x, 0, ray.direction.z - 0.5f);
-            transform.position += tmp * dt * 2f;
-        }
-        
+        }        
         
         if(mvt == Vector3.zero)
             moving = false;

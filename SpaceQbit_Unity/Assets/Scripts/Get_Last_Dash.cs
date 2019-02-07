@@ -7,11 +7,14 @@ public class Get_Last_Dash : MonoBehaviour
     private Mouvement_player otherScript;
     private float Dashed;
     private bool d;
+    private float Cooldown_dash;
+
     
     // Start is called before the first frame update
     void Start()
     {
         otherScript = GameObject.FindWithTag("Frame").GetComponent<Mouvement_player>();
+        Cooldown_dash = otherScript.getCooldownDash();
     }
 
     // Update is called once per frame
@@ -20,7 +23,7 @@ public class Get_Last_Dash : MonoBehaviour
     {
         float lastDash = otherScript.getLastTimeDash();
 
-        float cooldown = (lastDash + 5 - Time.time) / 5;
+        float cooldown = (lastDash + Cooldown_dash - Time.time) / Cooldown_dash;
         if (cooldown < 0 || (Time.time <= 5 && otherScript.getDashable())) cooldown = 0;
 
         transform.localScale = (new Vector3(cooldown, 1, 1));

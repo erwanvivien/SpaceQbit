@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\Get_Last_Dash.cs" />
     <Compile Include="Assets\Scripts\Looking_Direction.cs" />
     <Compile Include="Assets\Scripts\Mouvement_player.cs" />
+    <Compile Include="Assets\Scripts\Shooting.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Dev/SpaceQbit/SpaceQbit_Unity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
