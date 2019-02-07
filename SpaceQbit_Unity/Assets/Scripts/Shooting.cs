@@ -6,6 +6,7 @@ public class Shooting : MonoBehaviour
 {
     public GameObject obj;
     public Camera mainCam;
+    private Transform posCanvas;
     
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,6 @@ public class Shooting : MonoBehaviour
     Vector3 InitPointOnScreen()
     {
         Vector3 posMouse = Input.mousePosition;
-        
         //posMouse.y -= 400;
         //posMouse.x -= 967;
 
@@ -30,9 +30,12 @@ public class Shooting : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
+            posCanvas = GetComponentInParent<Transform>();
+
             Vector3 tmp = InitPointOnScreen();
 
-            Instantiate(obj);
+            GameObject newOne = Instantiate(obj);
+            newOne.transform.localPosition = posCanvas.position;
         }
 
     }
