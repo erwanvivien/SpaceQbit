@@ -44,7 +44,7 @@ public class Mouvement_player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CooldownDash = 1f;
+        CooldownDash = 5f;
     }
 
     private void OnCollisionEnter(Collision other)
@@ -89,7 +89,7 @@ public class Mouvement_player : MonoBehaviour
         
         if (Math.Abs(mvt.x) + Math.Abs(mvt.z) == 1)
             mvt *= 1.42f;
-        //Debug.Log(mvt);
+        
         transform.position += mvt * dt;
 
         if ((Input.GetKeyDown(KeyCode.LeftShift) || 
