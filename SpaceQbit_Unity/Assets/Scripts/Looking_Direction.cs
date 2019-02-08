@@ -24,8 +24,6 @@ public class Looking_Direction : MonoBehaviour
         
         posMouse.y -= 400;
         posMouse.x -= 967;
-        
-        Debug.Log(posMouse);
 
         if (!player.getMoving())
         {

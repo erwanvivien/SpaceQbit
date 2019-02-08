@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Shooting : MonoBehaviour
@@ -7,6 +9,7 @@ public class Shooting : MonoBehaviour
     public GameObject obj;
     public Camera mainCam;
     private Transform posCanvas;
+    private List<GameObject> Balls;
     
     // Start is called before the first frame update
     void Start()
@@ -14,15 +17,14 @@ public class Shooting : MonoBehaviour
         
     }
 
-    Vector3 InitPointOnScreen()
+    float GetCooToAngle()
     {
         Vector3 posMouse = Input.mousePosition;
-        //posMouse.y -= 400;
-        //posMouse.x -= 967;
-
-        Ray ray = mainCam.ScreenPointToRay(posMouse);
-            
-        return new Vector3(ray.direction.x, 0, ray.direction.z);
+                
+        Debug.Log(posMouse);
+        
+        float a = (float) Math.Atan(posMouse.y / posMouse.x) * 180;//d * 100;
+        return (float) Math.Atan(posMouse.y / posMouse.x) * 180;
     }
 
     // Update is called once per frame
@@ -32,10 +34,12 @@ public class Shooting : MonoBehaviour
         {
             posCanvas = GetComponentInParent<Transform>();
 
-            Vector3 tmp = InitPointOnScreen();
-
             GameObject newOne = Instantiate(obj);
+            
             newOne.transform.localPosition = posCanvas.position;
+            newOne.transform.Rotate(0, 0, GetCooToAngle());
+            
+            //Balls.Add(newOne);
         }
 
     }
