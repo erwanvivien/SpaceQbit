@@ -2,52 +2,53 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    public GameObject obj;
-    public Camera mainCam;
-    private Transform posCanvas;
-    private List<GameObject> Balls;
-    private List<float> timeBalls;
-    
-    private float lastTimeShoot;
-    private bool Shootable = true;
-    private float CooldownShoot;
+    public GameObject Obj;
+    public Camera cam;
     
     
     
     
-    public float getLastTimeShoot()
+    private Transform _posCanvas;
+    private List<GameObject> _bullets;
+    private List<float> _timeBullets;
+    
+    private float _lastTimeShoot;
+    private bool _shootable = true;
+    private float _cooldownShoot;
+
+    private float _durationBullet;
+    
+    
+    public float GetLastTimeShoot()
     {
-        return lastTimeShoot;
+        return _lastTimeShoot;
     }
 
-    public float getCooldownShoot()
+    public float GetCooldownShoot()
     {
-        return CooldownShoot;
+        return _cooldownShoot;
     }
 
-    public bool getShootable()
+    public bool GetShootable()
     {
-        return Shootable;
+        return _shootable;
     }
 
-    
-    
-    
-    
-    
-    
+
     
     // Start is called before the first frame update
     void Start()
     {
-        lastTimeShoot = -2;
-        Balls = new List<GameObject>();
-        timeBalls = new List<float>();
-        CooldownShoot = 0.5f;
+        _durationBullet = 10;
+        _lastTimeShoot = -2;
+        _bullets = new List<GameObject>();
+        _timeBullets = new List<float>();
+        _cooldownShoot = 0.5f;
     }
 
     float sign(float x)
@@ -56,47 +57,81 @@ public class Shooting : MonoBehaviour
         return -1;
     }
 
-    float GetCooToAngle()
+    Vector3 GetCooToAngle()
     {
-        Vector3 posMouse = Input.mousePosition;
-        posMouse.x -= 961;
-        posMouse.y -= 419;
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        Vector3 a = ray.direction;
+        a.y = 0;
+        a.z -= 0.3f;
 
-        double a = Math.Atan2(posMouse.y, posMouse.x) * 180 / Math.PI;
-        Debug.Log(a);
-
-        return (float) (a - 90);
+        double x = Math.Atan2(a.z, a.x) * 180 / Math.PI;
+        Debug.Log(x);
+        Vector3 b;
+        b.x = (float) (Math.Cos(x) - Math.Sin(x));
+        b.y = (float) (Math.Cos(x) - Math.Sin(x));
+        b.z = (float) 0;
+        
+        return b;
+//        
+//        
+//        posMouse.y = 0;
+//        
+//        double a = Math.Atan2(posMouse.z, posMouse.x) * 180 / Math.PI;
+//        Debug.Log((a - 90));
+//
+//        return (float) (a - 90);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if ((lastTimeShoot + CooldownShoot < Time.time) &&
-            (!Shootable))
+        if ((_lastTimeShoot + _cooldownShoot < Time.time) &&
+            (!_shootable))
         {
-            Shootable = true;
+            _shootable = true;
         }
 
-        if (Input.GetMouseButton(0) && Shootable)
+        if (Input.GetMouseButton(0) && _shootable)
         {
-            posCanvas = GetComponentInParent<Transform>();
+            _posCanvas = GetComponentInParent<Transform>();
 
-            GameObject newOne = Instantiate(obj);
+            GameObject newOne = Instantiate(Obj);
             
-            newOne.transform.localPosition = posCanvas.position;
-            newOne.transform.Rotate(0, 0, GetCooToAngle());
-            
-            Balls.Add(newOne);
-            timeBalls.Add(Time.time);
+            newOne.transform.localPosition = _posCanvas.position;
 
-            Shootable = false;
-            lastTimeShoot = Time.time;
+            //float angle = GetCooToAngle();
+            
+//            newOne.transform.Rotate((float) (Math.Cos(angle) - Math.Sin(angle)) , 
+//                                    (float) (-Math.Sin(angle) + Math.Cos(angle)), 
+//                                    angle);
+            newOne.transform.Rotate(GetCooToAngle());
+            
+//            newOne.AddComponent<Rigidbody>();
+//            Rigidbody rb = newOne.GetComponent<Rigidbody>();
+//            
+//            rb.velocity = new Vector3((float) -Math.Acos(angle / 360 * Math.PI), 
+//                                        0 , 
+//                                        (float) Math.Asin(angle / 360 * Math.PI));
+            
+            //rb.useGravity = false;
+            
+            _bullets.Add(newOne);
+            _timeBullets.Add(Time.time);
+
+            _shootable = false;
+            _lastTimeShoot = Time.time;
         }
 
-        if (timeBalls[0] + 10 < Time.time)
+        if (_timeBullets.Count > 0 && (_timeBullets[0] + _durationBullet < Time.time))
         {
-            timeBalls.RemoveAt(0);
-            Balls.RemoveAt(0);
+            Destroy(_bullets[0]);
+            _timeBullets.RemoveAt(0);
+            _bullets.RemoveAt(0);
+        }
+
+        foreach (var q in _bullets)
+        {
+            //q.rigidbody.
         }
     }
 }
