@@ -57,32 +57,18 @@ public class Shooting : MonoBehaviour
         return -1;
     }
 
-    Vector3 GetCooToAngle()
+    float GetCooToAngle()
     {
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        Vector3 a = ray.direction;
-        a.y = 0;
-        a.z -= 0.3f;
-
-        double x = Math.Atan2(a.z, a.x) * 180 / Math.PI;
-        Debug.Log(x);
-        Vector3 b;
-        b.x = (float) (Math.Cos(x) - Math.Sin(x));
-        b.y = (float) (Math.Cos(x) - Math.Sin(x));
-        b.z = (float) 0;
+        Vector3 posMouse = Input.mousePosition;
+        posMouse.x -= Screen.width / 2;
+        posMouse.y -= Screen.height / 2;
         
-        return b;
-//        
-//        
-//        posMouse.y = 0;
-//        
-//        double a = Math.Atan2(posMouse.z, posMouse.x) * 180 / Math.PI;
-//        Debug.Log((a - 90));
-//
-//        return (float) (a - 90);
+        double a = Math.Atan2(posMouse.y, posMouse.x) * 180 / Math.PI;
+        Debug.Log(a);   
+        
+        return (float) a;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if ((_lastTimeShoot + _cooldownShoot < Time.time) &&
@@ -99,21 +85,19 @@ public class Shooting : MonoBehaviour
             
             newOne.transform.localPosition = _posCanvas.position;
 
-            //float angle = GetCooToAngle();
+            float angle = GetCooToAngle();
+
+            Transform sprite = newOne.GetComponentInChildren<Transform>();   
+            sprite.Rotate(0 , 0, angle - 90);
             
-//            newOne.transform.Rotate((float) (Math.Cos(angle) - Math.Sin(angle)) , 
-//                                    (float) (-Math.Sin(angle) + Math.Cos(angle)), 
-//                                    angle);
-            newOne.transform.Rotate(GetCooToAngle());
+            newOne.AddComponent<Rigidbody>();
+            Rigidbody rb = newOne.GetComponent<Rigidbody>();
             
-//            newOne.AddComponent<Rigidbody>();
-//            Rigidbody rb = newOne.GetComponent<Rigidbody>();
-//            
-//            rb.velocity = new Vector3((float) -Math.Acos(angle / 360 * Math.PI), 
-//                                        0 , 
-//                                        (float) Math.Asin(angle / 360 * Math.PI));
+            rb.velocity = new Vector3((float) Math.Cos(angle / 360 * Math.PI), 
+                                        0 , 
+                                        (float) Math.Sin(angle / 360 * Math.PI));
             
-            //rb.useGravity = false;
+            rb.useGravity = false;
             
             _bullets.Add(newOne);
             _timeBullets.Add(Time.time);
