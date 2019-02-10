@@ -8,7 +8,7 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     public GameObject Obj;
-    public Camera cam;
+    //public Camera cam;
     
     
     
@@ -18,8 +18,9 @@ public class Shooting : MonoBehaviour
     private List<float> _timeBullets;
     
     private float _lastTimeShoot;
-    private bool _shootable = true;
+    private bool _shotable = true;
     private float _cooldownShoot;
+    private float _bulletSpeed;
 
     private float _durationBullet;
     
@@ -36,7 +37,7 @@ public class Shooting : MonoBehaviour
 
     public bool GetShootable()
     {
-        return _shootable;
+        return _shotable;
     }
 
 
@@ -44,6 +45,7 @@ public class Shooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _bulletSpeed = 3;
         _durationBullet = 10;
         _lastTimeShoot = -2;
         _bullets = new List<GameObject>();
@@ -60,11 +62,10 @@ public class Shooting : MonoBehaviour
     float GetCooToAngle()
     {
         Vector3 posMouse = Input.mousePosition;
-        posMouse.x -= Screen.width / 2;
-        posMouse.y -= Screen.height / 2;
+        posMouse.x -= (Screen.width / 2);
+        posMouse.y -= (Screen.height / 2);
         
         double a = Math.Atan2(posMouse.y, posMouse.x) * 180 / Math.PI;
-        Debug.Log(a);   
         
         return (float) a;
     }
@@ -72,12 +73,12 @@ public class Shooting : MonoBehaviour
     void Update()
     {
         if ((_lastTimeShoot + _cooldownShoot < Time.time) &&
-            (!_shootable))
+            (!_shotable))
         {
-            _shootable = true;
+            _shotable = true;
         }
 
-        if (Input.GetMouseButton(0) && _shootable)
+        if (Input.GetMouseButton(0) && _shotable)
         {
             _posCanvas = GetComponentInParent<Transform>();
 
@@ -91,18 +92,22 @@ public class Shooting : MonoBehaviour
             sprite.Rotate(0 , 0, angle - 90);
             
             newOne.AddComponent<Rigidbody>();
+            newOne.AddComponent<Collider>();
             Rigidbody rb = newOne.GetComponent<Rigidbody>();
             
-            rb.velocity = new Vector3((float) Math.Cos(angle / 360 * Math.PI), 
+            angle = (angle % 360 + 360) % 360;
+            Debug.Log(angle);   
+            rb.velocity = new Vector3((float) Math.Cos(angle / 180 * Math.PI), 
                                         0 , 
-                                        (float) Math.Sin(angle / 360 * Math.PI));
+                                        (float) Math.Sin(angle / 180 * Math.PI));
+            rb.velocity *= _bulletSpeed;
             
             rb.useGravity = false;
             
             _bullets.Add(newOne);
             _timeBullets.Add(Time.time);
 
-            _shootable = false;
+            _shotable = false;
             _lastTimeShoot = Time.time;
         }
 
@@ -113,9 +118,15 @@ public class Shooting : MonoBehaviour
             _bullets.RemoveAt(0);
         }
 
-        foreach (var q in _bullets)
+        for (int i = 0; i < _bullets.Count; i++)
         {
-            //q.rigidbody.
+            Collider col = _bullets[i].GetComponent<Collider>();
+            if (col.isTrigger)
+            {
+                Destroy(_bullets[i]);
+                _bullets.RemoveAt(i);
+                _timeBullets.RemoveAt(i);
+            }
         }
     }
 }
