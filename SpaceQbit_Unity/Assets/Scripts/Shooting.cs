@@ -92,17 +92,25 @@ public class Shooting : MonoBehaviour
             sprite.Rotate(0 , 0, angle - 90);
             
             newOne.AddComponent<Rigidbody>();
-            newOne.AddComponent<Collider>();
+            newOne.AddComponent<BoxCollider>();
+            newOne.AddComponent<Bullet_Collision>();
+            
             Rigidbody rb = newOne.GetComponent<Rigidbody>();
+            BoxCollider col = newOne.GetComponent<BoxCollider>();
             
             angle = (angle % 360 + 360) % 360;
-            Debug.Log(angle);   
-            rb.velocity = new Vector3((float) Math.Cos(angle / 180 * Math.PI), 
-                                        0 , 
-                                        (float) Math.Sin(angle / 180 * Math.PI));
-            rb.velocity *= _bulletSpeed;
+            angle = (float) (angle / 180 * Math.PI);
             
+            rb.velocity = new Vector3((float) Math.Cos(angle), 
+                                        0 , 
+                                        (float) Math.Sin(angle));
+            rb.velocity *= _bulletSpeed;
+            rb.angularDrag = 1000000;
             rb.useGravity = false;
+
+            col.isTrigger = true;
+            col.size = new Vector3(0.1f, 0.1f, 0.1f);
+            col.center = new Vector3(0, 0.5f, -0.5f);
             
             _bullets.Add(newOne);
             _timeBullets.Add(Time.time);
@@ -120,12 +128,14 @@ public class Shooting : MonoBehaviour
 
         for (int i = 0; i < _bullets.Count; i++)
         {
-            Collider col = _bullets[i].GetComponent<Collider>();
-            if (col.isTrigger)
+            Bullet_Collision nvScript = _bullets[i].GetComponent<Bullet_Collision>();
+            
+            if (nvScript.GetCollision())
             {
-                Destroy(_bullets[i]);
-                _bullets.RemoveAt(i);
                 _timeBullets.RemoveAt(i);
+                _bullets.RemoveAt(i);
+
+                Destroy(_bullets[i]);
             }
         }
     }
