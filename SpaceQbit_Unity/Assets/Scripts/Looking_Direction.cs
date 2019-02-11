@@ -14,7 +14,7 @@ public class Looking_Direction : MonoBehaviour
     {
         anm = GetComponent<Animator>();
         
-        player = GameObject.FindWithTag("Frame").GetComponent<Mouvement_player>();
+        player = GameObject.FindWithTag("Frame_Perso").GetComponent<Mouvement_player>();
     }
 
     // Update is called once per frame
@@ -22,8 +22,8 @@ public class Looking_Direction : MonoBehaviour
     {
         Vector3 posMouse = Input.mousePosition;
         
-        posMouse.y -= 400;
-        posMouse.x -= 967;
+        posMouse.y -= Screen.height / 2;
+        posMouse.x -= Screen.width / 2;
 
         if (!player.getMoving())
         {

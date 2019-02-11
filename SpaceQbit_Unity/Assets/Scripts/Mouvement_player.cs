@@ -63,7 +63,7 @@ public class Mouvement_player : MonoBehaviour
             dashable = true;
         }        
         
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKey(KeyCode.Z) || (Input.GetKey(KeyCode.LeftAlt)))
         {            
             mvt += Vector3.forward;
             moving = true;

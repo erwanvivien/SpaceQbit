@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class Bullet_Collision : MonoBehaviour
 {
-    private bool collision = false;
+    private bool _collision;
     
     private void OnCollisionEnter(Collision other)
     {
-        if (!other.gameObject.CompareTag("Perso"))
+        string tag = other.gameObject.tag;
+        if (tag != "Frame_Perso" && tag != "Terrain" || tag == "Mur")
         {
-            collision = true;
+            _collision = true;
         }
     }
 
     public bool GetCollision()
     {
-        return collision;
+        return _collision;
     }
 
 

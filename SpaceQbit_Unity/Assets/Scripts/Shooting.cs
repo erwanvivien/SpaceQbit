@@ -91,12 +91,7 @@ public class Shooting : MonoBehaviour
             Transform sprite = newOne.GetComponentInChildren<Transform>();   
             sprite.Rotate(0 , 0, angle - 90);
             
-            newOne.AddComponent<Rigidbody>();
-            newOne.AddComponent<BoxCollider>();
-            newOne.AddComponent<Bullet_Collision>();
-            
             Rigidbody rb = newOne.GetComponent<Rigidbody>();
-            BoxCollider col = newOne.GetComponent<BoxCollider>();
             
             angle = (angle % 360 + 360) % 360;
             angle = (float) (angle / 180 * Math.PI);
@@ -105,13 +100,7 @@ public class Shooting : MonoBehaviour
                                         0 , 
                                         (float) Math.Sin(angle));
             rb.velocity *= _bulletSpeed;
-            rb.angularDrag = 1000000;
-            rb.useGravity = false;
 
-            col.isTrigger = true;
-            col.size = new Vector3(0.1f, 0.1f, 0.1f);
-            col.center = new Vector3(0, 0.5f, -0.5f);
-            
             _bullets.Add(newOne);
             _timeBullets.Add(Time.time);
 

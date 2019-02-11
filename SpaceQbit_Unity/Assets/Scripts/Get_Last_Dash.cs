@@ -13,7 +13,7 @@ public class Get_Last_Dash : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        otherScript = GameObject.FindWithTag("Frame").GetComponent<Mouvement_player>();
+        otherScript = GameObject.FindWithTag("Frame_Perso").GetComponent<Mouvement_player>();
         Cooldown_dash = otherScript.getCooldownDash();
     }
 

@@ -22,10 +22,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 711, y: 474}
-  m_MaxSize: {x: 18006, y: 14024}
+  m_MinSize: {x: 713, y: 474}
+  m_MaxSize: {x: 18008, y: 14024}
   vertical: 0
-  controlID: 4896
+  controlID: 1555
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 474}
   m_MaxSize: {x: 10002, y: 14024}
   vertical: 1
-  controlID: 4732
+  controlID: 1470
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -188,7 +188,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d2fbffffd6280000de280000f8280000fc28000034290000
+      m_ExpandedIDs: bafbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -231,8 +231,8 @@ MonoBehaviour:
     y: 268
     width: 462
     height: 679
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
+  m_MinSize: {x: 232, y: 274}
+  m_MaxSize: {x: 10002, y: 10024}
   m_ActualView: {fileID: 7}
   m_Panes:
   - {fileID: 7}
@@ -275,8 +275,7 @@ MonoBehaviour:
     m_SceneHandles: 
     m_ShowAllHits: 0
     m_SearchArea: 1
-    m_Folders:
-    - Assets/Sprites/Weapons
+    m_Folders: []
   m_ViewMode: 0
   m_StartGridSize: 92
   m_LastFolders:
@@ -289,7 +288,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: c0090000
     m_LastClickedID: 2496
-    m_ExpandedIDs: ffffffff0000000012260000362600003a260000562600006c26000094260000ba270000ee27000002280000442800007628000088290000
+    m_ExpandedIDs: ffffffff0000000014260000382600003c260000582600006e26000096260000bc270000f02700000428000046280000782800008c290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -315,9 +314,9 @@ MonoBehaviour:
       m_ResourceFile: 
   m_AssetTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 34290000
+    m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff0000000012260000362600003a260000562600006c26000094260000ba270000ee27000002280000442800007628000088290000
+    m_ExpandedIDs: ffffffff0000000014260000382600003c260000582600006e26000096260000bc270000f02700000428000046280000782800008c290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -342,8 +341,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 34290000
-    m_LastClickedInstanceID: 10548
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
@@ -393,10 +392,10 @@ MonoBehaviour:
     y: 0
     width: 906
     height: 947
-  m_MinSize: {x: 204, y: 324}
-  m_MaxSize: {x: 4004, y: 8024}
+  m_MinSize: {x: 204, y: 348}
+  m_MaxSize: {x: 4004, y: 8048}
   vertical: 1
-  controlID: 4897
+  controlID: 1523
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -457,9 +456,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.0011352897, y: -2.0253022, z: 0.04888537}
+    m_Target: {x: 0.049433425, y: -0.9897013, z: -1.2631359}
     speed: 2
-    m_Value: {x: 0.0011352897, y: -2.0253022, z: 0.04888537}
+    m_Value: {x: 0.049433425, y: -0.9897013, z: -1.2631359}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -487,13 +486,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.20733935, y: -0.5694191, z: 0.15117152, w: 0.7809734}
+    m_Target: {x: 0.23624481, y: 0.0029166993, z: -0.00070956774, w: 0.971689}
     speed: 2
-    m_Value: {x: 0.20733935, y: -0.5694191, z: 0.15117152, w: 0.7809734}
+    m_Value: {x: 0.23624481, y: 0.0029166993, z: -0.00070956774, w: 0.971689}
   m_Size:
-    m_Target: 2.5999503
+    m_Target: 16.759075
     speed: 2
-    m_Value: 2.5999503
+    m_Value: 16.759075
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -533,7 +532,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 10442
+  m_LastSelectedObjectID: 10466
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -669,8 +668,8 @@ MonoBehaviour:
     y: 0
     width: 552
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 74}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
