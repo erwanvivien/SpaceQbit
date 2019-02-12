@@ -79,7 +79,6 @@ public class Mouvement_player : MonoBehaviour
             Ray r = new Ray(transform.position, transform.position + mvt);
             
             bool pathAvailable = true; // CHANGER CA POUR CHECK!
-
             
             if (pathAvailable)
             {
