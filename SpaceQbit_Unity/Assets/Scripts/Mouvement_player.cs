@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Experimental.UIElements;
@@ -7,23 +8,21 @@ using Debug = UnityEngine.Debug;
 
 public class Mouvement_player : MonoBehaviour
 {
-    private float CooldownDash;
+    private float CooldownDash = 5f;
     
-    private float lastTimeDash;
-    private float lastTimePressed;
+    private float _lastTimeDash;
+    private float _lastTimePressed;
 
-    private bool dashable = true;
-    private bool moving = false;
+    private bool _dashable = true;
+    private bool _moving;
 
     private KeyCode lastKeyPressed;
-
-    public Camera mainCam;    
 
     // ----------------------------
 
     public float getLastTimeDash()
     {
-        return lastTimeDash;
+        return _lastTimeDash;
     }
 
     public float getCooldownDash()
@@ -33,18 +32,18 @@ public class Mouvement_player : MonoBehaviour
 
     public bool getDashable()
     {
-        return dashable;
+        return _dashable;
     }
 
     public bool getMoving()
     {
-        return moving;
+        return _moving;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        CooldownDash = 5f;
+        _lastTimeDash = 0;
     }
 
     private void OnCollisionEnter(Collision other)
@@ -58,51 +57,70 @@ public class Mouvement_player : MonoBehaviour
         float dt = Time.deltaTime;
         Vector3 mvt = Vector3.zero;
                 
-        if (lastTimeDash + CooldownDash < Time.time && !dashable)
+        if (_lastTimeDash + CooldownDash < Time.time && !_dashable)
         {
-            dashable = true;
+            _dashable = true;
         }        
         
         if (Input.GetKey(KeyCode.Z) || (Input.GetKey(KeyCode.LeftAlt)))
         {            
             mvt += Vector3.forward;
-            moving = true;
+            _moving = true;
         }
      
         if (Input.GetKey(KeyCode.Q))
         {
             mvt += Vector3.left;
-            moving = true;
+            _moving = true;
         }
         
         if (Input.GetKey(KeyCode.S))
         {
             mvt += Vector3.back;
-            moving = true;
+            _moving = true;
         }
         
         if (Input.GetKey(KeyCode.D))
         {
             mvt += Vector3.right;
-            moving = true;
+            _moving = true;
         }
-        
+
         if (Math.Abs(mvt.x) + Math.Abs(mvt.z) == 1)
+        {
             mvt *= 1.42f;
+        }
         
         transform.position += mvt * dt;
 
         if ((Input.GetKeyDown(KeyCode.LeftShift) || 
              Input.GetKeyDown(KeyCode.RightShift)) && 
-             dashable)
+             _dashable)
         {
-            transform.position += mvt;
-            lastTimeDash = Time.time;
-            dashable = false;
-        }        
+//            NavMeshAgent startingPos = GetComponent<NavMeshAgent>(); 
+//            
+//            Vector3 targetPos = transform.position + mvt;
+//
+            bool pathAvailable = true; // CHANGER CA POUR CHECK!
+//            NavMeshPath path;
+//            
+//            path = new NavMeshPath();
+//            pathAvailable = startingPos.CalculatePath(targetPos, path);
+
+            if (pathAvailable)
+            {
+                transform.position += mvt;
+                _lastTimeDash = Time.time;
+                _dashable = false;
+            }
+        }
+
+        Ray ray = new Ray(transform.position, transform.position + mvt);
         
-        if(mvt == Vector3.zero)
-            moving = false;
+        if (mvt == Vector3.zero)
+        {
+            _moving = false;
+        }
     }
 }
         
