@@ -56,36 +56,15 @@ public class Mouvement_player : MonoBehaviour
     {
         float dt = Time.deltaTime;
         Vector3 mvt = Vector3.zero;
+        _moving = true;
                 
         if (_lastTimeDash + CooldownDash < Time.time && !_dashable)
         {
             _dashable = true;
         }        
         
-        if (Input.GetKey(KeyCode.Z) || (Input.GetKey(KeyCode.LeftAlt)))
-        {            
-            mvt += Vector3.forward;
-            _moving = true;
-        }
-     
-        if (Input.GetKey(KeyCode.Q))
-        {
-            mvt += Vector3.left;
-            _moving = true;
-        }
+        mvt += new Vector3(Input.GetAxisRaw("Horizontal"),0, Input.GetAxisRaw("Vertical"));
         
-        if (Input.GetKey(KeyCode.S))
-        {
-            mvt += Vector3.back;
-            _moving = true;
-        }
-        
-        if (Input.GetKey(KeyCode.D))
-        {
-            mvt += Vector3.right;
-            _moving = true;
-        }
-
         if (Math.Abs(mvt.x) + Math.Abs(mvt.z) == 1)
         {
             mvt *= 1.42f;
@@ -97,16 +76,11 @@ public class Mouvement_player : MonoBehaviour
              Input.GetKeyDown(KeyCode.RightShift)) && 
              _dashable)
         {
-//            NavMeshAgent startingPos = GetComponent<NavMeshAgent>(); 
-//            
-//            Vector3 targetPos = transform.position + mvt;
-//
+            Ray r = new Ray(transform.position, transform.position + mvt);
+            
             bool pathAvailable = true; // CHANGER CA POUR CHECK!
-//            NavMeshPath path;
-//            
-//            path = new NavMeshPath();
-//            pathAvailable = startingPos.CalculatePath(targetPos, path);
 
+            
             if (pathAvailable)
             {
                 transform.position += mvt;
