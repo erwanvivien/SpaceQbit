@@ -23,7 +23,7 @@ public class Looking_Direction : MonoBehaviour
     void Update()
     {
         Vector3 posMouse = Input.mousePosition;
-        
+        string animToplay;
         posMouse.y -= Screen.height / 2;
         posMouse.x -= Screen.width / 2;
 
@@ -31,49 +31,50 @@ public class Looking_Direction : MonoBehaviour
         {
             if (posMouse.x >= 0)
             {
-                _anm.Play("player_rest");
+                animToplay = "player_rest";
             }
             else
             {
-                _anm.Play("player_rest_left");
+                animToplay = "player_rest_left";
             }
         }
-//        else
-//        {
-//            if (Math.Abs(posMouse.x) > Math.Abs(posMouse.y))
-//            {
-//                if (posMouse.x > 0)
-//                {
-//                    if (_rigid.velocity.x >= 0)
-//                    {
-//                        
-//                    }
-//                    else
-//                    {
-//                        
-//                    }
-//                }
-//                else
-//                {
-//                    if(_rigid.velocity.x >= 0)
-//                    {
-//                        _anm.Play("player_left");
-//                    }
-//                    else
-//                    {
-//                        _anm.Play("player_right");
-//                    }
-//                }
-//            }
-//            else
-//            {
-//                if (posMouse.y > 0)
-//                    _anm.Play("player_up");
-//                else
-//                {
-//                    _anm.Play("player_down");
-//                }
-//            }
-//        }
+        else
+        {
+            if (Math.Abs(posMouse.x) > Math.Abs(posMouse.y))
+            {
+                if (posMouse.x > 0)
+                {
+                    if (_rigid.velocity.x >= 0)
+                    {
+                        animToplay = "player_right_right";
+                    }
+                    else
+                    {
+                        animToplay = "player_left_right";
+                    }
+                }
+                else
+                {
+                    if(_rigid.velocity.x >= 0)
+                    {
+                        animToplay = "player_left_left";
+                    }
+                    else
+                    {
+                        animToplay = "player_right_left";
+                    }
+                }
+            }
+            else
+            {
+                if (posMouse.y > 0)
+                    animToplay = "player_up";
+                else
+                {
+                    animToplay = "player_down";
+                }
+            }
+        }
+        _anm.Play(animToplay);
     }
 }

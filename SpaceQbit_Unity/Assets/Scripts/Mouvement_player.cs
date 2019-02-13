@@ -66,8 +66,6 @@ public class Mouvement_player : MonoBehaviour
             mvt *= 1.42f;
         }
         
-        transform.position += mvt * dt;
-
         if (((Input.GetKeyDown(KeyCode.LeftShift) || 
              Input.GetKeyDown(KeyCode.RightShift)) && 
              _dashable))
@@ -81,6 +79,10 @@ public class Mouvement_player : MonoBehaviour
         if (_lastTimeMoveSpeed < _durationMoveSpeed && _speeding)
         {
             transform.position += mvt * dt * _moveSpeed;
+        }
+        else
+        {
+            transform.position += mvt * dt;
         }
 
         if (mvt == Vector3.zero)
