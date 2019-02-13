@@ -16,52 +16,42 @@ public class Mouvement_player : MonoBehaviour
     private bool _dashable = true;
     private bool _moving;
 
-    private KeyCode lastKeyPressed;
+    private KeyCode _lastKeyPressed;
 
     // ----------------------------
 
-    public float getLastTimeDash()
+    public float GetLastTimeDash()
     {
         return _lastTimeDash;
     }
 
-    public float getCooldownDash()
+    public float GetCooldownDash()
     {
         return CooldownDash;
     }
 
-    public bool getDashable()
+    public bool GetDashable()
     {
         return _dashable;
     }
 
-    public bool getMoving()
+    public bool GetMoving()
     {
         return _moving;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        _lastTimeDash = 0;
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        //throw new System.NotImplementedException();
-    }
-
-    // Update is called once  frame
     void Update()
     {
         float dt = Time.deltaTime;
+        
         Vector3 mvt = Vector3.zero;
+        
         _moving = true;
-                
-        if (_lastTimeDash + CooldownDash < Time.time && !_dashable)
+        
+        if (_lastTimeDash > CooldownDash && !_dashable)
         {
             _dashable = true;
-        }        
+        }
         
         mvt += new Vector3(Input.GetAxisRaw("Horizontal"),0, Input.GetAxisRaw("Vertical"));
         
@@ -72,28 +62,21 @@ public class Mouvement_player : MonoBehaviour
         
         transform.position += mvt * dt;
 
-        if ((Input.GetKeyDown(KeyCode.LeftShift) || 
+        if (((Input.GetKeyDown(KeyCode.LeftShift) || 
              Input.GetKeyDown(KeyCode.RightShift)) && 
-             _dashable)
+             _dashable))
         {
-            Ray r = new Ray(transform.position, transform.position + mvt);
-            
-            bool pathAvailable = true; // CHANGER CA POUR CHECK!
-            
-            if (pathAvailable)
-            {
-                transform.position += mvt;
-                _lastTimeDash = Time.time;
-                _dashable = false;
-            }
+            transform.position += mvt;
+            _lastTimeDash = 0;
+            _dashable = false;
         }
 
-        Ray ray = new Ray(transform.position, transform.position + mvt);
-        
         if (mvt == Vector3.zero)
         {
             _moving = false;
         }
+        
+        _lastTimeDash += dt;
     }
 }
         

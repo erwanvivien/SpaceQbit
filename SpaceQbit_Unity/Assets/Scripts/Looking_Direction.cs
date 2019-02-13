@@ -6,15 +6,17 @@ using UnityEngine;
 
 public class Looking_Direction : MonoBehaviour
 {
-    private Animator anm;
-    private Mouvement_player player;
+    private Animator _anm;
+    private Mouvement_player _player;
+    private Rigidbody _rigid;
     
     // Start is called before the first frame update
     void Start()
     {
-        anm = GetComponent<Animator>();
+        _anm = GetComponent<Animator>();
         
-        player = GameObject.FindWithTag("Frame_Perso").GetComponent<Mouvement_player>();
+        _player = GameObject.FindWithTag("Frame_Perso").GetComponent<Mouvement_player>();
+        _rigid = GameObject.FindWithTag("Frame_Perso").GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -25,30 +27,53 @@ public class Looking_Direction : MonoBehaviour
         posMouse.y -= Screen.height / 2;
         posMouse.x -= Screen.width / 2;
 
-        if (!player.getMoving())
+        if (!_player.GetMoving())
         {
-            anm.Play("player_rest");
-        }
-        else
-        {
-            if (Math.Abs(posMouse.x) > Math.Abs(posMouse.y))
+            if (posMouse.x >= 0)
             {
-                if (posMouse.x < 0)
-                    anm.Play("player_left");
-                else
-                {
-                    anm.Play("player_right");
-                }
+                _anm.Play("player_rest");
             }
             else
             {
-                if (posMouse.y > 0)
-                    anm.Play("player_up");
-                else
-                {
-                    anm.Play("player_down");
-                }
+                _anm.Play("player_rest_left");
             }
         }
+//        else
+//        {
+//            if (Math.Abs(posMouse.x) > Math.Abs(posMouse.y))
+//            {
+//                if (posMouse.x > 0)
+//                {
+//                    if (_rigid.velocity.x >= 0)
+//                    {
+//                        
+//                    }
+//                    else
+//                    {
+//                        
+//                    }
+//                }
+//                else
+//                {
+//                    if(_rigid.velocity.x >= 0)
+//                    {
+//                        _anm.Play("player_left");
+//                    }
+//                    else
+//                    {
+//                        _anm.Play("player_right");
+//                    }
+//                }
+//            }
+//            else
+//            {
+//                if (posMouse.y > 0)
+//                    _anm.Play("player_up");
+//                else
+//                {
+//                    _anm.Play("player_down");
+//                }
+//            }
+//        }
     }
 }

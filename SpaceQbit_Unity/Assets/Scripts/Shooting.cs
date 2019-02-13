@@ -24,7 +24,6 @@ public class Shooting : MonoBehaviour
 
     private float _durationBullet;
     
-    
     public float GetLastTimeShoot()
     {
         return _lastTimeShoot;

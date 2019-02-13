@@ -8,8 +8,8 @@ public class Bullet_Collision : MonoBehaviour
     
     private void OnCollisionEnter(Collision other)
     {
-        string tag = other.gameObject.tag;
-        if (tag != "Frame_Perso" && tag != "Terrain" || tag == "Mur")
+        string tags = other.gameObject.tag;
+        if (tags != "Frame_Perso" && tags != "Terrain" || tags == "Mur")
         {
             _collision = true;
         }

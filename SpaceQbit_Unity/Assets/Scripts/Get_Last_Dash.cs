@@ -4,30 +4,35 @@ using UnityEngine;
 
 public class Get_Last_Dash : MonoBehaviour
 {
-    private Mouvement_player otherScript;
-    private float Dashed;
-    private bool d;
-    private float Cooldown_dash;
+    private Mouvement_player _otherScript;
+    private float _dashed;
+    private bool _d;
+    private float _timer;
+    private float _cooldown;
+    private float _time;
 
     void Start()
     {
-        otherScript = GameObject.FindWithTag("Frame_Perso").GetComponent<Mouvement_player>();
-        Cooldown_dash = otherScript.getCooldownDash();
+        _otherScript = GameObject.FindWithTag("Frame_Perso").GetComponent<Mouvement_player>();
+        _cooldown = _otherScript.GetCooldownDash();
     }
 
     void Update()
     {
-        float lastDash = otherScript.getLastTimeDash();
+        _d = _otherScript.GetDashable();
 
-        float cooldown = (lastDash + Cooldown_dash - Time.time) / Cooldown_dash;
-        
-        if (cooldown < 0 ||
-            (Time.time <= 5 &&
-            otherScript.getDashable()))
+        if (!_d && _timer <= 0) 
         {
-            cooldown = 0;
+            _timer = _cooldown;
         }
 
-        transform.localScale = (new Vector3(cooldown, 1, 1));
+        if (_timer < 0)
+        {
+            _timer = 0;
+        }
+        
+        transform.localScale = (new Vector3(_timer / _cooldown, 1, 1));
+
+        _timer -= Time.deltaTime;
     }
 }
