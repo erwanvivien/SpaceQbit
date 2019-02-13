@@ -16,6 +16,11 @@ public class Mouvement_player : MonoBehaviour
     private bool _dashable = true;
     private bool _moving;
 
+    private bool _speeding;
+    private float _lastTimeMoveSpeed;
+    private float _moveSpeed = 3;
+    private float _durationMoveSpeed = 0.5f;
+
     private KeyCode _lastKeyPressed;
 
     // ----------------------------
@@ -51,6 +56,7 @@ public class Mouvement_player : MonoBehaviour
         if (_lastTimeDash > CooldownDash && !_dashable)
         {
             _dashable = true;
+            _speeding = false;
         }
         
         mvt += new Vector3(Input.GetAxisRaw("Horizontal"),0, Input.GetAxisRaw("Vertical"));
@@ -66,9 +72,15 @@ public class Mouvement_player : MonoBehaviour
              Input.GetKeyDown(KeyCode.RightShift)) && 
              _dashable))
         {
-            transform.position += mvt;
             _lastTimeDash = 0;
+            _lastTimeMoveSpeed = 0;
             _dashable = false;
+            _speeding = true;
+        }
+
+        if (_lastTimeMoveSpeed < _durationMoveSpeed && _speeding)
+        {
+            transform.position += mvt * dt * _moveSpeed;
         }
 
         if (mvt == Vector3.zero)
@@ -77,6 +89,7 @@ public class Mouvement_player : MonoBehaviour
         }
         
         _lastTimeDash += dt;
+        _lastTimeMoveSpeed += dt;
     }
 }
         
