@@ -14,6 +14,12 @@
           <e p="Make_to_Screen_Size.cs" t="Include" />
           <e p="Menu_Escape.cs" t="Include" />
           <e p="Mouvement_player.cs" t="Include" />
+          <e p="NavMeshScripts" t="Include">
+            <e p="NavMeshLink.cs" t="Include" />
+            <e p="NavMeshModifier.cs" t="Include" />
+            <e p="NavMeshModifierVolume.cs" t="Include" />
+            <e p="NavMeshSurface.cs" t="Include" />
+          </e>
           <e p="Shooting.cs" t="Include" />
         </e>
       </e>

@@ -63,6 +63,10 @@
     <Compile Include="Assets\Scripts\Make_to_Screen_Size.cs" />
     <Compile Include="Assets\Scripts\Menu_Escape.cs" />
     <Compile Include="Assets\Scripts\Mouvement_player.cs" />
+    <Compile Include="Assets\Scripts\NavMeshScripts\NavMeshLink.cs" />
+    <Compile Include="Assets\Scripts\NavMeshScripts\NavMeshModifier.cs" />
+    <Compile Include="Assets\Scripts\NavMeshScripts\NavMeshModifierVolume.cs" />
+    <Compile Include="Assets\Scripts\NavMeshScripts\NavMeshSurface.cs" />
     <Compile Include="Assets\Scripts\Shooting.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Dev/SpaceQbit/SpaceQbit_Unity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
