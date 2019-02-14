@@ -7,12 +7,12 @@
         <e p="Scripts" t="Include">
           <e p="Bullet_Collision.cs" t="Include" />
           <e p="Cam_Follow.cs" t="Include" />
+          <e p="Escape_Menu.cs" t="Include" />
           <e p="Get_Coo_Cam.cs" t="Include" />
           <e p="Get_Hp.cs" t="Include" />
           <e p="Get_Last_Dash.cs" t="Include" />
           <e p="Looking_Direction.cs" t="Include" />
           <e p="Make_to_Screen_Size.cs" t="Include" />
-          <e p="Menu_Escape.cs" t="Include" />
           <e p="Mouvement_player.cs" t="Include" />
           <e p="NavMeshScripts" t="Include">
             <e p="NavMeshLink.cs" t="Include" />

@@ -8,7 +8,9 @@ using Debug = UnityEngine.Debug;
 
 public class Mouvement_player : MonoBehaviour
 {
-    private float CooldownDash = 5f;
+    private Escape_Menu esc;
+    
+    private float _cooldownDash = 5f;
     
     private float _lastTimeDash;
     private float _lastTimePressed;
@@ -32,7 +34,7 @@ public class Mouvement_player : MonoBehaviour
 
     public float GetCooldownDash()
     {
-        return CooldownDash;
+        return _cooldownDash;
     }
 
     public bool GetDashable()
@@ -45,22 +47,42 @@ public class Mouvement_player : MonoBehaviour
         return _moving;
     }
 
+    private void Start()
+    {
+        esc = GameObject.FindWithTag("Menu").GetComponent<Escape_Menu>();
+    }
+
     void Update()
     {
+        if (esc.getOn())
+        {
+            _moving = false;
+            _dashable = true;
+            _speeding = false;
+
+            return;
+        }
+
+        
         float dt = Time.deltaTime;
         
         Vector3 mvt = Vector3.zero;
         
         _moving = true;
         
-        if (_lastTimeDash > CooldownDash && !_dashable)
+        if (_lastTimeDash > _cooldownDash && !_dashable)
         {
             _dashable = true;
             _speeding = false;
         }
-        
+                
         mvt += new Vector3(Input.GetAxisRaw("Horizontal"),0, Input.GetAxisRaw("Vertical"));
         
+        if (mvt == Vector3.zero)
+        {
+            _moving = false;
+        }
+                
         if (Math.Abs(mvt.x) + Math.Abs(mvt.z) == 1)
         {
             mvt *= 1.42f;
@@ -85,10 +107,6 @@ public class Mouvement_player : MonoBehaviour
             transform.position += mvt * dt;
         }
 
-        if (mvt == Vector3.zero)
-        {
-            _moving = false;
-        }
         
         _lastTimeDash += dt;
         _lastTimeMoveSpeed += dt;

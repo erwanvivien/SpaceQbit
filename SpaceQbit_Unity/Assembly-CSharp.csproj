@@ -56,12 +56,12 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Bullet_Collision.cs" />
     <Compile Include="Assets\Scripts\Cam_Follow.cs" />
+    <Compile Include="Assets\Scripts\Escape_Menu.cs" />
     <Compile Include="Assets\Scripts\Get_Coo_Cam.cs" />
     <Compile Include="Assets\Scripts\Get_Hp.cs" />
     <Compile Include="Assets\Scripts\Get_Last_Dash.cs" />
     <Compile Include="Assets\Scripts\Looking_Direction.cs" />
     <Compile Include="Assets\Scripts\Make_to_Screen_Size.cs" />
-    <Compile Include="Assets\Scripts\Menu_Escape.cs" />
     <Compile Include="Assets\Scripts\Mouvement_player.cs" />
     <Compile Include="Assets\Scripts\NavMeshScripts\NavMeshLink.cs" />
     <Compile Include="Assets\Scripts\NavMeshScripts\NavMeshModifier.cs" />

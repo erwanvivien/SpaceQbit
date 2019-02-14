@@ -8,6 +8,9 @@ TagManager:
   - Perso
   - Frame
   - Frame_Perso
+  - Menu
+  - Cooldown
+  - HP
   layers:
   - Default
   - TransparentFX

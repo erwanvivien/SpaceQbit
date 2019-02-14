@@ -8,8 +8,10 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     public GameObject Obj;
-    //public Camera cam;
     
+    private Escape_Menu esc;
+
+
     
     
     
@@ -50,6 +52,8 @@ public class Shooting : MonoBehaviour
         _bullets = new List<GameObject>();
         _timeBullets = new List<float>();
         _cooldownShoot = 0.5f;
+        
+        esc = GameObject.FindWithTag("Menu").GetComponent<Escape_Menu>();
     }
 
     float sign(float x)
@@ -75,6 +79,11 @@ public class Shooting : MonoBehaviour
             (!_shotable))
         {
             _shotable = true;
+        }
+        
+        if (esc.getOn())
+        {
+            return;
         }
 
         if (Input.GetMouseButton(0) && _shotable)
