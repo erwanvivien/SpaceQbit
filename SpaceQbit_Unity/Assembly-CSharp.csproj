@@ -9,7 +9,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{060869FD-0C52-14BE-6400-776ED5B69AA4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -60,7 +61,6 @@
     <Compile Include="Assets\Scripts\Get_Coo_Cam.cs" />
     <Compile Include="Assets\Scripts\Get_Hp.cs" />
     <Compile Include="Assets\Scripts\Get_Last_Dash.cs" />
-    <Compile Include="Assets\Scripts\Life.cs" />
     <Compile Include="Assets\Scripts\Looking_Direction.cs" />
     <Compile Include="Assets\Scripts\Make_to_Screen_Size.cs" />
     <Compile Include="Assets\Scripts\Mouvement_player.cs" />
