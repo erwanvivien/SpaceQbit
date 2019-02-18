@@ -2,55 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98cfb365-9dc2-4e70-bfb4-6bc3daeee3b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpaceQbit_Unity/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpaceQbit_Unity/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SpaceQbit_Unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpaceQbit_Unity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player/Personnage.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/player/Personnage.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player/player_left_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player/player_left_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player/player_left_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player/player_left_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player/player_rest_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player/player_rest_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player/player_right_left.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player/player_right_left.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player/player_right_right.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/player/player_right_right.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet_Collision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullet_Collision.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cam_Follow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cam_Follow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Escape_Menu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Escape_Menu.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Looking_Direction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Looking_Direction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mouvement_player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mouvement_player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NavMeshScripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NavMeshScripts/NavMeshLink.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NavMeshScripts/NavMeshLink.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NavMeshScripts/NavMeshModifier.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NavMeshScripts/NavMeshModifier.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NavMeshScripts/NavMeshModifierVolume.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NavMeshScripts/NavMeshModifierVolume.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NavMeshScripts/NavMeshSurface.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NavMeshScripts/NavMeshSurface.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/CrashedAssetImports.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/BuiltinAssemblies.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/BuiltinAssemblies.stamp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.CollabProxy.Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.CollabProxy.Editor.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptMapper" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptMapper" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/c97626-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/c97626-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/6e01dd-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/6e01dd-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../q" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,12 +34,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="8184" />
+          <entry key="cs" value="8187" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="8184" />
+          <entry key="C#" value="8187" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -112,12 +71,12 @@
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Get_Coo_Cam.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+              <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
               <folding>
-                <marker date="1550088874880" expanded="false" signature="6:151" ph="..." />
-                <marker date="1550088874880" expanded="true" signature="193:443" ph="{...}" />
-                <marker date="1550088874880" expanded="true" signature="280:341" ph="{...}" />
-                <marker date="1550088874880" expanded="true" signature="360:441" ph="{...}" />
+                <marker date="1550519990308" expanded="false" signature="6:151" ph="..." />
+                <marker date="1550519990308" expanded="true" signature="193:443" ph="{...}" />
+                <marker date="1550519990308" expanded="true" signature="280:341" ph="{...}" />
+                <marker date="1550519990308" expanded="true" signature="360:441" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -276,7 +235,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GetCooCam.cs" />
         <option value="$PROJECT_DIR$/Assets/Shooting.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Ball_Collision.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Get_Coo_Cam.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Get_Hp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Make_to_Screen_Size.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Menu_Escape.cs" />
@@ -296,6 +254,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Cam_Follow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Escape_Menu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mouvement_player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Get_Coo_Cam.cs" />
       </list>
     </option>
   </component>
@@ -408,7 +367,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59547000" />
+    <option name="totallyTimeSpent" value="60271000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -707,12 +666,12 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Get_Coo_Cam.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
           <folding>
-            <marker date="1550088874880" expanded="false" signature="6:151" ph="..." />
-            <marker date="1550088874880" expanded="true" signature="193:443" ph="{...}" />
-            <marker date="1550088874880" expanded="true" signature="280:341" ph="{...}" />
-            <marker date="1550088874880" expanded="true" signature="360:441" ph="{...}" />
+            <marker date="1550519990308" expanded="false" signature="6:151" ph="..." />
+            <marker date="1550519990308" expanded="true" signature="193:443" ph="{...}" />
+            <marker date="1550519990308" expanded="true" signature="280:341" ph="{...}" />
+            <marker date="1550519990308" expanded="true" signature="360:441" ph="{...}" />
           </folding>
         </state>
       </provider>
