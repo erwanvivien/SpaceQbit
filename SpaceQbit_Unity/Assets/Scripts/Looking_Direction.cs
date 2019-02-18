@@ -41,8 +41,14 @@ public class Looking_Direction : MonoBehaviour
         }
 
         transform.localScale = new Vector3(Math.Sign(posMouse.x) >= 0 ? _scaling.x : -_scaling.x, 
+<<<<<<< HEAD
+            _scaling.y, 
+            _scaling.z);
+        
+=======
                                         _scaling.y, 
                                         _scaling.z);
+>>>>>>> 70c98b4e9753ed38e8a170cce6d09cd0b997b85e
         _anm.Play(animToPlay);
     }
 }

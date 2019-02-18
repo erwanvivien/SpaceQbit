@@ -1,22 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Cam_Follow: MonoBehaviour
 {
     private Vector3 _b = Vector3.zero;
 
-    public GameObject obj;
+    public GameObject Obj;
     private Vector3 _offset;
 
     void Start()
     {
-        _offset = transform.position - obj.transform.position;
+        _offset = transform.position - Obj.transform.position;
     }
     
     void LateUpdate()
     {
-        Vector3 targetPosition = obj.transform.position;
+        Vector3 targetPosition = Obj.transform.position;
 
         targetPosition += _offset;
         

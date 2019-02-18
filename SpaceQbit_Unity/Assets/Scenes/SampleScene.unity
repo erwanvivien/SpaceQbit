@@ -215,9 +215,9 @@ Transform:
   m_GameObject: {fileID: 123268296}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.06, z: 0}
-  m_LocalScale: {x: 0.015566189, y: 1.12, z: 0.016515186}
+  m_LocalScale: {x: 0.015566188, y: 1.12, z: 0.016515186}
   m_Children: []
-  m_Father: {fileID: 1701816537}
+  m_Father: {fileID: 888860668}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &159716619
@@ -1529,6 +1529,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882687046}
   m_CullTransparentMesh: 0
+--- !u!1 &888860667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 888860668}
+  m_Layer: 0
+  m_Name: Murs
+  m_TagString: Mur
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &888860668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888860667}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 123268301}
+  m_Father: {fileID: 1701816537}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1124514853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1999,6 +2030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6a7edd1ef27df4ab3ac3d43dd9187a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_Name: 
   m_EditorClassIdentifier: 
   m_Name: 
@@ -2008,6 +2040,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obj: {fileID: 444795948}
+=======
+  Obj: {fileID: 444795948}
+>>>>>>> 6edb0b69d9825bc760e7db7e2ce1384666c30bc2
 --- !u!4 &1474090730
 Transform:
   m_ObjectHideFlags: 0
@@ -2486,7 +2521,7 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 80, y: 1, z: 80}
   m_Children:
-  - {fileID: 123268301}
+  - {fileID: 888860668}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2789,7 +2824,7 @@ GameObject:
   - component: {fileID: 2012458029}
   - component: {fileID: 2012458031}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

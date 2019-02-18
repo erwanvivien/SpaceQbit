@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Escape_Menu : MonoBehaviour
+public class EscapeMenu : MonoBehaviour
 {
     private bool _on;
     private Canvas _canv;
-    private Canvas _canv_CD;
-    private Canvas _canv_HP;
+    private Canvas _canvCd;
+    private Canvas _canvHp;
 
-    public bool getOn()
+    public bool GetOn()
     {
         return _on;
     }
@@ -18,16 +18,16 @@ public class Escape_Menu : MonoBehaviour
     void Start()
     {
         _canv = GetComponent<Canvas>();
-        _canv_CD = GameObject.FindWithTag("Cooldown").GetComponent<Canvas>();
-        _canv_HP = GameObject.FindWithTag("HP").GetComponent<Canvas>();
+        _canvCd = GameObject.FindWithTag("Cooldown").GetComponent<Canvas>();
+        _canvHp = GameObject.FindWithTag("HP").GetComponent<Canvas>();
     }
 
     // Update is called once per frame
     void Update()
     {
         _canv.enabled = _on;
-        _canv_CD.enabled = !_on;
-        _canv_HP.enabled = !_on;
+        _canvCd.enabled = !_on;
+        _canvHp.enabled = !_on;
         
 //        _canv.
         
