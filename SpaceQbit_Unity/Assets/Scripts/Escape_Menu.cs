@@ -29,6 +29,8 @@ public class Escape_Menu : MonoBehaviour
         _canv_CD.enabled = !_on;
         _canv_HP.enabled = !_on;
         
+//        _canv.
+        
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             _on = !_on;

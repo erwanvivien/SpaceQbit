@@ -5,11 +5,26 @@ using UnityEngine;
 public class Bullet_Collision : MonoBehaviour
 {
     private bool _collision;
-    
-    private void OnCollisionEnter(Collision other)
+
+    private void OnTriggerEnter(Collider other)
     {
         string tags = other.gameObject.tag;
-        if (tags != "Frame_Perso" && tags != "Terrain" || tags == "Mur")
+        switch (tags)
+        {
+                case "Mur":
+                    _collision = true;
+                    break;
+                
+                case "Killable":
+//                    other.gameObject.GetComponent<Life>().Attack(damage);
+                    _collision = true;
+                    break;
+                
+                default:
+                    _collision = false;
+                    break;
+        }
+        if (tags == "Mur" || (tags != "Frame_Perso" && tags != "Terrain"))
         {
             _collision = true;
         }

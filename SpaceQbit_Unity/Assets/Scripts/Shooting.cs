@@ -129,10 +129,10 @@ public class Shooting : MonoBehaviour
             
             if (nvScript.GetCollision())
             {
+                Destroy(_bullets[i]);
+
                 _timeBullets.RemoveAt(i);
                 _bullets.RemoveAt(i);
-
-                Destroy(_bullets[i]);
             }
         }
     }

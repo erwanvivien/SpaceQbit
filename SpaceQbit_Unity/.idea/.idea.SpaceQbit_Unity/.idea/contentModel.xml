@@ -11,6 +11,7 @@
           <e p="Get_Coo_Cam.cs" t="Include" />
           <e p="Get_Hp.cs" t="Include" />
           <e p="Get_Last_Dash.cs" t="Include" />
+          <e p="Life.cs" t="Include" />
           <e p="Looking_Direction.cs" t="Include" />
           <e p="Make_to_Screen_Size.cs" t="Include" />
           <e p="Mouvement_player.cs" t="Include" />
