@@ -9,7 +9,7 @@ public class Shooting : MonoBehaviour
 {
     public GameObject Obj;
     
-    private Escape_Menu esc;
+    private EscapeMenu esc;
 
 
     
@@ -53,7 +53,7 @@ public class Shooting : MonoBehaviour
         _timeBullets = new List<float>();
         _cooldownShoot = 0.5f;
         
-        esc = GameObject.FindWithTag("Menu").GetComponent<Escape_Menu>();
+        esc = GameObject.FindWithTag("Menu").GetComponent<EscapeMenu>();
     }
 
     float sign(float x)
@@ -81,7 +81,7 @@ public class Shooting : MonoBehaviour
             _shotable = true;
         }
         
-        if (esc.getOn())
+        if (esc.GetOn())
         {
             return;
         }
@@ -129,10 +129,9 @@ public class Shooting : MonoBehaviour
             
             if (nvScript.GetCollision())
             {
+                Destroy(_bullets[i]);
                 _timeBullets.RemoveAt(i);
                 _bullets.RemoveAt(i);
-
-                Destroy(_bullets[i]);
             }
         }
     }

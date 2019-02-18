@@ -8,7 +8,7 @@ using Debug = UnityEngine.Debug;
 
 public class Mouvement_player : MonoBehaviour
 {
-    private Escape_Menu esc;
+    private EscapeMenu esc;
     
     private float _cooldownDash = 5f;
     
@@ -49,12 +49,12 @@ public class Mouvement_player : MonoBehaviour
 
     private void Start()
     {
-        esc = GameObject.FindWithTag("Menu").GetComponent<Escape_Menu>();
+        esc = GameObject.FindWithTag("Menu").GetComponent<EscapeMenu>();
     }
 
     void Update()
     {
-        if (esc.getOn())
+        if (esc.GetOn())
         {
             _moving = false;
             _dashable = true;
