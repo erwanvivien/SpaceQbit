@@ -18,7 +18,7 @@ public class Bullet_Collision : MonoBehaviour
                 break;
 
             case "Killable":
-                other.gameObject.GetComponent<Life>().Attack(_damage);
+                other.gameObject.GetComponent<Killable>().Attack(_damage);
                 _collision = true;
                 break;
 

@@ -60,7 +60,7 @@
     <Compile Include="Assets\Scripts\Get_Coo_Cam.cs" />
     <Compile Include="Assets\Scripts\Get_Hp.cs" />
     <Compile Include="Assets\Scripts\Get_Last_Dash.cs" />
-    <Compile Include="Assets\Scripts\Life.cs" />
+    <Compile Include="Assets\Scripts\Killable.cs" />
     <Compile Include="Assets\Scripts\Looking_Direction.cs" />
     <Compile Include="Assets\Scripts\Make_to_Screen_Size.cs" />
     <Compile Include="Assets\Scripts\Mouvement_player.cs" />

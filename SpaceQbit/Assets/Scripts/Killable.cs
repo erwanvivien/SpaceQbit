@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Life : MonoBehaviour
+public class Killable : MonoBehaviour
 {
     [SerializeField] private int _life = 0;
 
