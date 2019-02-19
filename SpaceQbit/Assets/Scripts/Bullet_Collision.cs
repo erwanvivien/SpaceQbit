@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Bullet_Collision : MonoBehaviour
 {
+    [SerializeField] private int _damage = 0;
+    
     private bool _collision;
 
     private void OnTriggerEnter(Collider other)
@@ -16,7 +18,7 @@ public class Bullet_Collision : MonoBehaviour
                 break;
 
             case "Killable":
-//                other.gameObject.GetComponent<Life>().Attack(damage);
+                other.gameObject.GetComponent<Life>().Attack(_damage);
                 _collision = true;
                 break;
 

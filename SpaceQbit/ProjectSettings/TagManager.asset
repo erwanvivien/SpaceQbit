@@ -12,6 +12,7 @@ TagManager:
   - Cooldown
   - HP
   - Mur
+  - Killable
   layers:
   - Default
   - TransparentFX
