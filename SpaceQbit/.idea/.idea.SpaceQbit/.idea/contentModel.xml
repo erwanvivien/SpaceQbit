@@ -76,6 +76,7 @@
           <e p="Looking_Direction.cs" t="Include" />
           <e p="Make_to_Screen_Size.cs" t="Include" />
           <e p="Mouvement_player.cs" t="Include" />
+          <e p="Search_Target.cs" t="Include" />
           <e p="Shooting.cs" t="Include" />
         </e>
       </e>
