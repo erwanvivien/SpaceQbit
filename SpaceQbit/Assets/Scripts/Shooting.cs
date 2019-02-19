@@ -17,10 +17,38 @@ public class Shooting : MonoBehaviour
     
     private float _lastTimeShoot;
     private bool _shotable = true;
+    
     [SerializeField] private float _cooldownShoot = 0.5f;
     [SerializeField] private float _bulletSpeed = 3;
 
     [SerializeField] private float _durationBullet = 10;
+    
+    [SerializeField] private int _damage = 10;
+    [SerializeField] private float _cooldownBulletSpeel = 10f;
+    [SerializeField] private int _boostDamageBullet = 3;
+
+    private float _time;
+    private bool _damageBoosted;
+
+    public bool GetDamageBoosted()
+    {
+        return _damageBoosted;
+    }
+    
+    public int GetDamage()
+    {
+        return _damage;
+    }
+
+    public float GetCooldownBulletSpell()
+    {
+        return _cooldownBulletSpeel;
+    }
+
+    public int GetBoostDamagebullet()
+    {
+        return _boostDamageBullet;
+    }
     
     public float GetLastTimeShoot()
     {
@@ -37,8 +65,6 @@ public class Shooting : MonoBehaviour
         return _shotable;
     }
 
-
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -128,5 +154,26 @@ public class Shooting : MonoBehaviour
                 _bullets.RemoveAt(i);
             }
         }
+        
+        if (_time < 0)
+        {
+            if (_damageBoosted)
+            {
+                _damage /= _boostDamageBullet;
+                _damageBoosted = false;
+            }
+            
+            _time = 0;
+        }
+        
+        if (Input.GetKeyDown(KeyCode.R) && (_time <= 0f))
+        {
+            _damageBoosted = true;
+            _time = _cooldownBulletSpeel;
+            _damage *= _boostDamageBullet;
+        }
+
+        _time -= Time.deltaTime;
+
     }
 }
