@@ -24,11 +24,12 @@ public class Shooting : MonoBehaviour
     [SerializeField] private float _durationBullet = 10;
     
     [SerializeField] private int _damage = 10;
-    [SerializeField] private float _cooldownBulletSpeel = 10f;
+    [SerializeField] private float _cooldownBulletSpell = 10f;
+    [SerializeField] private float _durationBulletSpell = 1f;
     [SerializeField] private int _boostDamageBullet = 3;
 
     private float _time;
-    private bool _damageBoosted;
+    private bool _damageBoosted = true;
 
     public bool GetDamageBoosted()
     {
@@ -42,7 +43,7 @@ public class Shooting : MonoBehaviour
 
     public float GetCooldownBulletSpell()
     {
-        return _cooldownBulletSpeel;
+        return _cooldownBulletSpell;
     }
 
     public int GetBoostDamagebullet()
@@ -115,7 +116,15 @@ public class Shooting : MonoBehaviour
 
             float angle = GetCooToAngle();
 
-            Transform sprite = newOne.GetComponentInChildren<Transform>();   
+            Transform sprite = newOne.GetComponentInChildren<Transform>();
+            
+            if (!_damageBoosted)
+            {
+                sprite.localScale *= 2;
+            }
+
+            sprite.localPosition.Set(sprite.localPosition.x, 0.1f, sprite.localPosition.z);
+            
             sprite.Rotate(0 , 0, angle - 90);
             
             Rigidbody rb = newOne.GetComponent<Rigidbody>();
@@ -157,23 +166,22 @@ public class Shooting : MonoBehaviour
         
         if (_time < 0)
         {
-            if (_damageBoosted)
+            if (!_damageBoosted)
             {
                 _damage /= _boostDamageBullet;
-                _damageBoosted = false;
+                _damageBoosted = true;
             }
             
             _time = 0;
         }
         
-        if (Input.GetKeyDown(KeyCode.R) && (_time <= 0f))
+        if (Input.GetKeyDown(KeyCode.R) && _time <= 0)
         {
-            _damageBoosted = true;
-            _time = _cooldownBulletSpeel;
+            _damageBoosted = false;
+            _time = _durationBulletSpell;
             _damage *= _boostDamageBullet;
         }
 
         _time -= Time.deltaTime;
-
     }
 }
