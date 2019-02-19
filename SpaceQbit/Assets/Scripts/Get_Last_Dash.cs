@@ -5,10 +5,12 @@ using UnityEngine;
 public class Get_Last_Dash : MonoBehaviour
 {
     private Mouvement_player _otherScript;
+    
     private float _dashed;
-    private bool _d;
-    private float _timer;
+    
+    private float _timer = 0;
     private float _cooldown;
+    
     private float _time;
 
     void Start()
@@ -19,9 +21,9 @@ public class Get_Last_Dash : MonoBehaviour
 
     void Update()
     {
-        _d = _otherScript.GetDashable();
+        bool d = _otherScript.GetDashable();
 
-        if (!_d && _timer <= 0) 
+        if (!d && _timer <= 0) 
         {
             _timer = _cooldown;
         }

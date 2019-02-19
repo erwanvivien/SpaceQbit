@@ -17,10 +17,10 @@ public class Shooting : MonoBehaviour
     
     private float _lastTimeShoot;
     private bool _shotable = true;
-    private float _cooldownShoot;
-    private float _bulletSpeed;
+    [SerializeField] private float _cooldownShoot = 0.5f;
+    [SerializeField] private float _bulletSpeed = 3;
 
-    private float _durationBullet;
+    [SerializeField] private float _durationBullet = 10;
     
     public float GetLastTimeShoot()
     {
@@ -42,12 +42,9 @@ public class Shooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _bulletSpeed = 3;
-        _durationBullet = 10;
         _lastTimeShoot = -2;
         _bullets = new List<GameObject>();
         _timeBullets = new List<float>();
-        _cooldownShoot = 0.5f;
         
         esc = GameObject.FindWithTag("Menu").GetComponent<EscapeMenu>();
     }

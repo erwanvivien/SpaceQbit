@@ -6,10 +6,9 @@ public class Killable : MonoBehaviour
 {
     [SerializeField] private int _life = 0;
 
-    public bool Attack(int dmg)
+    public void Attack(int dmg)
     {
         _life -= dmg;
-        return _life <= 0;
     }
     
     // Start is called before the first frame update
@@ -24,8 +23,6 @@ public class Killable : MonoBehaviour
         if (_life <= 0)
         {
             gameObject.SetActive(false);
-
-            Destroy(this);
         }
     }
 }

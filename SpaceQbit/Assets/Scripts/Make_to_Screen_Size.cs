@@ -13,6 +13,5 @@ public class Make_to_Screen_Size : MonoBehaviour
         float hScale = (float) h / 455;
 
         transform.localScale = new Vector3(wScale, 1, hScale);
-
     }
 }

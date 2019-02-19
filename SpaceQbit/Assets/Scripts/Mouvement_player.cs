@@ -10,7 +10,7 @@ public class Mouvement_player : MonoBehaviour
 {
     private EscapeMenu esc;
     
-    private float _cooldownDash = 5f;
+    [SerializeField] private float _cooldownDash = 5f;
     
     private float _lastTimeDash;
     private float _lastTimePressed;
@@ -20,8 +20,8 @@ public class Mouvement_player : MonoBehaviour
 
     private bool _speeding;
     private float _lastTimeMoveSpeed;
-    private float _moveSpeed = 3;
-    private float _durationMoveSpeed = 0.5f;
+    [SerializeField] private float _moveSpeed = 3;
+    [SerializeField] private float _durationMoveSpeed = 0.5f;
 
     private KeyCode _lastKeyPressed;
 

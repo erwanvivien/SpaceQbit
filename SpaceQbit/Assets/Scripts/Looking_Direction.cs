@@ -6,20 +6,20 @@ using UnityEngine;
 
 public class Looking_Direction : MonoBehaviour
 {
-    private Animator _anm;
-    private Mouvement_player _player;
+    [SerializeField] private Animator _anm;
+    [SerializeField] private Mouvement_player _player;
 
     private Vector3 _scaling;
     
     // Start is called before the first frame update
     void Start()
     {
-        _anm = GetComponent<Animator>();
-        
-        _player = GameObject.FindWithTag("Frame_Perso").GetComponent<Mouvement_player>();
+        if(_anm == null)
+            _anm = GetComponent<Animator>();
+        if(_player == null)
+            _player = GameObject.FindWithTag("Frame_Perso").GetComponent<Mouvement_player>();
 
         _scaling = transform.localScale;
-
     }
 
     // Update is called once per frame
