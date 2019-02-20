@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Bolt;
 using UnityEngine;
 
 public class Killable : MonoBehaviour
 {
     [SerializeField] private int _life = 0;
+    
 
     public void Attack(int dmg)
     {
         _life -= dmg;
         
-//        GameObject 
+//        GameObject newOne = Instantiate()
     }
     
     // Start is called before the first frame update
