@@ -7,7 +7,10 @@ using UnityEngine.Serialization;
 
 public class Search_Target : MonoBehaviour
 {
-    [SerializeField] private Material _mat;
+    [SerializeField] private Material _mat = null;
+
+    [SerializeField] private Follow_Target _followTarget = null;
+    
     private Renderer _renderer;
     
     // Start is called before the first frame update
@@ -15,6 +18,9 @@ public class Search_Target : MonoBehaviour
     {
         if (_mat == null)
             _mat = GetComponent<Material>();
+
+        if (_followTarget == null)
+            _followTarget = GetComponent<Follow_Target>();
         
         _renderer = GetComponent<Renderer>();
         _renderer.material = _mat;
@@ -28,12 +34,19 @@ public class Search_Target : MonoBehaviour
             Vector3 tmp = q.transform.position;
             Vector3 me = transform.position;
 
-            float distance_squared = (tmp.x - me.x) * (tmp.x - me.x) + 
+            float distanceSquared = (tmp.x - me.x) * (tmp.x - me.x) + 
                                      (tmp.y - me.y) * (tmp.y - me.y) +
                                      (tmp.z - me.z) * (tmp.z - me.z);
-            if (distance_squared < 5)
+            if (distanceSquared <= 5)
             {
+                _followTarget.SetTarget(q);
                 _renderer.material.color = Color.red;
+            }
+
+            if (distanceSquared >= 25)
+            {
+                _followTarget.SetTarget(null);
+                _renderer.material.color = Color.green;
             }
         }
     }

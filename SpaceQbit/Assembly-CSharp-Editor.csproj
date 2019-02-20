@@ -318,8 +318,53 @@
     <Reference Include="UnityEditor.OSXStandalone.Extensions">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="bolt">
+      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/bolt.dll</HintPath>
+    </Reference>
+    <Reference Include="bolt.user">
+      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/bolt.user.dll</HintPath>
+    </Reference>
+    <Reference Include="bolt.compiler">
+      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/editor/bolt.compiler.dll</HintPath>
+    </Reference>
+    <Reference Include="bolt.editor">
+      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/editor/bolt.editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/editor/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/editor/protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="Photon3DotNet">
+      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/photon/Photon3DotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="udpkit.common">
+      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.common.dll</HintPath>
+    </Reference>
+    <Reference Include="udpkit">
+      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.dll</HintPath>
+    </Reference>
+    <Reference Include="udpkit.platform.dotnet">
+      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.dotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="udpkit.platform.native_android">
+      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.native_android.dll</HintPath>
+    </Reference>
+    <Reference Include="udpkit.platform.native_ios">
+      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.native_ios.dll</HintPath>
+    </Reference>
+    <Reference Include="udpkit.platform.null">
+      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.null.dll</HintPath>
+    </Reference>
+    <Reference Include="udpkit.platform.photon">
+      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.photon.dll</HintPath>
+    </Reference>
     <Reference Include="JetBrains.Rider.Unity.Editor.Plugin.Repacked">
       <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/Plugins/PhotonWebGL/WebSocket/websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
@@ -335,51 +380,6 @@
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
-    </Reference>
-    <Reference Include="udpkit.platform.dotnet">
-      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.dotnet.dll</HintPath>
-    </Reference>
-    <Reference Include="bolt.compiler">
-      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/editor/bolt.compiler.dll</HintPath>
-    </Reference>
-    <Reference Include="Photon3DotNet">
-      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/photon/Photon3DotNet.dll</HintPath>
-    </Reference>
-    <Reference Include="bolt.editor">
-      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/editor/bolt.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/editor/Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="udpkit.platform.native_ios">
-      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.native_ios.dll</HintPath>
-    </Reference>
-    <Reference Include="bolt.user">
-      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/bolt.user.dll</HintPath>
-    </Reference>
-    <Reference Include="udpkit.platform.native_android">
-      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.native_android.dll</HintPath>
-    </Reference>
-    <Reference Include="websocket-sharp">
-      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/Plugins/PhotonWebGL/WebSocket/websocket-sharp.dll</HintPath>
-    </Reference>
-    <Reference Include="udpkit.platform.null">
-      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.null.dll</HintPath>
-    </Reference>
-    <Reference Include="protobuf-net">
-      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/editor/protobuf-net.dll</HintPath>
-    </Reference>
-    <Reference Include="bolt">
-      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/bolt.dll</HintPath>
-    </Reference>
-    <Reference Include="udpkit.common">
-      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.common.dll</HintPath>
-    </Reference>
-    <Reference Include="udpkit">
-      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.dll</HintPath>
-    </Reference>
-    <Reference Include="udpkit.platform.photon">
-      <HintPath>C:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.photon.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

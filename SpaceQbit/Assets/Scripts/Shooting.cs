@@ -28,7 +28,8 @@ public class Shooting : MonoBehaviour
     [SerializeField] private float _durationBulletSpell = 1f;
     [SerializeField] private int _boostDamageBullet = 3;
 
-    private float _time;
+    private float _timeDuration;
+    private float _timeCooldown;
     private bool _damageBoosted = true;
 
     public bool GetDamageBoosted()
@@ -109,23 +110,22 @@ public class Shooting : MonoBehaviour
         if (Input.GetMouseButton(0) && _shotable)
         {
             _posCanvas = GetComponentInParent<Transform>();
-
+            
             GameObject newOne = Instantiate(Obj);
             
             newOne.transform.localPosition = _posCanvas.position;
 
             float angle = GetCooToAngle();
 
-            Transform sprite = newOne.GetComponentInChildren<Transform>();
-            
+            //Transform sprite = newOne.GetComponentInChildren<Transform>();
+
             if (!_damageBoosted)
             {
-                sprite.localScale *= 2;
+                newOne.transform.GetChild(0).localScale *= 2;
+                newOne.GetComponent<BoxCollider>().size *= 2;
             }
-
-            sprite.localPosition.Set(sprite.localPosition.x, 0.1f, sprite.localPosition.z);
             
-            sprite.Rotate(0 , 0, angle - 90);
+            //sprite.Rotate(0 , 0, angle - 90);
             
             Rigidbody rb = newOne.GetComponent<Rigidbody>();
             
@@ -135,7 +135,11 @@ public class Shooting : MonoBehaviour
             rb.velocity = new Vector3((float) Math.Cos(angle), 
                                         0 , 
                                         (float) Math.Sin(angle));
+            
             rb.velocity *= _bulletSpeed;
+
+            Bullet_Collision bulletCollision = newOne.GetComponent<Bullet_Collision>();
+            bulletCollision.SetDamage(_damage);
 
             _bullets.Add(newOne);
             _timeBullets.Add(Time.time);
@@ -164,7 +168,7 @@ public class Shooting : MonoBehaviour
             }
         }
         
-        if (_time < 0)
+        if (_timeDuration < 0)
         {
             if (!_damageBoosted)
             {
@@ -172,16 +176,18 @@ public class Shooting : MonoBehaviour
                 _damageBoosted = true;
             }
             
-            _time = 0;
+            _timeDuration = 0;
         }
         
-        if (Input.GetKeyDown(KeyCode.R) && _time <= 0)
+        if (Input.GetKeyDown(KeyCode.R) && _timeCooldown <= 0)
         {
             _damageBoosted = false;
-            _time = _durationBulletSpell;
+            _timeDuration = _durationBulletSpell;
+            _timeCooldown = _cooldownBulletSpell;
             _damage *= _boostDamageBullet;
         }
 
-        _time -= Time.deltaTime;
+        _timeDuration -= Time.deltaTime;
+        _timeCooldown -= Time.deltaTime;
     }
 }

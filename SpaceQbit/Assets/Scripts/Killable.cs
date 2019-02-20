@@ -9,6 +9,8 @@ public class Killable : MonoBehaviour
     public void Attack(int dmg)
     {
         _life -= dmg;
+        
+//        GameObject 
     }
     
     // Start is called before the first frame update

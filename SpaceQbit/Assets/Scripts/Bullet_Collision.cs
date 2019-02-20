@@ -5,9 +5,16 @@ using UnityEngine.Serialization;
 
 public class Bullet_Collision : MonoBehaviour
 {
-    [SerializeField] private Shooting tmp;
+    [FormerlySerializedAs("tmp")] [SerializeField] private Shooting _tmp;
+
+    private int _damage;
     
     private bool _collision;
+
+    public void SetDamage(int damage)
+    {
+        _damage = damage;
+    }
     
     public bool GetCollision()
     {
@@ -16,8 +23,8 @@ public class Bullet_Collision : MonoBehaviour
 
     private void Start()
     {
-        if (tmp == null)
-            tmp = GameObject.FindWithTag("Perso").GetComponent<Shooting>();
+        if (_tmp == null)
+            _tmp = GameObject.FindWithTag("Perso").GetComponent<Shooting>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,8 +37,7 @@ public class Bullet_Collision : MonoBehaviour
                 break;
 
             case "Killable":
-                int dmg = tmp.GetDamage();
-                other.gameObject.GetComponent<Killable>().Attack(dmg);
+                other.gameObject.GetComponent<Killable>().Attack(_damage);
                 _collision = true;
                 break;
             
