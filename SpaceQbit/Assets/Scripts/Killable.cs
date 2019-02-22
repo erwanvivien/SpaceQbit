@@ -57,7 +57,7 @@ private float _life;
     // Update is called once per frame
     void Update()
     {
-        if (_time > _delayShown)
+        if (_time > _delayShown && _HPs != null)
         {
             _HPs.SetActive(false);
         }
