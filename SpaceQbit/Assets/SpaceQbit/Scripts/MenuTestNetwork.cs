@@ -31,6 +31,7 @@ public class MenuTestNetwork : Bolt.GlobalEventListener
 
             BoltNetwork.SetServerInfo(matchName, null);
             BoltNetwork.LoadScene("ActualMap");
+//          BoltScenes.AddScene();
         }
     }
 
