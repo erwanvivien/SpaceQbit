@@ -16,7 +16,7 @@ public class Get_Cooldown_Damage : MonoBehaviour
     void Start()
     {
         if(_otherScript == null)
-            _otherScript = GameObject.FindWithTag("Perso").GetComponent<Shooting>();
+            _otherScript = GameObject.FindWithTag("Gun").GetComponent<Shooting>();
         
         _cooldown = _otherScript.GetCooldownBulletSpell();
     }

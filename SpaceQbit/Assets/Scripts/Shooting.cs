@@ -10,7 +10,7 @@ public class Shooting : MonoBehaviour
     public GameObject Obj;
     
     private EscapeMenu esc;
-    
+
     private Transform _posCanvas;
     private List<GameObject> _bullets;
     private List<float> _timeBullets;
@@ -32,16 +32,20 @@ public class Shooting : MonoBehaviour
     private float _timeCooldown;
     private bool _damageBoosted = true;
 
+
+
+    private Transform objectToPlace;
+    [SerializeField] private Camera _cam;
+    
+    
+    
+    
+
     public bool GetDamageBoosted()
     {
         return _damageBoosted;
     }
     
-    public int GetDamage()
-    {
-        return _damage;
-    }
-
     public float GetCooldownBulletSpell()
     {
         return _cooldownBulletSpell;
@@ -75,24 +79,29 @@ public class Shooting : MonoBehaviour
         _timeBullets = new List<float>();
         
         esc = GameObject.FindWithTag("Menu").GetComponent<EscapeMenu>();
+        _cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
     }
 
-    float sign(float x)
+//    float GetCooToAngle()
+//    {
+//        Vector3 posMouse = Input.mousePosition;
+//        posMouse.x -= (Screen.width / 2f);
+//        posMouse.y -= (Screen.height / 2f);
+//        
+//        double a = Math.Atan2(posMouse.y, posMouse.x) * 180 / Math.PI;
+//        
+//        return (float) a;
+//    }
+    
+    float GetCooToAngle (Vector3 target)
     {
-        if (x >= 0) return 1;
-        return -1;
+        Vector3 targetDir = target - transform.position;
+        targetDir.y = 0;
+        float angle = Vector3.Angle(targetDir, new Vector3(1, 0, 0));
+
+        return angle;
     }
 
-    float GetCooToAngle()
-    {
-        Vector3 posMouse = Input.mousePosition;
-        posMouse.x -= (Screen.width / 2f);
-        posMouse.y -= (Screen.height / 2f);
-        
-        double a = Math.Atan2(posMouse.y, posMouse.x) * 180 / Math.PI;
-        
-        return (float) a;
-    }
 
     void Update()
     {
@@ -109,13 +118,20 @@ public class Shooting : MonoBehaviour
 
         if (Input.GetMouseButton(0) && _shotable)
         {
+            Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hitInfo;
+            float angle = 0;
+            if (Physics.Raycast(ray, out hitInfo))
+            {
+                angle = GetCooToAngle(hitInfo.point);
+                angle = Input.mousePosition.y > (float) Screen.height/2 ? angle : -angle;
+            }
+            
             _posCanvas = GetComponentInParent<Transform>();
             
             GameObject newOne = Instantiate(Obj);
             
             newOne.transform.localPosition = _posCanvas.position;
-
-            float angle = GetCooToAngle();
 
             //Transform sprite = newOne.GetComponentInChildren<Transform>();
 

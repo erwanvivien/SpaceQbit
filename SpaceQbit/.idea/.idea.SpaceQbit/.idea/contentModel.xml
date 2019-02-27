@@ -80,6 +80,11 @@
           <e p="Search_Target.cs" t="Include" />
           <e p="Shooting.cs" t="Include" />
         </e>
+        <e p="Sprites" t="Include">
+          <e p="Keycodes" t="Include">
+            <e p="README.txt" t="Include" />
+          </e>
+        </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />

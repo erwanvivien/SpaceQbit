@@ -13,6 +13,7 @@ TagManager:
   - HP
   - Mur
   - Killable
+  - Gun
   layers:
   - Default
   - TransparentFX

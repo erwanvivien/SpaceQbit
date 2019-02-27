@@ -33,7 +33,7 @@ private float _life;
         
         _HPs.GetComponent<Transform>().position = 
             new Vector3(pos.x, 
-            GetComponent<CapsuleCollider>().height / 2 + 0.5f,
+            pos.y + GetComponent<CapsuleCollider>().height / 2 + 0.2f,
             pos.z);
         
         Transform[] tmp = _HPs.GetComponentsInChildren<RectTransform>();

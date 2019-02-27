@@ -81,6 +81,7 @@
     <None Include="Assets\bolt\resources\backgrounds\ATTRIBUTION.txt" />
     <None Include="Assets\bolt\resources\icons_welcome\ATTRIBUTION.txt" />
     <None Include="Assets\bolt\resources\BoltShaderPOI.shader" />
+    <None Include="Assets\Sprites\Keycodes\Readme.txt" />
     <None Include="Assets\bolt\packages\bolt_packages.txt" />
     <None Include="Assets\bolt\resources\icons\ATTRIBUTION.txt" />
     <None Include="Assets\bolt\README.txt" />
