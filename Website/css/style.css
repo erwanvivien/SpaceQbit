@@ -39,6 +39,13 @@ footer,
 section {
   display: block; }
 
+th, td {
+  padding: 5px 15px;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
 ul {
   list-style-type: none;
   overflow: hidden;
@@ -61,7 +68,7 @@ li a {
 }
 
 li a:hover {
-  background-color: #4CAF50;
+  background-color: #DA680F/*metallic orange*/;/*#4CAF50 for green*/
 }
 
 .title-link {
@@ -101,13 +108,23 @@ li a:hover {
   }
 
 .c-subtitle {
-  font: bold 50px Forte;
+  font: bold 35px Algerian;
   text-decoration: underline;
   text-align: center;
   margin-top: 10px;
 }
 
 .c-subsubtitle{
-  font: bold 30px vivaldi;
-  margin-top: 10px;
+  font: bold 30px Arial;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+.c-text {
+  padding-left: 15px;
+}
+
+#estim_table {
+  position: relative;
+  left: 8%;
 }
