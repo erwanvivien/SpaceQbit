@@ -73,6 +73,7 @@
           <e p="Get_Cooldown_Damage.cs" t="Include" />
           <e p="Get_Cooldown_Speed.cs" t="Include" />
           <e p="Get_Hp.cs" t="Include" />
+          <e p="KeyBindings.cs" t="Include" />
           <e p="Killable.cs" t="Include" />
           <e p="Looking_Direction.cs" t="Include" />
           <e p="Make_to_Screen_Size.cs" t="Include" />

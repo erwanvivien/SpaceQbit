@@ -8,8 +8,11 @@ public class Looking_Direction : MonoBehaviour
 {
     [SerializeField] private Animator _anm;
     [SerializeField] private Mouvement_player _player;
+    [SerializeField] private Transform _gun;
 
     private Vector3 _scaling;
+    private Vector3 _posGun;
+    private Vector3 _scaleGun;
     
     // Start is called before the first frame update
     void Start()
@@ -18,8 +21,12 @@ public class Looking_Direction : MonoBehaviour
             _anm = GetComponent<Animator>();
         if(_player == null)
             _player = GameObject.FindWithTag("Frame_Perso").GetComponent<Mouvement_player>();
+        if(_gun == null)
+            _gun = GameObject.FindWithTag("Gun").GetComponent<Transform>();
 
         _scaling = transform.localScale;
+        _posGun = _gun.transform.position - transform.position;
+        _scaleGun = _gun.transform.localScale;
     }
 
     // Update is called once per frame
@@ -41,8 +48,16 @@ public class Looking_Direction : MonoBehaviour
         }
 
         transform.localScale = new Vector3(Math.Sign(posMouse.x) >= 0 ? _scaling.x : -_scaling.x, 
-                                        _scaling.y, 
-                                        _scaling.z);
+            _scaling.y, 
+            _scaling.z);
+        
+        _gun.localScale = new Vector3(Math.Sign(posMouse.x) >= 0 ? _scaleGun.x : -_scaleGun.x, 
+            _scaleGun.y, 
+            _scaleGun.z);
+        
+        _gun.localPosition = new Vector3(Math.Sign(posMouse.x) >= 0 ? _posGun.x : -_posGun.x, 
+            _posGun.y, 
+            _posGun.z);
 
         _anm.Play(animToPlay);
     }
