@@ -72,10 +72,12 @@
     <Compile Include="Assets\Scripts\Get_Cooldown_Damage.cs" />
     <Compile Include="Assets\Scripts\Get_Cooldown_Speed.cs" />
     <Compile Include="Assets\Scripts\Get_Hp.cs" />
+    <Compile Include="Assets\Scripts\KeyBinding.cs" />
     <Compile Include="Assets\Scripts\Killable.cs" />
     <Compile Include="Assets\Scripts\Looking_Direction.cs" />
     <Compile Include="Assets\Scripts\Make_to_Screen_Size.cs" />
     <Compile Include="Assets\Scripts\Mouvement_player.cs" />
+    <Compile Include="Assets\Scripts\PotentialKey.cs" />
     <Compile Include="Assets\Scripts\Search_Target.cs" />
     <Compile Include="Assets\Scripts\Shooting.cs" />
     <None Include="Assets\bolt\resources\backgrounds\ATTRIBUTION.txt" />
