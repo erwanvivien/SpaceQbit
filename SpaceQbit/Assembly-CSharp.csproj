@@ -72,7 +72,9 @@
     <Compile Include="Assets\Scripts\Get_Cooldown_Damage.cs" />
     <Compile Include="Assets\Scripts\Get_Cooldown_Speed.cs" />
     <Compile Include="Assets\Scripts\Get_Hp.cs" />
-    <Compile Include="Assets\Scripts\KeyBinding.cs" />
+    <Compile Include="Assets\Scripts\GetKeyName.cs" />
+    <Compile Include="Assets\Scripts\Key.cs" />
+    <Compile Include="Assets\Scripts\KeyBindArray.cs" />
     <Compile Include="Assets\Scripts\Killable.cs" />
     <Compile Include="Assets\Scripts\Looking_Direction.cs" />
     <Compile Include="Assets\Scripts\Make_to_Screen_Size.cs" />
@@ -80,6 +82,7 @@
     <Compile Include="Assets\Scripts\PotentialKey.cs" />
     <Compile Include="Assets\Scripts\Search_Target.cs" />
     <Compile Include="Assets\Scripts\Shooting.cs" />
+    <Compile Include="Assets\Scripts\ToggleActive.cs" />
     <None Include="Assets\bolt\resources\backgrounds\ATTRIBUTION.txt" />
     <None Include="Assets\bolt\resources\icons_welcome\ATTRIBUTION.txt" />
     <None Include="Assets\bolt\resources\BoltShaderPOI.shader" />

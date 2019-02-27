@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class EscapeMenu : MonoBehaviour
@@ -13,7 +14,7 @@ public class EscapeMenu : MonoBehaviour
     {
         return _on;
     }
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,11 @@ public class EscapeMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GetComponent<ToggleActive>().IsHidden())
+        {
+            return;
+        }
+        
         _canv.enabled = _on;
         _canvCd.enabled = !_on;
         _canvHp.enabled = !_on;

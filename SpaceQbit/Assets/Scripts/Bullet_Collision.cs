@@ -27,7 +27,7 @@ public class Bullet_Collision : MonoBehaviour
             _tmp = GameObject.FindWithTag("Perso").GetComponent<Shooting>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         string tags = other.gameObject.tag;
         switch (tags)

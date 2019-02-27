@@ -73,7 +73,9 @@
           <e p="Get_Cooldown_Damage.cs" t="Include" />
           <e p="Get_Cooldown_Speed.cs" t="Include" />
           <e p="Get_Hp.cs" t="Include" />
-          <e p="KeyBinding.cs" t="Include" />
+          <e p="GetKeyName.cs" t="Include" />
+          <e p="Key.cs" t="Include" />
+          <e p="KeyBindArray.cs" t="Include" />
           <e p="Killable.cs" t="Include" />
           <e p="Looking_Direction.cs" t="Include" />
           <e p="Make_to_Screen_Size.cs" t="Include" />
@@ -81,6 +83,7 @@
           <e p="PotentialKey.cs" t="Include" />
           <e p="Search_Target.cs" t="Include" />
           <e p="Shooting.cs" t="Include" />
+          <e p="ToggleActive.cs" t="Include" />
         </e>
         <e p="Sprites" t="Include">
           <e p="Keycodes" t="Include">
