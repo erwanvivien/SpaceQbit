@@ -39,12 +39,20 @@ footer,
 section {
   display: block; }
 
+th, td {
+  padding: 5px 15px;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
 ul {
   list-style-type: none;
   overflow: hidden;
   background-color: #333;
   position: -webkit-sticky;
   position: sticky;
+  z-index: 1000;
   top: 0;
 }
 
@@ -61,7 +69,7 @@ li a {
 }
 
 li a:hover {
-  background-color: #4CAF50;
+  background-color: #DA680F/*metallic orange*/;/*#4CAF50 for green*/
 }
 
 .title-link {
@@ -101,13 +109,50 @@ li a:hover {
   }
 
 .c-subtitle {
-  font: bold 50px Forte;
+  font: bold 35px Algerian;
   text-decoration: underline;
   text-align: center;
   margin-top: 10px;
 }
 
 .c-subsubtitle{
-  font: bold 30px vivaldi;
-  margin-top: 10px;
+  font: bold 30px Arial;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+.c-text {
+  padding-left: 15px;
+}
+
+#tables {
+  position: relative;
+  width:100%;
+  height: 300px;
+
+}
+
+#estim_table {
+  position: relative;
+  width: 20%;
+  left: 22%;
+}
+
+#progress1_table {
+  position: relative;
+  width: 20%;
+  left: 55%;
+  top: -250px;
+}
+
+#task_t {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+#task_table {
+  position: relative;
+  text-align: center;
+  left: 32%;
 }
