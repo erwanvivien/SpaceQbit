@@ -1,9 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using UnityEditor.SceneManagement;
-using UnityEngine;
-using UnityEngine.Serialization;
+﻿using UnityEngine;
 
 public class Search_Target : MonoBehaviour
 {

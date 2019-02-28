@@ -9,7 +9,7 @@ public class Shooting : MonoBehaviour
 {
     public GameObject Obj;
     
-    private EscapeMenu esc;
+    private CurrentMenu esc;
 
     private Transform _posCanvas;
     private List<GameObject> _bullets;
@@ -70,7 +70,6 @@ public class Shooting : MonoBehaviour
     {
         return _shotable;
     }
-
     // Start is called before the first frame update
     void Start()
     {
@@ -78,21 +77,10 @@ public class Shooting : MonoBehaviour
         _bullets = new List<GameObject>();
         _timeBullets = new List<float>();
         
-        esc = GameObject.FindWithTag("Menu").GetComponent<EscapeMenu>();
+//        esc = GameObject.FindWithTag("Menu").GetComponent<CurrentMenu>();
         _cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
     }
 
-//    float GetCooToAngle()
-//    {
-//        Vector3 posMouse = Input.mousePosition;
-//        posMouse.x -= (Screen.width / 2f);
-//        posMouse.y -= (Screen.height / 2f);
-//        
-//        double a = Math.Atan2(posMouse.y, posMouse.x) * 180 / Math.PI;
-//        
-//        return (float) a;
-//    }
-    
     float GetCooToAngle (Vector3 target)
     {
         Vector3 targetDir = target - transform.position;
@@ -102,7 +90,6 @@ public class Shooting : MonoBehaviour
         return angle;
     }
 
-
     void Update()
     {
         if ((_lastTimeShoot + _cooldownShoot < Time.time) &&
@@ -111,10 +98,10 @@ public class Shooting : MonoBehaviour
             _shotable = true;
         }
         
-        if (esc.GetOn())
-        {
-            return;
-        }
+//        if (esc.inMenu)
+//        {
+//            return;
+//        }
 
         if (Input.GetMouseButton(0) && _shotable)
         {
@@ -133,15 +120,11 @@ public class Shooting : MonoBehaviour
             
             newOne.transform.localPosition = _posCanvas.position;
 
-            //Transform sprite = newOne.GetComponentInChildren<Transform>();
-
             if (!_damageBoosted)
             {
                 newOne.transform.GetChild(0).localScale *= 2;
                 newOne.GetComponent<BoxCollider>().size *= 2;
             }
-            
-            //sprite.Rotate(0 , 0, angle - 90);
             
             Rigidbody rb = newOne.GetComponent<Rigidbody>();
             

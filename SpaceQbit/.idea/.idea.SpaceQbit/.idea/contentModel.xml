@@ -67,7 +67,8 @@
         <e p="Scripts" t="Include">
           <e p="Bullet_Collision.cs" t="Include" />
           <e p="Cam_Follow.cs" t="Include" />
-          <e p="EscapeMenu.cs" t="Include" />
+          <e p="CurrentMenu.cs" t="Include" />
+          <e p="DisapearAfter.cs" t="Include" />
           <e p="Follow_Target.cs" t="Include" />
           <e p="Get_Coo_Cam.cs" t="Include" />
           <e p="Get_Cooldown_Damage.cs" t="Include" />
@@ -83,7 +84,6 @@
           <e p="PotentialKey.cs" t="Include" />
           <e p="Search_Target.cs" t="Include" />
           <e p="Shooting.cs" t="Include" />
-          <e p="ToggleActive.cs" t="Include" />
         </e>
         <e p="Sprites" t="Include">
           <e p="Keycodes" t="Include">

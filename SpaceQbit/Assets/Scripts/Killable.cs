@@ -14,7 +14,7 @@ public class Killable : MonoBehaviour
 
     private float _delayShown;
 
-private float _life;
+    private float _life;
 
     public void Attack(int dmg)
     {
@@ -27,7 +27,6 @@ private float _life;
         _time = 0;
 
         _life -= dmg;
-        Debug.Log(_life);
 
         Vector3 pos = GetComponent<Transform>().position;
         
@@ -44,7 +43,6 @@ private float _life;
                 1);
     }
     
-    // Start is called before the first frame update
     void Start()
     {
         tag = "Killable";
@@ -54,7 +52,6 @@ private float _life;
         _time = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (_time > _delayShown && _HPs != null)
