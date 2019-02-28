@@ -129,30 +129,45 @@ li a:hover {
   position: relative;
   width:100%;
   height: 300px;
-
+  font-size: 15px;
+  text-align: center;
 }
 
 #estim_table {
   position: relative;
-  width: 20%;
-  left: 22%;
+  width: 27.5%;
+  left: 18%;
 }
 
 #progress1_table {
   position: relative;
-  width: 20%;
-  left: 55%;
-  top: -250px;
+  width: 27.5%;
+  left: 52%;
+  top: -79%;
 }
 
 #task_t {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 400px;
+    text-align: center;
 }
 
 #task_table {
   position: relative;
-  text-align: center;
-  left: 32%;
+  left: 15%;
+}
+
+#new_task_table {
+  position: relative;
+  left: 55%;
+  top: -93%;
+}
+
+.c-td-small {
+  font-size: 15px;
+}
+
+.c-td-big {
+  font-size: 25px;
 }
