@@ -12,7 +12,7 @@ public class CurrentMenu : MonoBehaviour
 
     public GameObject SaveBox;
 
-    private Canvas EscapeCanvas;
+    private Canvas _escapeCanvas;
     
     public void Save()
     {
@@ -56,7 +56,7 @@ public class CurrentMenu : MonoBehaviour
         Canv = null;
         inMenu = false;
 
-        EscapeCanvas = GetComponentsInChildren<Canvas>()[1];
+        _escapeCanvas = GetComponentsInChildren<Canvas>()[1];
     }
     
     private void Update()
@@ -65,9 +65,9 @@ public class CurrentMenu : MonoBehaviour
         {
             if (Canv == null)
             {
-                SetCanvas(EscapeCanvas);
+                SetCanvas(_escapeCanvas);
             }
-            else if(Canv == EscapeCanvas)
+            else if(Canv == _escapeCanvas)
             {
                 ResetCanvas();
             }

@@ -70,14 +70,14 @@ public class Shooting : MonoBehaviour
     {
         return _shotable;
     }
-    // Start is called before the first frame update
+
     void Start()
     {
         _lastTimeShoot = -2;
         _bullets = new List<GameObject>();
         _timeBullets = new List<float>();
         
-//        esc = GameObject.FindWithTag("Menu").GetComponent<CurrentMenu>();
+        esc = GameObject.FindWithTag("Menu").GetComponent<CurrentMenu>();
         _cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
     }
 
@@ -98,10 +98,10 @@ public class Shooting : MonoBehaviour
             _shotable = true;
         }
         
-//        if (esc.inMenu)
-//        {
-//            return;
-//        }
+        if (esc.inMenu)
+        {
+            return;
+        }
 
         if (Input.GetMouseButton(0) && _shotable)
         {

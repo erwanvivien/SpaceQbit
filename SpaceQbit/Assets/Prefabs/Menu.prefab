@@ -1820,7 +1820,7 @@ GameObject:
   - component: {fileID: 8854793243271127127}
   m_Layer: 0
   m_Name: Menu
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3919,10 +3919,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1764490080898261816}
     m_Modifications:
+    - target: {fileID: 1537099194907369063, guid: b61412b49eff1c049ac33eed38f74fdb,
+        type: 3}
+      propertyPath: m_TagString
+      value: EscapeMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 7337972923921105029, guid: b61412b49eff1c049ac33eed38f74fdb,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7295866371715259002, guid: b61412b49eff1c049ac33eed38f74fdb,
         type: 3}

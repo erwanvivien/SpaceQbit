@@ -49,19 +49,19 @@ public class Mouvement_player : MonoBehaviour
 
     private void Start()
     {
-        //esc = GameObject.FindWithTag("Menu").GetComponent<CurrentMenu>();
+        esc = GameObject.FindWithTag("Menu").GetComponent<CurrentMenu>();
     }
 
     void Update()
     {
-//        if (esc.inMenu)
-//        {
-//            _moving = false;
-//            _dashable = true;
-//            _speeding = false;
-//
-//            return;
-//        }
+        if (esc.inMenu)
+        {
+            _moving = false;
+            _dashable = true;
+            _speeding = false;
+
+            return;
+        }
         
         float dt = Time.deltaTime;
         
