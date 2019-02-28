@@ -25,7 +25,7 @@ public class CurrentMenu : MonoBehaviour
             sw.WriteLine(pos.z);
         }
 
-        GameObject t = Instantiate(SaveBox);
+        Instantiate(SaveBox);
     }
 
     public void Quit()

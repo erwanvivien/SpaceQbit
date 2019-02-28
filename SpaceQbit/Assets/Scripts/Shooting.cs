@@ -149,7 +149,6 @@ public class Shooting : MonoBehaviour
 
         if (_timeBullets.Count > 0 && (_timeBullets[0] + _durationBullet < Time.time))
         {
-            Destroy(_bullets[0]);
             _timeBullets.RemoveAt(0);
             _bullets.RemoveAt(0);
         }
