@@ -116,7 +116,7 @@ li a:hover {
 }
 
 .c-subsubtitle{
-  font: bold 30px Arial;
+  font: bold 40px Gabriola;
   padding-top: 10px;
   padding-left: 5px;
 }
@@ -178,3 +178,6 @@ li a:hover {
   text-align: center;
   width: 50%;
 }
+ .c-timeline{
+   padding-left: 10px;
+ }
