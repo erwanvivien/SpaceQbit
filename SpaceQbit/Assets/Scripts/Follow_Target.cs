@@ -18,7 +18,7 @@ public class Follow_Target : MonoBehaviour
     {
         return target;
     }
-
+    
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Perso").transform;
