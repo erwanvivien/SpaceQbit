@@ -82,6 +82,7 @@
         <e p="Scripts" t="Include">
           <e p="Bullet_Collision.cs" t="Include" />
           <e p="Cam_Follow.cs" t="Include" />
+          <e p="CooOffset.cs" t="Include" />
           <e p="CurrentMenu.cs" t="Include" />
           <e p="DisapearAfter.cs" t="Include" />
           <e p="Follow_Target.cs" t="Include" />

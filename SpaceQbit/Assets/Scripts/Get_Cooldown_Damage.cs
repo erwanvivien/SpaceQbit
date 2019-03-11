@@ -35,7 +35,7 @@ public class Get_Cooldown_Damage : MonoBehaviour
             _timer = 0;
         }
         
-        transform.localScale = (new Vector3(_timer / _cooldown, 1, 1));
+        transform.localScale = (new Vector3(_timer / _cooldown * 200f, 200, 1));
 
         _timer -= Time.deltaTime;
     }

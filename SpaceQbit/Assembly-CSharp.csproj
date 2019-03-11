@@ -70,6 +70,7 @@
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
     <Compile Include="Assets\Scripts\Bullet_Collision.cs" />
     <Compile Include="Assets\Scripts\Cam_Follow.cs" />
+    <Compile Include="Assets\Scripts\CooOffset.cs" />
     <Compile Include="Assets\Scripts\CurrentMenu.cs" />
     <Compile Include="Assets\Scripts\DisapearAfter.cs" />
     <Compile Include="Assets\Scripts\Follow_Target.cs" />

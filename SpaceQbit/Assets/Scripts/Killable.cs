@@ -22,20 +22,17 @@ public class Killable : MonoBehaviour
         {
             _HPs = Instantiate(_hpBar);
         }
-        
         _HPs.SetActive(true);
+        
+        _HPs.GetComponent<CooOffset>().SetOffset(new Vector3(0, 
+            GetComponent<CapsuleCollider>().height / 2 + 0.2f,
+            0));
+        _HPs.GetComponent<CooOffset>().SetGameObj(gameObject);
+        
         _time = 0;
-
         _life -= dmg;
-
-        Vector3 pos = GetComponent<Transform>().position;
         
-        _HPs.GetComponent<Transform>().position = 
-            new Vector3(pos.x, 
-            pos.y + GetComponent<CapsuleCollider>().height / 2 + 0.2f,
-            pos.z);
-        
-        Transform[] tmp = _HPs.GetComponentsInChildren<RectTransform>();
+        RectTransform[] tmp = _HPs.GetComponentsInChildren<RectTransform>();
         
         tmp[2].localScale = 
             new Vector3(_life/_lifeMax,

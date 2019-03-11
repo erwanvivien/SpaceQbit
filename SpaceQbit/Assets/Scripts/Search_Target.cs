@@ -2,9 +2,12 @@
 
 public class Search_Target : MonoBehaviour
 {
-    [SerializeField] private Material _mat = null;
+    [SerializeField] private Material _mat;
+    [SerializeField] private float _damage;
 
-    private Follow_Target _followTarget = null;
+    private float _time;
+
+    private Follow_Target _followTarget;
     
     private Renderer _renderer;
     
@@ -30,20 +33,33 @@ public class Search_Target : MonoBehaviour
             Vector3 me = transform.position;
 
             float distanceSquared = (tmp.x - me.x) * (tmp.x - me.x) + 
-                                     (tmp.y - me.y) * (tmp.y - me.y) +
                                      (tmp.z - me.z) * (tmp.z - me.z);
             
-            if (distanceSquared <= 5)
+            Debug.Log(distanceSquared);
+
+            if (distanceSquared <= 2)
+            {
+                _followTarget.SetTarget(null);
+                if (_time <= 0)
+                {
+                    Debug.Log("Hit.");
+                    GameObject.FindWithTag("HealthBar").GetComponent<Get_Hp>().Damaged(_damage);
+                    _time = 2;
+                }
+            }
+            else if (distanceSquared <= 5)
             {
                 _followTarget.SetTarget(q);
                 _renderer.material.color = Color.red;
             }
-
-            if (distanceSquared >= 25)
+            else if (distanceSquared >= 15)
             {
                 _followTarget.SetTarget(null);
                 _renderer.material.color = Color.green;
             }
         }
+
+        _time -= Time.deltaTime;
+        _time = _time < 0 ? 0 : _time;
     }
 }

@@ -17,6 +17,7 @@ TagManager:
   - InputController
   - EscapeMenu
   - BindingMenu
+  - HealthBar
   layers:
   - Default
   - TransparentFX
