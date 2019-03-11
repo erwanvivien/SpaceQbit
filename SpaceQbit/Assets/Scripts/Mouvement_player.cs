@@ -6,7 +6,7 @@ using UnityEngine.AI;
 using UnityEngine.Experimental.UIElements;
 using Debug = UnityEngine.Debug;
 
-public class Mouvement_player : MonoBehaviour
+public class Mouvement_player : Bolt.EntityEventListener<IPlayerState>
 {
     private CurrentMenu esc;
     
