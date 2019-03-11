@@ -5,30 +5,35 @@ using UnityEngine.AI;
 
 public class Follow_Target : MonoBehaviour
 {
-    private GameObject target = null;
-    NavMeshAgent nav;
-    Transform player;
+    private GameObject _target;
+    NavMeshAgent _nav;
+    Transform _player;
 
-    public void SetTarget(GameObject trget)
+    public void SetTarget(GameObject tgt)
     {
-        target = trget;
+        _target = tgt;
+        if (tgt == null)
+        {
+            _nav.SetDestination(GetComponent<Transform>().position);
+        }
     }
 
     public GameObject GetTarget()
     {
-        return target;
+        return _target;
     }
     
     void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Perso").transform;
-        nav = GetComponent<NavMeshAgent>();
+        _player = GameObject.FindGameObjectWithTag("Perso").transform;
+        _nav = GetComponent<NavMeshAgent>();
     }
+    
     void Update()
     {
-        if (target != null)
+        if (_target != null)
         {
-            nav.SetDestination(player.position);
+            _nav.SetDestination(_player.position);
         }
     }
 }

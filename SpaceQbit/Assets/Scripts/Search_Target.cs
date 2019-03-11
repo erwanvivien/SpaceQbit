@@ -4,7 +4,7 @@ public class Search_Target : MonoBehaviour
 {
     [SerializeField] private Material _mat = null;
 
-    [SerializeField] private Follow_Target _followTarget = null;
+    private Follow_Target _followTarget = null;
     
     private Renderer _renderer;
     
@@ -32,6 +32,7 @@ public class Search_Target : MonoBehaviour
             float distanceSquared = (tmp.x - me.x) * (tmp.x - me.x) + 
                                      (tmp.y - me.y) * (tmp.y - me.y) +
                                      (tmp.z - me.z) * (tmp.z - me.z);
+            
             if (distanceSquared <= 5)
             {
                 _followTarget.SetTarget(q);
