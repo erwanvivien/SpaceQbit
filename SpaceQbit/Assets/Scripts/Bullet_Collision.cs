@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class Bullet_Collision : MonoBehaviour
+public class Bullet_Collision : Bolt.EntityEventListener<IBulletState>
 {
     [FormerlySerializedAs("tmp")] [SerializeField] private Shooting _tmp;
 

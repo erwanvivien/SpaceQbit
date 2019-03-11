@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class DisapearAfter : MonoBehaviour
+public class DisapearAfter : Bolt.EntityEventListener<IBulletState>
 {
     [SerializeField] private float _tmp;
     private float _time;

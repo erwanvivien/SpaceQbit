@@ -52,7 +52,7 @@ public class Mouvement_player : Bolt.EntityEventListener<IPlayerState>
         esc = GameObject.FindWithTag("Menu").GetComponent<CurrentMenu>();
     }
 
-    void Update()
+    public override void SimulateOwner()
     {
         if (esc.inMenu)
         {
@@ -109,6 +109,11 @@ public class Mouvement_player : Bolt.EntityEventListener<IPlayerState>
         
         _lastTimeDash += dt;
         _lastTimeMoveSpeed += dt;
+    }
+
+    void Update()
+    {
+        SimulateOwner();
     }
 }
         

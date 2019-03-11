@@ -53,6 +53,7 @@
           <e p="NetworkCallbacks.cs" t="Include" />
           <e p="PotentialKey.cs" t="Include" />
           <e p="Search_Target.cs" t="Include" />
+          <e p="ServerCallbacks.cs" t="Include" />
           <e p="Shooting.cs" t="Include" />
         </e>
         <e p="Sprites" t="Include">
