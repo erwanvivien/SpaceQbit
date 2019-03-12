@@ -32,15 +32,9 @@ public class Shooting : MonoBehaviour
     private float _timeCooldown;
     private bool _damageBoosted = true;
 
-
-
-    private Transform objectToPlace;
+    private Transform _objectToPlace;
     [SerializeField] private Camera _cam;
     
-    
-    
-    
-
     public bool GetDamageBoosted()
     {
         return _damageBoosted;
@@ -107,7 +101,9 @@ public class Shooting : MonoBehaviour
         {
             Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitInfo;
+            
             float angle = 0;
+            
             if (Physics.Raycast(ray, out hitInfo))
             {
                 angle = GetCooToAngle(hitInfo.point);

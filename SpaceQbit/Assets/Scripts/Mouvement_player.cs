@@ -74,7 +74,7 @@ public class Mouvement_player : MonoBehaviour
             _dashable = true;
             _speeding = false;
         }
-                
+        
         mvt += new Vector3(Input.GetAxisRaw("Horizontal"),0, Input.GetAxisRaw("Vertical"));
         
         if (mvt == Vector3.zero)
@@ -82,7 +82,7 @@ public class Mouvement_player : MonoBehaviour
             _moving = false;
         }
                 
-        if (Math.Abs(mvt.x) + Math.Abs(mvt.z) == 1)
+        if (Math.Abs(Math.Abs(mvt.x) + Math.Abs(mvt.z) - 1f) < 0.1f)
         {
             mvt *= 1.42f;
         }
@@ -105,7 +105,6 @@ public class Mouvement_player : MonoBehaviour
         {
             transform.position += mvt * dt;
         }
-
         
         _lastTimeDash += dt;
         _lastTimeMoveSpeed += dt;
