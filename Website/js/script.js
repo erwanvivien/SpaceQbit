@@ -29,7 +29,7 @@ function appearUpdate(elem, ticks) {
 }
 
 function troll() {
-  alert("Eh bah non je t'ai trollé!!!");
+  alert("Mouahaha I pranked you and it's on camera!!! It's gonna be viral on facebook!!");
 }
 
 setTimeout(function () {
