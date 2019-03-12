@@ -33,19 +33,11 @@ public class Looking_Direction : MonoBehaviour
     void Update()
     {
         Vector3 posMouse = Input.mousePosition;
-        string animToPlay;
-        
+
         posMouse.y -= Screen.height / 2f;
         posMouse.x -= Screen.width / 2f;
 
-        if (_player.GetMoving())
-        {
-            animToPlay = "player_moving";
-        }
-        else
-        {
-            animToPlay = "player_rest";
-        }
+        var animToPlay = _player.GetMoving() ? "player_moving" : "player_rest";
 
         transform.localScale = new Vector3(Math.Sign(posMouse.x) >= 0 ? _scaling.x : -_scaling.x, 
             _scaling.y, 

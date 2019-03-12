@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+<<<<<<< HEAD
+    <e p="C:\Dev\SpaceQbit\SpaceQbit" t="IncludeRecursive">
+=======
     <e p="$USER_HOME$/.Rider2018.3/system/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2018.3/system/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_SpaceQbit.-1788362013.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
+>>>>>>> cb7a61c3ecd73ba08d179d7a00dfd7b4a5f9d32d
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -114,11 +118,19 @@
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="SpaceQbit.sln" t="IncludeFlat" />
+<<<<<<< HEAD
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+    <e p="C:\Users\Erwan\.Rider2018.2\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\Erwan\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Erwan\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_SpaceQbit.257342268.00" t="ExcludeRecursive" />
+=======
       <e p="Temp" t="ExcludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
     </e>
+>>>>>>> cb7a61c3ecd73ba08d179d7a00dfd7b4a5f9d32d
   </component>
 </project>
