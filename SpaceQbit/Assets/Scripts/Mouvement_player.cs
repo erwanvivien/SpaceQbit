@@ -6,7 +6,7 @@ using UnityEngine.AI;
 using UnityEngine.Experimental.UIElements;
 using Debug = UnityEngine.Debug;
 
-public class Mouvement_player : MonoBehaviour
+public class Mouvement_player : Bolt.EntityEventListener<IPlayerState>
 {
     private CurrentMenu esc;
     
@@ -52,7 +52,7 @@ public class Mouvement_player : MonoBehaviour
         esc = GameObject.FindWithTag("Menu").GetComponent<CurrentMenu>();
     }
 
-    void Update()
+    public override void SimulateOwner()
     {
         if (esc.inMenu)
         {
@@ -108,6 +108,11 @@ public class Mouvement_player : MonoBehaviour
         
         _lastTimeDash += dt;
         _lastTimeMoveSpeed += dt;
+    }
+
+    void Update()
+    {
+        SimulateOwner();
     }
 }
         
