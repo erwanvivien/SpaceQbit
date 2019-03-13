@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneGuid: 
-  _serializerGuid: 59c907e2-5a0e-4d64-a471-19b9fcbb8169
+  _serializerGuid: d9c5e788-3119-431f-a329-d0cf9b074721
   _prefabId: 2
   _updateRate: 1
   _autoFreezeProxyFrames: 0
@@ -206,10 +206,10 @@ Transform:
   m_LocalPosition: {x: 1.2, y: 3.43, z: -2.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 9067888958540635282}
+  - {fileID: 9067888958540635262}
   - {fileID: 440}
   - {fileID: 7026205872069247318}
-  - {fileID: 7139667171276011891}
+  - {fileID: 7139667171276011917}
   m_Father: {fileID: 438}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -476,7 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b724fcc5689f14d99ec6edf91e8dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Obj: {fileID: 8556774304179471342, guid: 8550ea4e7e2baf143adb6fa2f87e01a2, type: 3}
+  Obj: {fileID: 368, guid: 8550ea4e7e2baf143adb6fa2f87e01a2, type: 3}
   _cooldownShoot: 0.5
   _bulletSpeed: 3
   _durationBullet: 10
@@ -484,7 +484,7 @@ MonoBehaviour:
   _cooldownBulletSpell: 10
   _durationBulletSpell: 1
   _boostDamageBullet: 3
-  _cam: {fileID: 9067888958540635178}
+  _cam: {fileID: 9067888958540635199}
 --- !u!1001 &1297720053651829623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -681,17 +681,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 9067888958540635178}
-    - target: {fileID: 8373045617871855618, guid: f23fc4231728b84488f6ba03c7997618,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4552131163353966749, guid: f23fc4231728b84488f6ba03c7997618,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9067888958540635199}
     - target: {fileID: 563593819863654471, guid: f23fc4231728b84488f6ba03c7997618,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -702,9 +692,19 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4552131163353966749, guid: f23fc4231728b84488f6ba03c7997618,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373045617871855618, guid: f23fc4231728b84488f6ba03c7997618,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f23fc4231728b84488f6ba03c7997618, type: 3}
---- !u!224 &7139667171276011891 stripped
+--- !u!224 &7139667171276011917 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1764490080898261816, guid: f23fc4231728b84488f6ba03c7997618,
     type: 3}
@@ -851,7 +851,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 9067888958540635178}
+      objectReference: {fileID: 9067888958540635199}
     - target: {fileID: 1034116132567496830, guid: 5da079bb4a1906049b7f4be8507eddd2,
         type: 3}
       propertyPath: m_PlaneDistance
@@ -934,13 +934,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4c6164fc2e9cae4b9e678426edee492, type: 3}
---- !u!4 &9067888958540635282 stripped
+--- !u!4 &9067888958540635262 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 621323872260889502, guid: f4c6164fc2e9cae4b9e678426edee492,
     type: 3}
   m_PrefabInstance: {fileID: 9067888958540635628}
   m_PrefabAsset: {fileID: 0}
---- !u!20 &9067888958540635178 stripped
+--- !u!20 &9067888958540635199 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8873797907952822271, guid: f4c6164fc2e9cae4b9e678426edee492,
     type: 3}

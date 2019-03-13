@@ -52,7 +52,7 @@ public class Mouvement_player : Bolt.EntityEventListener<IPlayerState>
         esc = GameObject.FindWithTag("Menu").GetComponent<CurrentMenu>();
     }
 
-    public override void SimulateOwner()
+    void Update()
     {
         if (esc.inMenu)
         {
@@ -65,26 +65,12 @@ public class Mouvement_player : Bolt.EntityEventListener<IPlayerState>
         
         float dt = Time.deltaTime;
         
-        Vector3 mvt = Vector3.zero;
-        
         _moving = true;
         
         if (_lastTimeDash > _cooldownDash && !_dashable)
         {
             _dashable = true;
             _speeding = false;
-        }
-        
-        mvt += new Vector3(Input.GetAxisRaw("Horizontal"),0, Input.GetAxisRaw("Vertical"));
-        
-        if (mvt == Vector3.zero)
-        {
-            _moving = false;
-        }
-                
-        if (Math.Abs(Math.Abs(mvt.x) + Math.Abs(mvt.z) - 1f) < 0.1f)
-        {
-            mvt *= 1.42f;
         }
         
         if (((Input.GetKeyDown(KeyCode.LeftShift) || 
@@ -97,6 +83,31 @@ public class Mouvement_player : Bolt.EntityEventListener<IPlayerState>
             _speeding = true;
         }
 
+        
+        _lastTimeDash += dt;
+        _lastTimeMoveSpeed += dt;
+    }
+
+    public override void SimulateOwner()
+    {
+        Vector3 mvt = Vector3.zero;
+        
+        float dt = Time.deltaTime;
+        
+        _moving = true;
+        
+        mvt += new Vector3(Input.GetAxisRaw("Horizontal"),0, Input.GetAxisRaw("Vertical"));
+        
+        if (mvt == Vector3.zero)
+        {
+            _moving = false;
+        }
+        
+        if (Math.Abs(mvt.x) + Math.Abs(mvt.z) == 1)
+        {
+            mvt *= 1.42f;
+        }
+        
         if (_lastTimeMoveSpeed < _durationMoveSpeed && _speeding)
         {
             transform.position += mvt * dt * _moveSpeed;
@@ -105,14 +116,12 @@ public class Mouvement_player : Bolt.EntityEventListener<IPlayerState>
         {
             transform.position += mvt * dt;
         }
+
         
         _lastTimeDash += dt;
         _lastTimeMoveSpeed += dt;
     }
 
-    void Update()
-    {
-        SimulateOwner();
     }
 }
         

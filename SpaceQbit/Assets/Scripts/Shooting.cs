@@ -5,7 +5,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-public class Shooting : MonoBehaviour
+public class Shooting : Bolt.EntityBehaviour<IPlayerState>
 {
     public GameObject Obj;
     
