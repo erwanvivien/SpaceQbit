@@ -29,9 +29,22 @@ function appearUpdate(elem, ticks) {
 }
 
 function troll() {
-  alert("Mouahaha I pranked you and it's on camera!!! It's gonna be viral on facebook!!");
+  alert("Eh bah non je t'ai trollé!!!");
 }
 
 setTimeout(function () {
 	$("#gif").attr("src", "images/logofreeze.jpg");
 },7000);
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}

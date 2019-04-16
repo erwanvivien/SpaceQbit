@@ -3,40 +3,37 @@
 
 <head>
   <!--Meta-->
-  <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-  <link rel="icon" href="images/Logo_Blanc.jpg" type="image/jpg"/>
-  <title>SpaceQbit - Sparks Studio</title>
-  <meta name="description" content="Everything about the game SpaceQbit, developed by Sparks@."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>SpaceQbit - Overview</title>
+  <meta name="description" content="Everything about the game SpaceQbit, developed by Sparks.">
   <!--Styles-->
-  <link type="text/css" rel="stylesheet" href="css/style.css"/>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <!--Header-->
   <header class="c-header" role="banner">
-    <div class="o-header-wrapper">
-      <div class="c-header-title">
+      <div class="o-header-wrapper">
         <a class="title-link" href="index.html">
           <h1><span class="c-header-head">SpaceQbit</span></h1>
-          <br><span class="c-header-subhead appear">A Sparks© production</span>
+          <br><span class="c-header-subhead">A Sparks© production</span>
         </a>
       </div>
-      <!--<button onclick="toggle()">Toggle Menu</button>-->
-    </div>
   </header>
   <!--Navigation-->
-  <!--<nav id="nav" class="navbar c-nav">-->
-    <ul>
-      <li><a href="#" class ="c-nav-link">Overview</a></li>
-      <li><a href="timeline.html" class="c-nav-link">Timeline</a></li>
-      <li><a href="software.html" class="c-nav-link">Software, libraries etc</a></li>
-      <li style="float:right"><a href="download.html" class="c-nav-link">Downloads</a></li>
-    </ul>
+  <div class="o-nav-wrapper" id="navbar">
+    <a class="c-nav-link active" href="#">Overview</a>
+    <a class="c-nav-link" href="timeline.html">Timeline</a>
+    <a class="c-nav-link" href="software.html">Gallery</a>
+    <a class="c-nav-link" style="float:right" href="download.html">Downloads</a>
+  </div>
+  <!--Main-->
   <main class="main" role="main">
-    <h2 class="c-subtitle">Completion of the project</h2><br>
+    <h2 class="c-subtitle">Completion of the project</h2>
     <br>
-    <div id="tables">
+    <div class="tables">
       <table id="estim_table">
         <tr>
           <th>Field/Oral</th>
@@ -84,6 +81,8 @@
           <td colspan="4">Table 1: Book of Specifications</td>
         </tr>
       </table>
+    </div><br><br>
+    <div class="tables">
       <table id="progress1_table">
         <tr>
           <th>Field/Oral</th>
@@ -133,8 +132,9 @@
       </table>
     </div><br>
     <h2 class="c-subtitle">Task Repartition</h2><br>
+    <!--<p>Here is a little remainder of which task was assigned to whom</p><br><br>-->
     <br>
-    <div id="task_t">
+    <div class="tables">
       <table id="task_table">
         <tr>
           <th></th>
@@ -196,6 +196,9 @@
           <td style="background-color: white" colspan="5">Table 3: Book of Specifications</td>
         </tr>
       </table>
+    </div>
+    <br><br>
+    <div class="tables">
       <table id="new_task_table">
         <tr>
           <th></th>
@@ -222,8 +225,8 @@
           <th>AI</th>
           <td class="c-td-small">&#9938;</td>
           <td></td>
+          <td class="c-td-big">&#9938;</td>
           <td></td>
-		  <td class="c-td-big">&#9938;</td>
         </tr>
         <tr>
           <th>Programming</th>
@@ -253,19 +256,39 @@
           <td></td>
           <td></td>
         </tr>
-        <td style="background-color: white" colspan="5">Table 4: 1st soutenance's update</td>
+        <tr>
+          <td style="background-color: white" colspan="5">Table 4: 1st soutenance's update</td>
+        </tr>
       </table>
-    </div><br><br><br><br><br><br><br>
+    </div><br><br><br>
+    <h2 class="c-subtitle">Tools</h2>
+    <div class="o-tools-wrapper">
+      <ul class="c-tools">
+        <li>Visual Studio</li>
+        <li>Rider</li>
+        <li>Atom</li>
+        <li>Unity</li>
+        <li>Github</li>
+        <li>Git Kraken</li>
+        <li>Photoshop</li>
+        <li>Adobe Premiere</li>
+        <li>Audacity/Adobe Audition</li>
+        <li>Overleaf</li>
+      </ul>
+    </div>
+    <br><br>
     <h2 class="c-subtitle">Team Presentation</h2><br>
     <br>
     <div class="c-pres">
       <div class="c-pres-member">
+        <h3>Erwan Vivien</h3>
         <img class="c-member-photo" src="images/erwan.jpg" alt="Erwan" width="243" height="364">
         <p>Before EPITA, I have always been interested in the making of video games. I've done some really tiny projects but nothing was satisfying me.
            I have always been a gamer ! This project is the perfect cross between educational programming and passion.
         </p>
       </div>
-      <br>
+      <br><br>
+      <h3>Christophe Terreaux</h3>
       <div class="c-pres-member">
         <img class="c-member-photo" src="images/chris.jpg" alt="Christophe" width="243" height="364">
         <p>Since I was young, video games have a part in my life. I have done my first corporate internship in middle school in the society Kylotonn.
@@ -274,7 +297,8 @@
           As a member, this will primarily be my creativity and also my game design's idea which will permit to have a true game.
         </p>
       </div>
-      <br>
+      <br><br>
+      <h3>Zacharie Constans</h3>
       <div class="c-pres-member">
         <img class="c-member-photo" src="images/zach.jpg" alt="Zacharie" width="243" height="364">
         <p>I began to have interest in game development and more generally programming since ninth grade, and I started to code the same year with a MOOC on Javascript on khanacademy.org.
@@ -282,7 +306,8 @@
            For me this project is an opportunity to learn more about how programs are developed, how can different people work on the same project together and a way to enhance my programming skills.
         </p>
       </div>
-      <br>
+      <br><br>
+      <h3>Gautier Picard</h3>
       <div class="c-pres-member">
         <img class="c-member-photo" src="images/gogo.jpg" alt="Gautier" width="243" height="364">
         <p>I started programming around thirteen years old in school (9th grade) and outside with a friend. I understood soon after that I would like to work in IT.
