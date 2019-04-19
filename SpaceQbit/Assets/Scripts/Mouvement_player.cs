@@ -122,6 +122,5 @@ public class Mouvement_player : Bolt.EntityEventListener<IPlayerState>
         _lastTimeMoveSpeed += dt;
     }
 
-    }
 }
         

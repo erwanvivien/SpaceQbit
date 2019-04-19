@@ -10,7 +10,7 @@ public class NetworkCallbacks : Bolt.GlobalEventListener
     public override void SceneLoadLocalDone(string map)
     {
         // randomize a position
-        var spawnPosition = new Vector3(Random.Range(-8, 8), 0, Random.Range(-8, 8));
+        var spawnPosition = new Vector3(Random.Range(-2, 2), 0, Random.Range(-2, 2));
 
         // instantiate cube
         BoltNetwork.Instantiate(BoltPrefabs.Perso1, spawnPosition, Quaternion.identity);

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Follow_Target : MonoBehaviour
+public class Follow_Target : Bolt.EntityBehaviour<IEnemyState>
 {
     private GameObject _target;
     NavMeshAgent _nav;
@@ -25,7 +25,7 @@ public class Follow_Target : MonoBehaviour
     
     void Awake()
     {
-        _player = GameObject.FindGameObjectWithTag("Perso").transform;
+        _player = GameObject.FindWithTag("Perso1(clone)").transform;
         _nav = GetComponent<NavMeshAgent>();
     }
     

@@ -3,7 +3,7 @@ PlayerPath?
 /home/zac/Documents/tmp/testjeu.x86_64
 SceneListBegin?
 Assets/Scenes/MenuNet.unity
-Assets/Scenes/scene.unity
+Assets/scene.unity
 Assets/Scenes/TestMeny.unity
 SceneListEnd?
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
