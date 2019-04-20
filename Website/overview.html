@@ -10,30 +10,46 @@
   <meta name="description" content="Everything about the game SpaceQbit, developed by Sparks.">
   <!--Styles-->
   <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="image/favicon.ico">
 </head>
 
 <body>
   <!--Header-->
   <header class="c-header" role="banner">
       <div class="o-header-wrapper">
-        <a class="title-link" href="index.html">
-          <h1><span class="c-header-head">SpaceQbit</span></h1>
+          <h1><a class="title-link" href="index.html"><span class="c-header-head">SpaceQbit</span></a></h1>
           <br><span class="c-header-subhead">A Sparks© production</span>
-        </a>
       </div>
   </header>
   <!--Navigation-->
   <div class="o-nav-wrapper" id="navbar">
-    <a class="c-nav-link active" href="#">Overview</a>
-    <a class="c-nav-link" href="timeline.html">Timeline</a>
-    <a class="c-nav-link" href="software.html">Gallery</a>
-    <a class="c-nav-link" style="float:right" href="download.html">Downloads</a>
+    <ul style="list-style-type:none">
+      <li><a class="c-nav-link" href="#">Overview</a></li>
+      <li><a class="c-nav-link" href="timeline.html">Timeline</a></li>
+      <li><a class="c-nav-link" href="gallery.html">Gallery</a></li>
+      <li><a class="c-nav-link" style="float:right" href="download.html">Downloads</a></li>
+      <li class="dropdown"><a class="c-nav-link dropbtn" href="#">Softwares<i class="down"></i></a>
+        <div class="dropdown-content">
+          <a href="https://visualstudio.microsoft.com/" target="_blank">Visual Studio</a>
+          <a href="https://www.jetbrains.com/rider/" target="_blank">Rider</a>
+          <a href="https://atom.io/" target="_blank">Atom</a>
+          <a href="https://unity.com/" target="_blank">Unity</a>
+          <a href="https://github.com/" target="_blank">GitHub</a>
+          <a href="https://www.gitkraken.com/" target="_blank">GitKraken</a>
+          <a href="https://www.adobe.com/products/photoshop.html" target="_blank">Adobe Photoshop</a>
+          <a href="https://www.adobe.com/products/premiere.html" target="_blank">Adobe Premiere</a>
+          <a href="https://www.adobe.com/products/audition.html" target="_blank">Adobe Audition</a>
+          <a href="https://www.audacityteam.org/" target="_blank">Audacity</a>
+          <a href="https://fr.overleaf.com/" target="_blank">Overleaf</a>
+        </div>
+      </li>
+    </ul>
   </div>
   <!--Main-->
   <main class="main" role="main">
     <h2 class="c-subtitle">Completion of the project</h2>
     <br>
-    <div class="tables">
+    <div class="tablesC">
       <table id="estim_table">
         <tr>
           <th>Field/Oral</th>
@@ -81,8 +97,6 @@
           <td colspan="4">Table 1: Book of Specifications</td>
         </tr>
       </table>
-    </div><br><br>
-    <div class="tables">
       <table id="progress1_table">
         <tr>
           <th>Field/Oral</th>
@@ -134,7 +148,7 @@
     <h2 class="c-subtitle">Task Repartition</h2><br>
     <!--<p>Here is a little remainder of which task was assigned to whom</p><br><br>-->
     <br>
-    <div class="tables">
+    <div class="tablesT">
       <table id="task_table">
         <tr>
           <th></th>
@@ -196,9 +210,6 @@
           <td style="background-color: white" colspan="5">Table 3: Book of Specifications</td>
         </tr>
       </table>
-    </div>
-    <br><br>
-    <div class="tables">
       <table id="new_task_table">
         <tr>
           <th></th>
@@ -261,20 +272,18 @@
         </tr>
       </table>
     </div><br><br><br>
-    <h2 class="c-subtitle">Tools</h2>
-    <div class="o-tools-wrapper">
-      <ul class="c-tools">
-        <li>Visual Studio</li>
-        <li>Rider</li>
-        <li>Atom</li>
-        <li>Unity</li>
-        <li>Github</li>
-        <li>Git Kraken</li>
-        <li>Photoshop</li>
-        <li>Adobe Premiere</li>
-        <li>Audacity/Adobe Audition</li>
-        <li>Overleaf</li>
-      </ul>
+    <h2 class="c-subtitle tools">Tools</h2>
+    <div class="o-tools-wrapper tools">
+      <p>Visual Studio<br>
+      Rider<br>
+      Atom<br>
+      Unity<br>
+      GitHub<br>
+      Git Kraken<br>
+      Photoshop<br>
+      Adobe Premiere<br>
+      Audacity/Adobe Audition<br>
+      Overleaf</p><br>
     </div>
     <br><br>
     <h2 class="c-subtitle">Team Presentation</h2><br>
@@ -282,7 +291,7 @@
     <div class="c-pres">
       <div class="c-pres-member">
         <h3>Erwan Vivien</h3>
-        <img class="c-member-photo" src="images/erwan.jpg" alt="Erwan" width="243" height="364">
+        <img class="c-member-photo" src="image/erwan.jpg" alt="Erwan" width="243" height="364">
         <p>Before EPITA, I have always been interested in the making of video games. I've done some really tiny projects but nothing was satisfying me.
            I have always been a gamer ! This project is the perfect cross between educational programming and passion.
         </p>
@@ -290,7 +299,7 @@
       <br><br>
       <h3>Christophe Terreaux</h3>
       <div class="c-pres-member">
-        <img class="c-member-photo" src="images/chris.jpg" alt="Christophe" width="243" height="364">
+        <img class="c-member-photo" src="image/chris.jpg" alt="Christophe" width="243" height="364">
         <p>Since I was young, video games have a part in my life. I have done my first corporate internship in middle school in the society Kylotonn.
           Working on a video game is one of my objective since I was nine years old. Working on this project will be my long awaited opportunity.
           As the leader, my main goal is to keep a rhythm in our work, to take the good decisions when needed and also to keep good relationship between the members of the group.
@@ -300,7 +309,7 @@
       <br><br>
       <h3>Zacharie Constans</h3>
       <div class="c-pres-member">
-        <img class="c-member-photo" src="images/zach.jpg" alt="Zacharie" width="243" height="364">
+        <img class="c-member-photo" src="image/zach.jpg" alt="Zacharie" width="243" height="364">
         <p>I began to have interest in game development and more generally programming since ninth grade, and I started to code the same year with a MOOC on Javascript on khanacademy.org.
            But I stopped soon after and learned Python, alone at first on openclassrooms.com and later during my final year of high school by being part of a special course made to prepare the entry in the "Prépas CPGE".
            For me this project is an opportunity to learn more about how programs are developed, how can different people work on the same project together and a way to enhance my programming skills.
@@ -309,7 +318,7 @@
       <br><br>
       <h3>Gautier Picard</h3>
       <div class="c-pres-member">
-        <img class="c-member-photo" src="images/gogo.jpg" alt="Gautier" width="243" height="364">
+        <img class="c-member-photo" src="image/gogo.jpg" alt="Gautier" width="243" height="364">
         <p>I started programming around thirteen years old in school (9th grade) and outside with a friend. I understood soon after that I would like to work in IT.
           At the time, I believed working on video games was the one and only path for me.
           Today, even if I dropped this idea a little to look closely to other possible careers, my interest in video games has not decreased since
