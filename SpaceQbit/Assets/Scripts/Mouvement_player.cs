@@ -6,7 +6,7 @@ using UnityEngine.AI;
 using UnityEngine.Experimental.UIElements;
 using Debug = UnityEngine.Debug;
 
-public class Mouvement_player : Bolt.EntityEventListener<IPlayerState>
+public class Mouvement_player : MonoBehaviour
 {
     private CurrentMenu esc;
     
@@ -54,6 +54,9 @@ public class Mouvement_player : Bolt.EntityEventListener<IPlayerState>
 
     void Update()
     {
+        
+        Vector3 mvt = Vector3.zero;
+        
         if (esc.inMenu)
         {
             _moving = false;
@@ -62,35 +65,6 @@ public class Mouvement_player : Bolt.EntityEventListener<IPlayerState>
 
             return;
         }
-        
-        float dt = Time.deltaTime;
-        
-        _moving = true;
-        
-        if (_lastTimeDash > _cooldownDash && !_dashable)
-        {
-            _dashable = true;
-            _speeding = false;
-        }
-        
-        if (((Input.GetKeyDown(KeyCode.LeftShift) || 
-             Input.GetKeyDown(KeyCode.RightShift)) && 
-             _dashable))
-        {
-            _lastTimeDash = 0;
-            _lastTimeMoveSpeed = 0;
-            _dashable = false;
-            _speeding = true;
-        }
-
-        
-        _lastTimeDash += dt;
-        _lastTimeMoveSpeed += dt;
-    }
-
-    public override void SimulateOwner()
-    {
-        Vector3 mvt = Vector3.zero;
         
         float dt = Time.deltaTime;
         
@@ -116,11 +90,26 @@ public class Mouvement_player : Bolt.EntityEventListener<IPlayerState>
         {
             transform.position += mvt * dt;
         }
+        
+        if (_lastTimeDash > _cooldownDash && !_dashable)
+        {
+            _dashable = true;
+            _speeding = false;
+        }
+        
+        if (((Input.GetKeyDown(KeyCode.LeftShift) || 
+             Input.GetKeyDown(KeyCode.RightShift)) && 
+             _dashable))
+        {
+            _lastTimeDash = 0;
+            _lastTimeMoveSpeed = 0;
+            _dashable = false;
+            _speeding = true;
+        }
 
         
         _lastTimeDash += dt;
         _lastTimeMoveSpeed += dt;
     }
-
 }
         

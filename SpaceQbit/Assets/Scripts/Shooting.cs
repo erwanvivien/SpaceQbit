@@ -5,7 +5,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-public class Shooting : Bolt.EntityBehaviour<IPlayerState>
+public class Shooting : MonoBehaviour
 {
     public GameObject Obj;
     
@@ -72,7 +72,7 @@ public class Shooting : Bolt.EntityBehaviour<IPlayerState>
         _timeBullets = new List<float>();
         
         esc = GameObject.FindWithTag("Menu").GetComponent<CurrentMenu>();
-        _cam = GameObject.FindWithTag("LocalCamera").GetComponent<Camera>();
+        _cam = GameObject.FindWithTag("PCamera").GetComponent<Camera>();
     }
 
     float GetCooToAngle (Vector3 target)

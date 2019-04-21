@@ -205,3 +205,4 @@ c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 71bb6a6b6c8f052f948db64c7dd3ca4f udpkit.platform.photon.dll:udpkit.platform.photon.PhotonPingManager
 2a9d31b824cabde46b42de980dbf886c Assembly-CSharp.dll:.Search_Target
+a26287687bdad13d8b60b237850ab4be Assembly-CSharp.dll:.PCamera

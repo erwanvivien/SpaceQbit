@@ -53,15 +53,16 @@
           <e p="Killable.cs" t="Include" />
           <e p="Looking_Direction.cs" t="Include" />
           <e p="Make_to_Screen_Size.cs" t="Include" />
-          <e p="MenuNet.cs" t="Include" />
           <e p="Mouvement_player.cs" t="Include" />
-          <e p="PotentialKey.cs" t="Include" />
-          <e p="Search_Target.cs" t="Include" />
-          <e p="Shooting.cs" t="Include" />
-          <e p="TestsNet" t="Include">
+          <e p="Netw" t="Include">
+            <e p="MenuNet.cs" t="Include" />
+            <e p="PCamera.cs" t="Include" />
             <e p="PlayerObject.cs" t="Include" />
             <e p="PlayerObjectRegistry.cs" t="Include" />
           </e>
+          <e p="PotentialKey.cs" t="Include" />
+          <e p="Search_Target.cs" t="Include" />
+          <e p="Shooting.cs" t="Include" />
         </e>
         <e p="Sprites" t="Include">
           <e p="Keycodes" t="Include">

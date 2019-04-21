@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Follow_Target : Bolt.EntityBehaviour<IEnemyState>
+public class Follow_Target : MonoBehaviour
 {
     private GameObject _target;
     NavMeshAgent _nav;
