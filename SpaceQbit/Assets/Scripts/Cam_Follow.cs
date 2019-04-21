@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Cam_Follow: Bolt.EntityBehaviour<ICameraState>
+public class Cam_Follow: MonoBehaviour
 {
     private Vector3 _b = Vector3.zero;
 

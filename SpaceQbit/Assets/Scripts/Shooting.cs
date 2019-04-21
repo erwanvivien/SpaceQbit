@@ -72,7 +72,7 @@ public class Shooting : Bolt.EntityBehaviour<IPlayerState>
         _timeBullets = new List<float>();
         
         esc = GameObject.FindWithTag("Menu").GetComponent<CurrentMenu>();
-        _cam = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        _cam = GameObject.FindWithTag("LocalCamera").GetComponent<Camera>();
     }
 
     float GetCooToAngle (Vector3 target)

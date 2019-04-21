@@ -31,7 +31,6 @@ public class MenuNet : Bolt.GlobalEventListener
 
             BoltNetwork.SetServerInfo(matchName, null);
             BoltNetwork.LoadScene("scene");
-//          BoltScenes.AddScene();
         }
     }
 

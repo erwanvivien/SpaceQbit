@@ -33,6 +33,11 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Bullet_Collision.cs" t="Include" />
+          <e p="Callbacks" t="Include">
+            <e p="NetworkCallbacks.cs" t="Include" />
+            <e p="PlayerCallbacks.cs" t="Include" />
+            <e p="ServerCallbacks.cs" t="Include" />
+          </e>
           <e p="Cam_Follow.cs" t="Include" />
           <e p="CooOffset.cs" t="Include" />
           <e p="CurrentMenu.cs" t="Include" />
@@ -50,11 +55,13 @@
           <e p="Make_to_Screen_Size.cs" t="Include" />
           <e p="MenuNet.cs" t="Include" />
           <e p="Mouvement_player.cs" t="Include" />
-          <e p="NetworkCallbacks.cs" t="Include" />
           <e p="PotentialKey.cs" t="Include" />
           <e p="Search_Target.cs" t="Include" />
-          <e p="ServerCallbacks.cs" t="Include" />
           <e p="Shooting.cs" t="Include" />
+          <e p="TestsNet" t="Include">
+            <e p="PlayerObject.cs" t="Include" />
+            <e p="PlayerObjectRegistry.cs" t="Include" />
+          </e>
         </e>
         <e p="Sprites" t="Include">
           <e p="Keycodes" t="Include">
@@ -80,9 +87,6 @@
           <e p="resources" t="Include">
             <e p="BoltShaderPOI.shader" t="Include" />
             <e p="backgrounds" t="Include">
-              <e p="ATTRIBUTION.txt" t="Include" />
-            </e>
-            <e p="icons" t="Include">
               <e p="ATTRIBUTION.txt" t="Include" />
             </e>
             <e p="icons_welcome" t="Include">

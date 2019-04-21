@@ -25,7 +25,7 @@ public class Follow_Target : Bolt.EntityBehaviour<IEnemyState>
     
     void Awake()
     {
-        _player = GameObject.FindWithTag("Perso1(clone)").transform;
+        _player = GameObject.FindWithTag("Perso1").transform;
         _nav = GetComponent<NavMeshAgent>();
     }
     

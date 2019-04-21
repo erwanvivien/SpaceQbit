@@ -44,7 +44,7 @@ MonoBehaviour:
     connectionRequestAttempts: 20
   debugClientCount: 2
   debugStartPort: 50538
-  debugStartMapName: scene
+  debugStartMapName: MenuNet
   debugPlayAsServer: 0
   showDebugInfo: 1
   overrideTimeScale: 1
