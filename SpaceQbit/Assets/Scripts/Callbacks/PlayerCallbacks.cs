@@ -3,7 +3,6 @@ using UnityEngine;
 [BoltGlobalBehaviour("scene")]
 public class TutorialPlayerCallbacks : Bolt.GlobalEventListener
 {
-
     public override void SceneLoadLocalDone(string map)
     {
         // this just instantiates our player camera,

@@ -1,50 +1,48 @@
 using UnityEngine;
-	public class PCamera : BoltSingletonPrefab<PCamera>
-	{
-		
-		private Vector3 _b = Vector3.zero;
-		
-		// camera target
-		Transform _target;
 
-		private Vector3 _offset;
+public class PCamera : BoltSingletonPrefab<PCamera>
+{
+    private Vector3 _b = Vector3.zero;
 
-		[SerializeField]
-		Transform cam;
-		
-		public Camera myCamera 
-		{
-			get { return transform.GetComponent<Camera> (); }
-		}
+    // camera target
+    Transform _target;
 
-		void Awake ()
-		{
-			DontDestroyOnLoad (gameObject);
-		}
+    private Vector3 _offset;
 
-		void UpdateCamera ()
-		{
-			Vector3 targetPosition = _target.position;
+    [SerializeField] Transform cam;
 
-			targetPosition += _offset;
-        
-			transform.position = 
-				Vector3.SmoothDamp(transform.position, 
-					targetPosition, 
-					ref _b, 
-					0.5f);
-		}
+    public Camera myCamera
+    {
+        get { return transform.GetComponent<Camera>(); }
+    }
 
-		public void SetTarget (BoltEntity entity)
-		{
-			_target = entity.transform;
-			_offset = new Vector3(1.2f, 3, 1.5f);
-			UpdateCamera ();
-		}
-    
-		void LateUpdate()
-		{
-			UpdateCamera();
-		}
-		
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
+    void UpdateCamera()
+    {
+        Vector3 targetPosition = _target.position;
+
+        targetPosition += _offset;
+
+        transform.position =
+            Vector3.SmoothDamp(transform.position,
+                targetPosition,
+                ref _b,
+                0.5f);
+    }
+
+    public void SetTarget(BoltEntity entity)
+    {
+        _target = entity.transform;
+        _offset = new Vector3(0, 3, -3);
+        UpdateCamera();
+    }
+
+    void LateUpdate()
+    {
+        UpdateCamera();
+    }
 }

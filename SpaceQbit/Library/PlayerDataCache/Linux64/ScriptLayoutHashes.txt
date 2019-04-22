@@ -124,6 +124,7 @@ f48c15cd588b7d02a4fbf29bd177f46d Assembly-CSharp.dll:.Looking_Direction
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
+8b294f99896107a8501503c6fce5bf25 Assembly-CSharp.dll:.PMotor
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ServerCallbacks
 8952f0ce2f40193f40f1495e5557351f Assembly-CSharp.dll:.Get_Coo_Cam
 77d533a28644c89d9282fdce23e1da8d Assembly-CSharp.dll:.Mouvement_player
@@ -134,6 +135,7 @@ b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.Analytics.Editor.dll:UnityEditor.Analytics.AnalyticsEventTrackerEditor
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Make_to_Screen_Size
+a26287687bdad13d8b60b237850ab4be Assembly-CSharp.dll:.PCamera
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.BoltDebugStart
 0f4ee7cf2db15a17666473eb2b005567 Assembly-CSharp.dll:.Get_Hp
@@ -153,6 +155,7 @@ e0ee4b3d4e27318934cc940a969d3d96 UnityEngine.Networking.dll:UnityEngine.Networki
 ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.PController
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.CooOffset
 510fefd6a544e16a3ffefa557ddcba39 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
 aa82b3ce4c0c9b227036c0337315c5d3 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
@@ -205,6 +208,3 @@ c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 71bb6a6b6c8f052f948db64c7dd3ca4f udpkit.platform.photon.dll:udpkit.platform.photon.PhotonPingManager
 2a9d31b824cabde46b42de980dbf886c Assembly-CSharp.dll:.Search_Target
-a26287687bdad13d8b60b237850ab4be Assembly-CSharp.dll:.PCamera
-8b294f99896107a8501503c6fce5bf25 Assembly-CSharp.dll:Bolt.AdvancedTutorial.PMotor
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.PController

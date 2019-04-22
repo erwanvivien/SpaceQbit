@@ -3,7 +3,6 @@
 [BoltGlobalBehaviour(BoltNetworkModes.Host, "scene")]
 public class ServerCallbacks : Bolt.GlobalEventListener
 {
-
     void Awake()
     {
         PlayerObjectRegistry.CreateServerPlayer();
@@ -14,12 +13,12 @@ public class ServerCallbacks : Bolt.GlobalEventListener
         PlayerObjectRegistry.CreateClientPlayer(connection);
     }
 
-    public override void SceneLoadLocalDone(string map) 
+    public override void SceneLoadLocalDone(string map)
     {
         PlayerObjectRegistry.ServerPlayer.Spawn();
     }
 
-    public override void SceneLoadRemoteDone(BoltConnection connection) 
+    public override void SceneLoadRemoteDone(BoltConnection connection)
     {
         PlayerObjectRegistry.GetTutorialPlayer(connection).Spawn();
     }

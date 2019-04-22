@@ -5,17 +5,17 @@ using UnityEngine;
 public class GetKeyName : MonoBehaviour
 {
     [SerializeField] private int BindingNb;
-    [SerializeField] private 
-    
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField]
+    private
+
+        // Start is called before the first frame update
+        void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 }

@@ -22,13 +22,13 @@ public class Follow_Target : MonoBehaviour
     {
         return _target;
     }
-    
+
     void Awake()
     {
         _player = GameObject.FindWithTag("Perso1").transform;
         _nav = GetComponent<NavMeshAgent>();
     }
-    
+
     void Update()
     {
         if (_target != null)

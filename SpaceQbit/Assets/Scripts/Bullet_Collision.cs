@@ -5,17 +5,18 @@ using UnityEngine.Serialization;
 
 public class Bullet_Collision : MonoBehaviour
 {
-    [FormerlySerializedAs("tmp")] [SerializeField] private Shooting _tmp;
+    [FormerlySerializedAs("tmp")] [SerializeField]
+    private Shooting _tmp;
 
     private int _damage;
-    
+
     private bool _collision;
 
     public void SetDamage(int damage)
     {
         _damage = damage;
     }
-    
+
     public bool GetCollision()
     {
         return _collision;
@@ -40,7 +41,7 @@ public class Bullet_Collision : MonoBehaviour
                 other.gameObject.GetComponent<Killable>().Attack(_damage);
                 _collision = true;
                 break;
-            
+
             default:
                 _collision = false;
                 break;

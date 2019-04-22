@@ -10,17 +10,17 @@ public class PController : Bolt.EntityBehaviour<IPlayerState>
     bool _dash;
 
     PMotor _motor;
-    
+
     void Awake()
     {
-    _motor = GetComponent<PMotor>();
+        _motor = GetComponent<PMotor>();
     }
 
     public override void Attached()
     {
         state.SetTransforms(state.transform, transform);
     }
-    
+
     void PollKeys()
     {
         _forward = Input.GetKey(KeyCode.Z);
@@ -29,12 +29,12 @@ public class PController : Bolt.EntityBehaviour<IPlayerState>
         _right = Input.GetKey(KeyCode.D);
         _dash = Input.GetKeyDown(KeyCode.LeftShift);
     }
-    
+
     void Update()
     {
         PollKeys();
     }
-    
+
     public override void SimulateController()
     {
         PollKeys();
@@ -49,10 +49,10 @@ public class PController : Bolt.EntityBehaviour<IPlayerState>
 
         entity.QueueInput(input);
     }
-    
+
     public override void ExecuteCommand(Command command, bool resetState)
     {
-        PlayerCommand cmd = (PlayerCommand)command;
+        PlayerCommand cmd = (PlayerCommand) command;
 
         if (resetState)
         {
@@ -62,7 +62,8 @@ public class PController : Bolt.EntityBehaviour<IPlayerState>
         else
         {
             // apply movement (this runs on both server and client)
-            PMotor.State motorState = _motor.Move(cmd.Input.Forward, cmd.Input.Backward, cmd.Input.Left, cmd.Input.Right);
+            PMotor.State motorState =
+                _motor.Move(cmd.Input.Forward, cmd.Input.Backward, cmd.Input.Left, cmd.Input.Right);
 
             // copy the motor state to the commands result (this gets sent back to the client)
             cmd.Result.Position = motorState.position;

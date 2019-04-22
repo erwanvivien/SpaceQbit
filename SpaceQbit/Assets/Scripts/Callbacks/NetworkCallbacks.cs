@@ -11,7 +11,7 @@ public class NetworkCallbacks : Bolt.GlobalEventListener
     {
         logMessages.Insert(0, evnt.Message);
     }
-    
+
     void OnGUI()
     {
         // only display max the 5 latest log messages

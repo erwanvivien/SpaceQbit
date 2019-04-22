@@ -8,21 +8,21 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     public GameObject Obj;
-    
+
     private CurrentMenu esc;
 
     private Transform _posCanvas;
     private List<GameObject> _bullets;
     private List<float> _timeBullets;
-    
+
     private float _lastTimeShoot;
     private bool _shotable = true;
-    
+
     [SerializeField] private float _cooldownShoot = 0.5f;
     [SerializeField] private float _bulletSpeed = 3;
 
     [SerializeField] private float _durationBullet = 10;
-    
+
     [SerializeField] private int _damage = 10;
     [SerializeField] private float _cooldownBulletSpell = 10f;
     [SerializeField] private float _durationBulletSpell = 1f;
@@ -34,12 +34,12 @@ public class Shooting : MonoBehaviour
 
     private Transform _objectToPlace;
     [SerializeField] private Camera _cam;
-    
+
     public bool GetDamageBoosted()
     {
         return _damageBoosted;
     }
-    
+
     public float GetCooldownBulletSpell()
     {
         return _cooldownBulletSpell;
@@ -49,7 +49,7 @@ public class Shooting : MonoBehaviour
     {
         return _boostDamageBullet;
     }
-    
+
     public float GetLastTimeShoot()
     {
         return _lastTimeShoot;
@@ -70,12 +70,12 @@ public class Shooting : MonoBehaviour
         _lastTimeShoot = -2;
         _bullets = new List<GameObject>();
         _timeBullets = new List<float>();
-        
+
         esc = GameObject.FindWithTag("Menu").GetComponent<CurrentMenu>();
         _cam = GameObject.FindWithTag("PCamera(clone)").GetComponent<Camera>();
     }
 
-    float GetCooToAngle (Vector3 target)
+    float GetCooToAngle(Vector3 target)
     {
         Vector3 targetDir = target - transform.position;
         targetDir.y = 0;
@@ -91,7 +91,7 @@ public class Shooting : MonoBehaviour
         {
             _shotable = true;
         }
-        
+
         if (esc.inMenu)
         {
             return;
@@ -101,19 +101,19 @@ public class Shooting : MonoBehaviour
         {
             Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hitInfo;
-            
+
             float angle = 0;
-            
+
             if (Physics.Raycast(ray, out hitInfo))
             {
                 angle = GetCooToAngle(hitInfo.point);
-                angle = Input.mousePosition.y > (float) Screen.height/2 ? angle : -angle;
+                angle = Input.mousePosition.y > (float) Screen.height / 2 ? angle : -angle;
             }
-            
+
             _posCanvas = GetComponentInParent<Transform>();
-            
+
             GameObject newOne = Instantiate(Obj);
-            
+
             newOne.transform.localPosition = _posCanvas.position;
 
             if (!_damageBoosted)
@@ -121,16 +121,16 @@ public class Shooting : MonoBehaviour
                 newOne.transform.GetChild(0).localScale *= 2;
                 newOne.GetComponent<BoxCollider>().size *= 2;
             }
-            
+
             Rigidbody rb = newOne.GetComponent<Rigidbody>();
-            
+
             angle = (angle % 360 + 360) % 360;
             angle = (float) (angle / 180 * Math.PI);
-            
-            rb.velocity = new Vector3((float) Math.Cos(angle), 
-                                        0 , 
-                                        (float) Math.Sin(angle));
-            
+
+            rb.velocity = new Vector3((float) Math.Cos(angle),
+                0,
+                (float) Math.Sin(angle));
+
             rb.velocity *= _bulletSpeed;
 
             Bullet_Collision bulletCollision = newOne.GetComponent<Bullet_Collision>();
@@ -152,7 +152,7 @@ public class Shooting : MonoBehaviour
         for (int i = 0; i < _bullets.Count; i++)
         {
             Bullet_Collision nvScript = _bullets[i].GetComponent<Bullet_Collision>();
-            
+
             if (nvScript.GetCollision())
             {
                 Destroy(_bullets[i]);
@@ -161,7 +161,7 @@ public class Shooting : MonoBehaviour
                 _bullets.RemoveAt(i);
             }
         }
-        
+
         if (_timeDuration < 0)
         {
             if (!_damageBoosted)
@@ -169,10 +169,10 @@ public class Shooting : MonoBehaviour
                 _damage /= _boostDamageBullet;
                 _damageBoosted = true;
             }
-            
+
             _timeDuration = 0;
         }
-        
+
         if (Input.GetKeyDown(KeyCode.R) && _timeCooldown <= 0)
         {
             _damageBoosted = false;

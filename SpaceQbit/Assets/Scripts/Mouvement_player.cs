@@ -9,9 +9,9 @@ using Debug = UnityEngine.Debug;
 public class Mouvement_player : MonoBehaviour
 {
     private CurrentMenu esc;
-    
+
     [SerializeField] private float _cooldownDash = 5f;
-    
+
     private float _lastTimeDash;
     private float _lastTimePressed;
 
@@ -54,9 +54,8 @@ public class Mouvement_player : MonoBehaviour
 
     void Update()
     {
-        
         Vector3 mvt = Vector3.zero;
-        
+
         if (esc.inMenu)
         {
             _moving = false;
@@ -65,23 +64,23 @@ public class Mouvement_player : MonoBehaviour
 
             return;
         }
-        
+
         float dt = Time.deltaTime;
-        
+
         _moving = true;
-        
-        mvt += new Vector3(Input.GetAxisRaw("Horizontal"),0, Input.GetAxisRaw("Vertical"));
-        
+
+        mvt += new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+
         if (mvt == Vector3.zero)
         {
             _moving = false;
         }
-        
+
         if (Math.Abs(mvt.x) + Math.Abs(mvt.z) == 1)
         {
             mvt *= 1.42f;
         }
-        
+
         if (_lastTimeMoveSpeed < _durationMoveSpeed && _speeding)
         {
             transform.position += mvt * dt * _moveSpeed;
@@ -90,15 +89,15 @@ public class Mouvement_player : MonoBehaviour
         {
             transform.position += mvt * dt;
         }
-        
+
         if (_lastTimeDash > _cooldownDash && !_dashable)
         {
             _dashable = true;
             _speeding = false;
         }
-        
-        if (((Input.GetKeyDown(KeyCode.LeftShift) || 
-             Input.GetKeyDown(KeyCode.RightShift)) && 
+
+        if (((Input.GetKeyDown(KeyCode.LeftShift) ||
+              Input.GetKeyDown(KeyCode.RightShift)) &&
              _dashable))
         {
             _lastTimeDash = 0;
@@ -107,9 +106,8 @@ public class Mouvement_player : MonoBehaviour
             _speeding = true;
         }
 
-        
+
         _lastTimeDash += dt;
         _lastTimeMoveSpeed += dt;
     }
 }
-        

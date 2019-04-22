@@ -30,8 +30,10 @@ public class PlayerObject
                 character.AssignControl(connection);
             }
         }
+
         character.transform.position = RandomPosition();
     }
+
     Vector3 RandomPosition()
     {
         float x = Random.Range(-2f, +2f);

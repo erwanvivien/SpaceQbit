@@ -42,7 +42,7 @@ MonoBehaviour:
     connectionTimeout: 10000
     connectionRequestTimeout: 500
     connectionRequestAttempts: 20
-  debugClientCount: 2
+  debugClientCount: 0
   debugStartPort: 50538
   debugStartMapName: scene
   debugPlayAsServer: 1

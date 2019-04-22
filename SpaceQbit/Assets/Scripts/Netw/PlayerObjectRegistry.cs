@@ -8,7 +8,7 @@ public static class PlayerObjectRegistry
     static PlayerObject CreatePlayer(BoltConnection connection)
     {
         PlayerObject player;
-        
+
         player = new PlayerObject();
 
         player.connection = connection;
@@ -17,17 +17,17 @@ public static class PlayerObjectRegistry
         {
             player.connection.UserData = player;
         }
-        
+
         players.Add(player);
 
         return player;
     }
-    
+
     public static IEnumerable<PlayerObject> AllPlayers
     {
         get { return players; }
     }
-    
+
     public static PlayerObject ServerPlayer
     {
         get { return players.First(player => player.IsServer); }
@@ -42,7 +42,7 @@ public static class PlayerObjectRegistry
     {
         return CreatePlayer(connection);
     }
-    
+
     public static PlayerObject GetTutorialPlayer(BoltConnection connection)
     {
         if (connection == null)
@@ -50,6 +50,6 @@ public static class PlayerObjectRegistry
             return ServerPlayer;
         }
 
-        return (PlayerObject)connection.UserData;
+        return (PlayerObject) connection.UserData;
     }
 }
