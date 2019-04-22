@@ -11,10 +11,7 @@ public class PCamera : BoltSingletonPrefab<PCamera>
 
     [SerializeField] Transform cam;
 
-    public Camera myCamera
-    {
-        get { return transform.GetComponent<Camera>(); }
-    }
+    public Camera myCamera => transform.GetComponent<Camera>();
 
     void Awake()
     {
@@ -27,17 +24,15 @@ public class PCamera : BoltSingletonPrefab<PCamera>
 
         targetPosition += _offset;
 
-        transform.position =
-            Vector3.SmoothDamp(transform.position,
-                targetPosition,
-                ref _b,
-                0.5f);
+        cam.position =
+            Vector3.SmoothDamp(cam.position, targetPosition, ref _b, 0.5f);
     }
 
     public void SetTarget(BoltEntity entity)
     {
         _target = entity.transform;
-        _offset = new Vector3(0, 3, -3);
+        _offset = new Vector3(1, 3, -3);
+        cam.localEulerAngles = new Vector3(45, 0, 0);
         UpdateCamera();
     }
 
