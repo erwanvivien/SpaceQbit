@@ -1,3 +1,4 @@
+using System.Net.Sockets;
 using UnityEngine;
 
 public class PCamera : BoltSingletonPrefab<PCamera>
@@ -5,7 +6,8 @@ public class PCamera : BoltSingletonPrefab<PCamera>
     private Vector3 _b = Vector3.zero;
 
     // camera target
-    Transform _target;
+    GameObject _target;
+    private Rigidbody tmp;
 
     private Vector3 _offset;
 
@@ -20,9 +22,9 @@ public class PCamera : BoltSingletonPrefab<PCamera>
 
     void UpdateCamera()
     {
-        Vector3 targetPosition = _target.position;
+        Vector3 targetPosition = _target.transform.position + _offset;
 
-        targetPosition += _offset;
+        float a = tmp.velocity.x + tmp.velocity.y + tmp.velocity.z;
 
         cam.position =
             Vector3.SmoothDamp(cam.position, targetPosition, ref _b, 0.5f);
@@ -30,10 +32,13 @@ public class PCamera : BoltSingletonPrefab<PCamera>
 
     public void SetTarget(BoltEntity entity)
     {
-        _target = entity.transform;
+        _target = entity.GetComponentsInChildren<BoxCollider>()[0].gameObject;
+
         _offset = new Vector3(1, 3, -3);
         cam.localEulerAngles = new Vector3(45, 0, 0);
-        UpdateCamera();
+        cam.localPosition = new Vector3(1, 3, -3);
+
+        tmp = _target.GetComponentInChildren<Rigidbody>();
     }
 
     void LateUpdate()
