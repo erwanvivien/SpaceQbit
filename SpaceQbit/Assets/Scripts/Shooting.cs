@@ -72,7 +72,7 @@ public class Shooting : MonoBehaviour
         _timeBullets = new List<float>();
         
         esc = GameObject.FindWithTag("Menu").GetComponent<CurrentMenu>();
-        _cam = GameObject.FindWithTag("PCamera").GetComponent<Camera>();
+        _cam = GameObject.FindWithTag("PCamera(clone)").GetComponent<Camera>();
     }
 
     float GetCooToAngle (Vector3 target)

@@ -19,7 +19,7 @@ public class PlayerObject
     {
         if (!character)
         {
-            character = BoltNetwork.Instantiate(BoltPrefabs.Perso1);
+            character = BoltNetwork.Instantiate(BoltPrefabs.Perso2);
 
             if (IsServer)
             {

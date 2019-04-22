@@ -6,7 +6,7 @@ using UnityEngine;
 		
 		// camera target
 		Transform _target;
-		
+
 		private Vector3 _offset;
 
 		[SerializeField]
@@ -14,7 +14,7 @@ using UnityEngine;
 		
 		public Camera myCamera 
 		{
-			get { return cam.GetComponent<Camera> (); }
+			get { return transform.GetComponent<Camera> (); }
 		}
 
 		void Awake ()
@@ -28,8 +28,8 @@ using UnityEngine;
 
 			targetPosition += _offset;
         
-			cam.position = 
-				Vector3.SmoothDamp(cam.position, 
+			transform.position = 
+				Vector3.SmoothDamp(transform.position, 
 					targetPosition, 
 					ref _b, 
 					0.5f);
@@ -38,12 +38,8 @@ using UnityEngine;
 		public void SetTarget (BoltEntity entity)
 		{
 			_target = entity.transform;
+			_offset = new Vector3(1.2f, 3, 1.5f);
 			UpdateCamera ();
-		}
-
-		void Start()
-		{
-			_offset = transform.position - _target.position;
 		}
     
 		void LateUpdate()

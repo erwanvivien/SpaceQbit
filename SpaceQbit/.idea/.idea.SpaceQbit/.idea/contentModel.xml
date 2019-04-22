@@ -57,6 +57,8 @@
           <e p="Netw" t="Include">
             <e p="MenuNet.cs" t="Include" />
             <e p="PCamera.cs" t="Include" />
+            <e p="PController.cs" t="Include" />
+            <e p="PMotor.cs" t="Include" />
             <e p="PlayerObject.cs" t="Include" />
             <e p="PlayerObjectRegistry.cs" t="Include" />
           </e>

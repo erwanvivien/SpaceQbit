@@ -93,8 +93,10 @@
     <Compile Include="Assets\Scripts\Mouvement_player.cs" />
     <Compile Include="Assets\Scripts\Netw\MenuNet.cs" />
     <Compile Include="Assets\Scripts\Netw\PCamera.cs" />
+    <Compile Include="Assets\Scripts\Netw\PController.cs" />
     <Compile Include="Assets\Scripts\Netw\PlayerObject.cs" />
     <Compile Include="Assets\Scripts\Netw\PlayerObjectRegistry.cs" />
+    <Compile Include="Assets\Scripts\Netw\PMotor.cs" />
     <Compile Include="Assets\Scripts\PotentialKey.cs" />
     <Compile Include="Assets\Scripts\Search_Target.cs" />
     <Compile Include="Assets\Scripts\Shooting.cs" />

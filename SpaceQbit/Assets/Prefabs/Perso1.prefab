@@ -124,7 +124,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 381}
-  - component: {fileID: 773}
   m_Layer: 0
   m_Name: Perso1
   m_TagString: Untagged
@@ -149,35 +148,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -36112512, guid: 5b00bf8b25851d440940a40ec23344f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sceneGuid: 
-  _serializerGuid: d9c5e788-3119-431f-a329-d0cf9b074721
-  _prefabId: 2
-  _updateRate: 1
-  _autoFreezeProxyFrames: 0
-  _clientPredicted: 1
-  _allowInstantiateOnClient: 1
-  _persistThroughSceneLoads: 0
-  _sceneObjectDestroyOnDetach: 1
-  _sceneObjectAutoAttach: 1
-  _alwaysProxy: 0
-  _detachOnDisable: 1
-  _allowFirstReplicationWhenFrozen: 0
-  _autoRemoveChildEntities: 0
-  _entityBehaviourQueryOption: 0
-  _entityPriorityCalculatorQueryOption: 0
-  _entityReplicationFilterQueryOption: 0
 --- !u!1 &148
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +178,7 @@ Transform:
   m_Children:
   - {fileID: 383}
   - {fileID: 7026205872069247318}
-  - {fileID: 8892791873203640375}
+  - {fileID: 7139667171276011864}
   m_Father: {fileID: 381}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -703,7 +673,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f23fc4231728b84488f6ba03c7997618, type: 3}
---- !u!224 &8892791873203640375 stripped
+--- !u!224 &7139667171276011864 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1764490080898261816, guid: f23fc4231728b84488f6ba03c7997618,
     type: 3}
