@@ -28,9 +28,9 @@ public class PController : Bolt.EntityBehaviour<IPlayerState>
 
     void PollKeys(bool mouse)
     {
-        _forward = Input.GetKey(KeyCode.W);
+        _forward = Input.GetKey(KeyCode.Z);
         _backward = Input.GetKey(KeyCode.S);
-        _left = Input.GetKey(KeyCode.A);
+        _left = Input.GetKey(KeyCode.Q);
         _right = Input.GetKey(KeyCode.D);
         _jump = Input.GetKeyDown(KeyCode.Space);
 
