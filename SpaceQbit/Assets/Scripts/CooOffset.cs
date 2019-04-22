@@ -11,13 +11,13 @@ public class CooOffset : MonoBehaviour
     {
         _offset = v;
     }
-    
+
     public void SetGameObj(GameObject g)
     {
         _instantiateFrom = g;
         transform.position = _instantiateFrom.transform.position + _offset;
     }
-    
+
     // Update is called once per frame
     void LateUpdate()
     {

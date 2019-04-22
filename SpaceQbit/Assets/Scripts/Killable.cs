@@ -22,24 +22,25 @@ public class Killable : MonoBehaviour
         {
             _HPs = Instantiate(_hpBar);
         }
+
         _HPs.SetActive(true);
-        
-        _HPs.GetComponent<CooOffset>().SetOffset(new Vector3(0, 
+
+        _HPs.GetComponent<CooOffset>().SetOffset(new Vector3(0,
             GetComponent<CapsuleCollider>().height / 2 + 0.2f,
             0));
         _HPs.GetComponent<CooOffset>().SetGameObj(gameObject);
-        
+
         _time = 0;
         _life -= dmg;
-        
+
         RectTransform[] tmp = _HPs.GetComponentsInChildren<RectTransform>();
-        
-        tmp[2].localScale = 
-            new Vector3(_life/_lifeMax,
+
+        tmp[2].localScale =
+            new Vector3(_life / _lifeMax,
                 1,
                 1);
     }
-    
+
     void Start()
     {
         tag = "Killable";
@@ -55,7 +56,7 @@ public class Killable : MonoBehaviour
         {
             _HPs.SetActive(false);
         }
-        
+
         if (_life <= 0)
         {
             gameObject.SetActive(false);

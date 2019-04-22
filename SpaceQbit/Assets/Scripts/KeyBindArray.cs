@@ -5,7 +5,7 @@ using UnityEngine;
 public class KeyBindArray : MonoBehaviour
 {
     public KeyCode[] _keyBindings = new KeyCode[60];
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class KeyBindArray : MonoBehaviour
         _keyBindings[07] = KeyCode.D;
         _keyBindings[08] = KeyCode.E;
         _keyBindings[09] = KeyCode.F;
-        
+
         _keyBindings[10] = KeyCode.G;
         _keyBindings[11] = KeyCode.H;
         _keyBindings[12] = KeyCode.I;
@@ -30,7 +30,7 @@ public class KeyBindArray : MonoBehaviour
         _keyBindings[17] = KeyCode.O;
         _keyBindings[18] = KeyCode.P;
         _keyBindings[19] = KeyCode.Q;
-        
+
         _keyBindings[20] = KeyCode.R;
         _keyBindings[21] = KeyCode.S;
         _keyBindings[22] = KeyCode.T;
@@ -41,7 +41,7 @@ public class KeyBindArray : MonoBehaviour
         _keyBindings[27] = KeyCode.Y;
         _keyBindings[28] = KeyCode.Z;
         _keyBindings[29] = KeyCode.Space;
-        
+
         _keyBindings[30] = KeyCode.LeftShift;
         _keyBindings[31] = KeyCode.RightShift;
         _keyBindings[32] = KeyCode.Tab;
@@ -52,7 +52,7 @@ public class KeyBindArray : MonoBehaviour
         _keyBindings[37] = KeyCode.Alpha4;
         _keyBindings[38] = KeyCode.Alpha5;
         _keyBindings[39] = KeyCode.Alpha6;
-        
+
         _keyBindings[40] = KeyCode.Alpha7;
         _keyBindings[41] = KeyCode.Alpha8;
         _keyBindings[42] = KeyCode.Alpha9;
@@ -63,7 +63,7 @@ public class KeyBindArray : MonoBehaviour
         _keyBindings[47] = KeyCode.Return;
         _keyBindings[48] = KeyCode.Backspace;
         _keyBindings[49] = KeyCode.Asterisk;
-        
+
         _keyBindings[50] = KeyCode.Keypad0;
         _keyBindings[51] = KeyCode.Keypad1;
         _keyBindings[52] = KeyCode.Keypad2;

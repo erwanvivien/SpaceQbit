@@ -11,7 +11,7 @@ public class PotentialKey : MonoBehaviour
 {
     public Texture2D keyIcon;
     public int KeyNumber;
-    
+
     [NonSerialized] public KeyCode keyCode;
     [NonSerialized] public string keyName;
 
@@ -20,8 +20,8 @@ public class PotentialKey : MonoBehaviour
     private void Start()
     {
         _array = GetComponentInParent<KeyBindArray>();
-        
-        
+
+
         KeyCode k = _array._keyBindings[KeyNumber];
         keyName = k.ToString();
         keyCode = k;

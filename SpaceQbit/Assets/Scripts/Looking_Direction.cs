@@ -13,15 +13,15 @@ public class Looking_Direction : MonoBehaviour
     private Vector3 _scaling;
     private Vector3 _posGun;
     private Vector3 _scaleGun;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        if(_anm == null)
+        if (_anm == null)
             _anm = GetComponent<Animator>();
-        if(_player == null)
+        if (_player == null)
             _player = GameObject.FindWithTag("Frame_Perso").GetComponent<Mouvement_player>();
-        if(_gun == null)
+        if (_gun == null)
             _gun = GameObject.FindWithTag("Gun").GetComponent<Transform>();
 
         _scaling = transform.localScale;
@@ -39,16 +39,16 @@ public class Looking_Direction : MonoBehaviour
 
         var animToPlay = _player.GetMoving() ? "player_moving" : "player_rest";
 
-        transform.localScale = new Vector3(Math.Sign(posMouse.x) >= 0 ? _scaling.x : -_scaling.x, 
-            _scaling.y, 
+        transform.localScale = new Vector3(Math.Sign(posMouse.x) >= 0 ? _scaling.x : -_scaling.x,
+            _scaling.y,
             _scaling.z);
-        
-        _gun.localScale = new Vector3(Math.Sign(posMouse.x) >= 0 ? _scaleGun.x : -_scaleGun.x, 
-            _scaleGun.y, 
+
+        _gun.localScale = new Vector3(Math.Sign(posMouse.x) >= 0 ? _scaleGun.x : -_scaleGun.x,
+            _scaleGun.y,
             _scaleGun.z);
-        
-        _gun.localPosition = new Vector3(Math.Sign(posMouse.x) >= 0 ? _posGun.x : -_posGun.x, 
-            _posGun.y, 
+
+        _gun.localPosition = new Vector3(Math.Sign(posMouse.x) >= 0 ? _posGun.x : -_posGun.x,
+            _posGun.y,
             _posGun.z);
 
         _anm.Play(animToPlay);

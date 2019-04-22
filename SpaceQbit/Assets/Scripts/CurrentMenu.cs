@@ -13,11 +13,11 @@ public class CurrentMenu : MonoBehaviour
     public GameObject SaveBox;
 
     private Canvas _escapeCanvas;
-    
+
     public void Save()
     {
         Vector3 pos = GameObject.FindWithTag("Frame_Perso").transform.position;
-        
+
         using (StreamWriter sw = new StreamWriter("save.txt"))
         {
             sw.WriteLine(pos.x);
@@ -35,7 +35,7 @@ public class CurrentMenu : MonoBehaviour
 
     public void SetCanvas(Canvas c)
     {
-        if(Canv != null)
+        if (Canv != null)
             Canv.enabled = false;
         Canv = c;
         Canv.enabled = true;
@@ -46,7 +46,7 @@ public class CurrentMenu : MonoBehaviour
     {
         if (Canv != null)
             Canv.enabled = false;
-        
+
         Canv = null;
         inMenu = false;
     }
@@ -58,7 +58,7 @@ public class CurrentMenu : MonoBehaviour
 
         _escapeCanvas = GetComponentsInChildren<Canvas>()[1];
     }
-    
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -67,7 +67,7 @@ public class CurrentMenu : MonoBehaviour
             {
                 SetCanvas(_escapeCanvas);
             }
-            else if(Canv == _escapeCanvas)
+            else if (Canv == _escapeCanvas)
             {
                 ResetCanvas();
             }

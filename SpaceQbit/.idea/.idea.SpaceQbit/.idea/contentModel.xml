@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-<<<<<<< HEAD
-    <e p="C:\Dev\SpaceQbit\SpaceQbit" t="IncludeRecursive">
-=======
     <e p="$USER_HOME$/.Rider2018.3/system/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2018.3/system/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_SpaceQbit.-1788362013.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
->>>>>>> cb7a61c3ecd73ba08d179d7a00dfd7b4a5f9d32d
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -37,6 +33,11 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Bullet_Collision.cs" t="Include" />
+          <e p="Callbacks" t="Include">
+            <e p="NetworkCallbacks.cs" t="Include" />
+            <e p="PlayerCallbacks.cs" t="Include" />
+            <e p="ServerCallbacks.cs" t="Include" />
+          </e>
           <e p="Cam_Follow.cs" t="Include" />
           <e p="CooOffset.cs" t="Include" />
           <e p="CurrentMenu.cs" t="Include" />
@@ -52,12 +53,17 @@
           <e p="Killable.cs" t="Include" />
           <e p="Looking_Direction.cs" t="Include" />
           <e p="Make_to_Screen_Size.cs" t="Include" />
-          <e p="MenuNet.cs" t="Include" />
           <e p="Mouvement_player.cs" t="Include" />
-          <e p="NetworkCallbacks.cs" t="Include" />
+          <e p="Netw" t="Include">
+            <e p="MenuNet.cs" t="Include" />
+            <e p="PCamera.cs" t="Include" />
+            <e p="PController.cs" t="Include" />
+            <e p="PMotor.cs" t="Include" />
+            <e p="PlayerObject.cs" t="Include" />
+            <e p="PlayerObjectRegistry.cs" t="Include" />
+          </e>
           <e p="PotentialKey.cs" t="Include" />
           <e p="Search_Target.cs" t="Include" />
-          <e p="ServerCallbacks.cs" t="Include" />
           <e p="Shooting.cs" t="Include" />
         </e>
         <e p="Sprites" t="Include">
@@ -84,9 +90,6 @@
           <e p="resources" t="Include">
             <e p="BoltShaderPOI.shader" t="Include" />
             <e p="backgrounds" t="Include">
-              <e p="ATTRIBUTION.txt" t="Include" />
-            </e>
-            <e p="icons" t="Include">
               <e p="ATTRIBUTION.txt" t="Include" />
             </e>
             <e p="icons_welcome" t="Include">
@@ -118,19 +121,11 @@
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="SpaceQbit.sln" t="IncludeFlat" />
-<<<<<<< HEAD
-      <e p="Temp\bin" t="ExcludeRecursive" />
-    </e>
-    <e p="C:\Users\Erwan\.Rider2018.2\config\extensions" t="IncludeRecursive" />
-    <e p="C:\Users\Erwan\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Erwan\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_SpaceQbit.257342268.00" t="ExcludeRecursive" />
-=======
       <e p="Temp" t="ExcludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
     </e>
->>>>>>> cb7a61c3ecd73ba08d179d7a00dfd7b4a5f9d32d
   </component>
 </project>

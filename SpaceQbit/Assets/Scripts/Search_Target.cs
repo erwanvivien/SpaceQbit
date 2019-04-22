@@ -8,9 +8,9 @@ public class Search_Target : MonoBehaviour
     private float _time;
 
     private Follow_Target _followTarget;
-    
+
     private Renderer _renderer;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class Search_Target : MonoBehaviour
 
         if (_followTarget == null)
             _followTarget = GetComponent<Follow_Target>();
-        
+
         _renderer = GetComponent<Renderer>();
         _renderer.material = _mat;
     }
@@ -32,9 +32,9 @@ public class Search_Target : MonoBehaviour
             Vector3 tmp = q.transform.position;
             Vector3 me = transform.position;
 
-            float distanceSquared = (tmp.x - me.x) * (tmp.x - me.x) + 
-                                     (tmp.z - me.z) * (tmp.z - me.z);
-            
+            float distanceSquared = (tmp.x - me.x) * (tmp.x - me.x) +
+                                    (tmp.z - me.z) * (tmp.z - me.z);
+
             Debug.Log(distanceSquared);
 
             if (distanceSquared <= 2)

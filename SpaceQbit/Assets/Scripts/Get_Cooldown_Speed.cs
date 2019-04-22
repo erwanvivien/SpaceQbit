@@ -5,19 +5,19 @@ using UnityEngine;
 public class Get_Cooldown_Speed : MonoBehaviour
 {
     [SerializeField] private Mouvement_player _otherScript;
-    
+
     private float _dashed;
-    
+
     private float _timer = 0;
     private float _cooldown;
-    
+
     private float _time;
 
     void Start()
     {
-        if(_otherScript == null)
+        if (_otherScript == null)
             _otherScript = GameObject.FindWithTag("Frame_Perso").GetComponent<Mouvement_player>();
-        
+
         _cooldown = _otherScript.GetCooldownDash();
     }
 
@@ -25,7 +25,7 @@ public class Get_Cooldown_Speed : MonoBehaviour
     {
         bool d = _otherScript.GetDashable();
 
-        if (!d && _timer <= 0) 
+        if (!d && _timer <= 0)
         {
             _timer = _cooldown;
         }
@@ -34,7 +34,7 @@ public class Get_Cooldown_Speed : MonoBehaviour
         {
             _timer = 0;
         }
-        
+
         transform.localScale = (new Vector3(_timer / _cooldown * 200f, 200f, 1));
 
         _timer -= Time.deltaTime;

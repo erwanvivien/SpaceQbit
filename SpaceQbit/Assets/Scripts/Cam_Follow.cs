@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Cam_Follow: MonoBehaviour
+public class Cam_Follow : MonoBehaviour
 {
     private Vector3 _b = Vector3.zero;
 
@@ -11,17 +11,17 @@ public class Cam_Follow: MonoBehaviour
     {
         _offset = transform.position - Obj.transform.position;
     }
-    
+
     void LateUpdate()
     {
         Vector3 targetPosition = Obj.transform.position;
 
         targetPosition += _offset;
-        
-        transform.position = 
-            Vector3.SmoothDamp(transform.position, 
-                targetPosition, 
-                ref _b, 
+
+        transform.position =
+            Vector3.SmoothDamp(transform.position,
+                targetPosition,
+                ref _b,
                 0.5f);
     }
 }

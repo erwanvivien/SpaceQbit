@@ -10,7 +10,7 @@ public class Get_Coo_Cam : MonoBehaviour
     public GameObject CanvasCam;
 
     private Vector3 _offset;
-    
+
     void Start()
     {
         _offset = new Vector3(1.43f, 3.43f, -2);
