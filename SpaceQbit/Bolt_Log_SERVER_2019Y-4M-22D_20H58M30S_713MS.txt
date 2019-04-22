@@ -1,0 +1,24 @@
+Bolt starting with a simulation rate of 60 steps per second
+Creating Global Behaviour: 'BoltConsole'
+Creating Global Behaviour: 'BoltPoll'
+Creating Global Behaviour: 'BoltSend'
+Creating Global Behaviour: 'BoltSceneLoader'
+Creating Global Behaviour: 'BoltRuntimeConfigs'
+Creating Global Behaviour: 'NetworkCallbacks'
+Registered token class Bolt.Tokens.BoltDisconnectToken as id 1
+22/04/2019 20:58:30: Binding physical socket using platform 'DotNetPlatform'
+22/04/2019 20:58:30: Socket bound to [EndPoint 127.0.0.1:50538 | 50538]
+22/04/2019 20:58:30: Physical socket bound to [EndPoint 127.0.0.1:50538 | 50538]
+22/04/2019 20:58:30: LAN endpoint resolved as [EndPoint 192.168.1.166:50538 | 50538]
+Loading Bolt.SceneLoadState (scene)
+Creating Global Behaviour: 'PlayerCallbacks'
+Creating Global Behaviour: 'ServerCallbacks'
+Found 1 Scene Objects
+Attached [Entity [NetworkId 0-0-0-1-0-0-0-1] EnemyState] (Token: NULL)
+Attached [Entity [NetworkId 0-0-0-2-0-0-0-1] PlayerState] (Token: NULL)
+Detached [Entity [NetworkId 0-0-0-1-0-0-0-1] EnemyState]
+Detached [Entity [NetworkId 0-0-0-2-0-0-0-1] PlayerState]
+Behaviour not available in this dispatcher, ignoring call to Remove.
+Behaviour not available in this dispatcher, ignoring call to Remove.
+Behaviour not available in this dispatcher, ignoring call to Remove.
+Behaviour not available in this dispatcher, ignoring call to Remove.

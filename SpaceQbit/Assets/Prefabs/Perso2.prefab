@@ -2693,10 +2693,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4556348688102152267}
   - component: {fileID: 1762348992684260311}
-  - component: {fileID: 2665819010123550069}
-  - component: {fileID: 1824642562679475410}
-  - component: {fileID: 9122366668358751161}
-  - component: {fileID: 3994456675286636870}
+  - component: {fileID: 377151322612516369}
+  - component: {fileID: 7217445328738887202}
+  - component: {fileID: 8200476587983338832}
   m_Layer: 0
   m_Name: Perso2
   m_TagString: Untagged
@@ -2734,7 +2733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneGuid: 
   _serializerGuid: d9c5e788-3119-431f-a329-d0cf9b074721
-  _prefabId: 2
+  _prefabId: 1
   _updateRate: 1
   _autoFreezeProxyFrames: 0
   _clientPredicted: 1
@@ -2749,7 +2748,7 @@ MonoBehaviour:
   _entityBehaviourQueryOption: 0
   _entityPriorityCalculatorQueryOption: 0
   _entityReplicationFilterQueryOption: 0
---- !u!143 &2665819010123550069
+--- !u!143 &377151322612516369
 CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2760,14 +2759,14 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1.4
-  m_Radius: 0.5
+  m_Height: 0.88
+  m_Radius: 0.7
   m_SlopeLimit: 45
-  m_StepOffset: 0.5
+  m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.7, z: 0}
---- !u!114 &1824642562679475410
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7217445328738887202
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2776,17 +2775,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 4570200246860755896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ada4153561883c4168ef9389d2b9bbcb, type: 3}
+  m_Script: {fileID: 11500000, guid: 159a028eb1cf49cbb01b91017aa5eb3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   skinWidth: 0.08
-  movingSpeed: 4
-  maxVelocity: 32
+  gravityForce: 0
+  jumpForce: 0
+  jumpTotalFrames: 0
+  movingSpeed: 2
+  maxVelocity: 4
   drag: {x: 1, y: 0, z: 1}
   layerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &9122366668358751161
+    m_Bits: 0
+--- !u!114 &8200476587983338832
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2798,21 +2800,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b825895d470e1df98792491188d9c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3994456675286636870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4570200246860755896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbc322c5593d73749bd5e8a2436ac099, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cooldownDash: 5
-  _moveSpeed: 3
-  _durationMoveSpeed: 0.5
 --- !u!1 &4649850326750155391
 GameObject:
   m_ObjectHideFlags: 0

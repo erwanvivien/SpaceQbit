@@ -1,0 +1,85 @@
+Bolt starting with a simulation rate of 60 steps per second
+22/04/2019 21:00:07: >>>> [PUNCH] >>>> Create Socket
+22/04/2019 21:00:07: >>>> [PUNCH] >>>> Created Socket
+22/04/2019 21:00:07: >>>> Requesting STUN info
+Creating Global Behaviour: 'BoltConsole'
+Creating Global Behaviour: 'BoltPoll'
+Creating Global Behaviour: 'BoltSend'
+Creating Global Behaviour: 'BoltSceneLoader'
+Creating Global Behaviour: 'Bolt.photon.PhotonCloudGlobalBehavior+PhotonBoltBehavior'
+Creating Global Behaviour: 'Bolt.photon.PhotonCloudGlobalBehavior'
+Creating Global Behaviour: 'udpkit.platform.photon.PhotonPingManager'
+Creating Global Behaviour: 'BoltRuntimeConfigs'
+Creating Global Behaviour: 'NetworkCallbacks'
+Registered token class Bolt.Tokens.BoltDisconnectToken as id 1
+22/04/2019 21:00:07: Binding physical socket using platform 'PhotonPlatform'
+22/04/2019 21:00:07: Physical socket bound to [EndPoint 0.0.0.0:0 | 0]
+22/04/2019 21:00:07: LAN endpoint resolved as [EndPoint 192.168.1.166:0 | 0]
+22/04/2019 21:00:07: >>>> Recvd Sun Info: 90.92.34.69:63834
+22/04/2019 21:00:07: Connecting to Photon Cloud using AppId: f1be2448-1f91-4d5e-ae6d-f829995100d7
+22/04/2019 21:00:07: State changed to: ConnectingToNameServer
+22/04/2019 21:00:07: Connecting to Region: [eu] Europe :: Amsterdam
+22/04/2019 21:00:07: State changed to: ConnectedToNameServer
+22/04/2019 21:00:07: State changed to: Authenticating
+22/04/2019 21:00:07: Received your UserID from server. Updating local value to: b01f4f33-0813-425c-bec3-264da3550e68
+22/04/2019 21:00:07: State changed to: DisconnectingFromNameServer
+22/04/2019 21:00:07: State changed to: ConnectingToMasterserver
+22/04/2019 21:00:07: State changed to: Authenticating
+22/04/2019 21:00:07: State changed to: ConnectedToMasterserver
+22/04/2019 21:00:07: State changed to: JoinedLobby
+22/04/2019 21:00:13: Lan Broadcast: disabled
+22/04/2019 21:00:13: Changing Connect State: Idle => JoinRoomPending
+22/04/2019 21:00:13: State changed to: Joining
+22/04/2019 21:00:13: Joining to room: ece67b07-9832-4686-9838-75dfbbe2a255
+22/04/2019 21:00:13: Connecting to a Photon Session
+22/04/2019 21:00:13: State changed to: DisconnectingFromMasterserver
+22/04/2019 21:00:13: State changed to: ConnectingToGameserver
+22/04/2019 21:00:13: State changed to: Authenticating
+22/04/2019 21:00:13: State changed to: Joining
+22/04/2019 21:00:13: State changed to: Joined
+22/04/2019 21:00:13: Using punch: True
+22/04/2019 21:00:13: Changing Connect State: JoinRoomPending => DirectPending
+22/04/2019 21:00:13: Received PunchInfo from Player 1
+22/04/2019 21:00:13: >>> LocalPunchInfo: 192.168.1.166:63834|90.92.34.69:63834
+22/04/2019 21:00:14: Sent PING to Player 1
+22/04/2019 21:00:15: Sent PING to Player 1
+22/04/2019 21:00:16: Sent PING to Player 1
+22/04/2019 21:00:17: Sent PING to Player 1
+22/04/2019 21:00:18: Sent PING to Player 1
+22/04/2019 21:00:19: Sent PING to Player 1
+22/04/2019 21:00:19: Incoming PING from Player 1
+22/04/2019 21:00:19: Sent PONG to Player 1
+22/04/2019 21:00:19: Incoming PONG from Player 1
+22/04/2019 21:00:19: [PUNCH SUCCESS] Local Player 2 with Remote Player 1
+22/04/2019 21:00:19: Added Player 1 to whitelist
+22/04/2019 21:00:19: Lan Broadcast: disabled
+22/04/2019 21:00:19: Lan Broadcast: disabled
+22/04/2019 21:00:19: Connecting to [EndPoint 82.227.167.239:50014 | 50014]
+22/04/2019 21:00:19: Connect to [EndPoint 82.227.167.239:50014 | 50014] accepted
+22/04/2019 21:00:19: Correct connection id #2 received from server
+22/04/2019 21:00:19: [EndPoint 82.227.167.239:50014 | 50014] connected
+Assigned id 2 from server
+Assigned id 2 from server
+22/04/2019 21:00:19: Changing Connect State: DirectPending => DirectSuccess
+22/04/2019 21:00:19: Incoming PING from Player 1
+Loading Bolt.SceneLoadState (scene)
+22/04/2019 21:00:19: Incoming PONG from Player 1
+Creating Global Behaviour: 'PlayerCallbacks'
+22/04/2019 21:00:19: Incoming PING from Player 1
+Found 0 Scene Objects
+22/04/2019 21:00:19: Incoming PONG from Player 1
+Attached [Entity [NetworkId 0-0-0-2-0-0-0-1] PlayerState] (Token: NULL)
+Received [Entity [NetworkId 0-0-0-2-0-0-0-1] PlayerState] from [Connection [EndPoint 82.227.167.239:50014 | 50014]]
+Attached [Entity [NetworkId 0-0-0-1-0-0-0-1] PlayerState] (Token: NULL)
+Received [Entity [NetworkId 0-0-0-1-0-0-0-1] PlayerState] from [Connection [EndPoint 82.227.167.239:50014 | 50014]]
+FRAME FORWARD: 11
+FRAME STALL: 0
+FRAME STALL: 1
+22/04/2019 21:02:37: [EndPoint 82.227.167.239:50014 | 50014] disconnected
+Detached [Entity [NetworkId 0-0-0-2-0-0-0-1] PlayerState]
+Detached [Entity [NetworkId 0-0-0-1-0-0-0-1] PlayerState]
+Behaviour not available in this dispatcher, ignoring call to Remove.
+22/04/2019 21:02:37: State changed to: Disconnecting
+Behaviour not available in this dispatcher, ignoring call to Remove.
+Behaviour not available in this dispatcher, ignoring call to Remove.
+Behaviour not available in this dispatcher, ignoring call to Remove.

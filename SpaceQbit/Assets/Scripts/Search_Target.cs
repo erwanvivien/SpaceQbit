@@ -35,7 +35,7 @@ public class Search_Target : MonoBehaviour
             float distanceSquared = (tmp.x - me.x) * (tmp.x - me.x) +
                                     (tmp.z - me.z) * (tmp.z - me.z);
 
-            Debug.Log(distanceSquared);
+//            Debug.Log(distanceSquared);
 
             if (distanceSquared <= 2)
             {
