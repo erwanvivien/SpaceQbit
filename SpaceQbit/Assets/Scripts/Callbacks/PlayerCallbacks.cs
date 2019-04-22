@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [BoltGlobalBehaviour("scene")]
-public class TutorialPlayerCallbacks : Bolt.GlobalEventListener
+public class PlayerCallbacks : Bolt.GlobalEventListener
 {
     public override void SceneLoadLocalDone(string map)
     {

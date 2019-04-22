@@ -58,6 +58,7 @@ public class PController : Bolt.EntityBehaviour<IPlayerState>
         input.Forward = _forward;
         input.Backward = _backward;
         input.Left = _left;
+        input.Right = _right;
 
         entity.QueueInput(input);
     }

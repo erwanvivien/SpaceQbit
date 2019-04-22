@@ -43,7 +43,7 @@ public static class PlayerObjectRegistry
         return CreatePlayer(connection);
     }
 
-    public static PlayerObject GetTutorialPlayer(BoltConnection connection)
+    public static PlayerObject GetPlayer(BoltConnection connection)
     {
         if (connection == null)
         {
