@@ -1,7 +1,0 @@
-Bolt starting with a simulation rate of 60 steps per second
-System.NullReferenceException: Object reference not set to an instance of an object
-  at Bolt.PrefabDatabase.UpdateLookup () [0x0003d] in <edfb18edc306400f89898076816a044e>:0 
-  at Bolt.PrefabDatabase.BuildCache () [0x00007] in <edfb18edc306400f89898076816a044e>:0 
-  at BoltCore.BeginStart (Bolt.ControlCommandStart cmd) [0x000c3] in <edfb18edc306400f89898076816a044e>:0 
-  at Bolt.ControlCommandStart.Run () [0x00001] in <edfb18edc306400f89898076816a044e>:0 
-  at Bolt.ControlBehaviour.Update () [0x00062] in <edfb18edc306400f89898076816a044e>:0 
