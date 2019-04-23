@@ -1,7 +1,7 @@
 ﻿using Bolt;
 using UnityEngine;
 
-public class PController : Bolt.EntityBehaviour<IPlayerState>
+public class PController : EntityBehaviour<IPlayerState>
 {
     /*
     const float MOUSE_SENSITIVITY = 2f;
@@ -125,7 +125,7 @@ public class PController : Bolt.EntityBehaviour<IPlayerState>
 
     void Update()
     {
-        PollKeys(false);
+        PollKeys(true);
     }
 
     public override void SimulateController()
@@ -147,14 +147,16 @@ public class PController : Bolt.EntityBehaviour<IPlayerState>
 
     public override void ExecuteCommand(Command command, bool resetState)
     {
-        PlayerCommand cmd = (PlayerCommand)command;
+        PlayerCommand cmd = (PlayerCommand) command;
 
         if (resetState)
         {
             _motor.SetState(cmd.Result.Position, cmd.Result.Velocity, cmd.Result.IsGrounded, cmd.Result.JumpFrames);
-        } else
+        }
+        else
         {
-            PMotor.State motorState = _motor.Move(cmd.Input.Forward, cmd.Input.Backward, cmd.Input.Left, cmd.Input.Right, cmd.Input.Jump, cmd.Input.Yaw);
+            PMotor.State motorState = _motor.Move(cmd.Input.Forward, cmd.Input.Backward, cmd.Input.Left,
+                cmd.Input.Right, cmd.Input.Jump, cmd.Input.Yaw);
 
             // copy the motor state to the commands result (this gets sent back to the client)
             cmd.Result.Position = motorState.position;
