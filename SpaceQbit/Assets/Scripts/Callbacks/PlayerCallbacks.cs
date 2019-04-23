@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[BoltGlobalBehaviour("scene")]
+[BoltGlobalBehaviour("Rscene")]
 public class PlayerCallbacks : Bolt.GlobalEventListener
 {
     public override void SceneLoadLocalDone(string map)

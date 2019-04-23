@@ -30,7 +30,7 @@ public class MenuNet : Bolt.GlobalEventListener
             string matchName = Guid.NewGuid().ToString();
 
             BoltNetwork.SetServerInfo(matchName, null);
-            BoltNetwork.LoadScene("scene");
+            BoltNetwork.LoadScene("Rscene");
         }
     }
 
