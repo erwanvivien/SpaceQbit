@@ -8,7 +8,6 @@ public class Follow_Target : MonoBehaviour
 {
     private GameObject _target;
     NavMeshAgent _nav;
-    private bool _move = true;
 
     private Transform _tsfm;
     private Transform _tsfmPoule;
@@ -39,7 +38,7 @@ public class Follow_Target : MonoBehaviour
     private void Start()
     {
         _tsfm = GetComponent<Transform>();
-        _tsfmPoule = GetComponentInChildren<Transform>();
+        _tsfmPoule = GetComponentsInChildren<Transform>()[1];
         _scalePouleSave = _tsfmPoule.localScale;
     }
 
@@ -53,7 +52,8 @@ public class Follow_Target : MonoBehaviour
             Vector3 tmp = position;
             Vector3 me = transform.position;
             
-            _tsfmPoule.localScale = new Vector3(_scalePouleSave.x * (tmp.x - me.x) >= 0 ? 1 : -1, _scalePouleSave.y, _scalePouleSave.z);
+            
+            _tsfmPoule.localScale = new Vector3(_scalePouleSave.x * (tmp.x - me.x >= 0 ? 1 : -1), _scalePouleSave.y, _scalePouleSave.z);
 
             _nav.SetDestination(position);
         }

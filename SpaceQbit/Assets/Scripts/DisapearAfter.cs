@@ -5,22 +5,16 @@ using UnityEngine.Serialization;
 
 public class DisapearAfter : MonoBehaviour
 {
-    [SerializeField] private float _tmp;
-    private float _time;
-
-    void Start()
-    {
-        _time = _tmp;
-    }
+    [SerializeField] private float time;
 
     // Update is called once per frame
     void Update()
     {
-        if (_time <= 0)
+        if (time <= 0)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
 
-        _time -= Time.deltaTime;
+        time -= Time.deltaTime;
     }
 }

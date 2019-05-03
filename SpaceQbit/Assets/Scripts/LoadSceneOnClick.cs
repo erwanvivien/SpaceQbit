@@ -5,12 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class LoadSceneOnClick : MonoBehaviour
 {
-    private GameObject _cube;
     private GameObject _audio;
 
     private void Start()
     {
-        _cube  = GameObject.FindWithTag("Cube");
         _audio = GameObject.FindWithTag("Audio");
     }
 
@@ -31,7 +29,6 @@ public class LoadSceneOnClick : MonoBehaviour
                 _audio.GetComponent<AudioSource>().volume = time / 2f * volume;
             }
         }
-        
         
         SceneManager.LoadScene(sceneindex);
     }

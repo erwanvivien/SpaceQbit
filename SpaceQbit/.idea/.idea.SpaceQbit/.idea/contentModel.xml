@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Dev\SPACEQBIT_Soutenance2\SpaceQbit\SpaceQbit" t="IncludeRecursive">
+    <e p="C:\Users\vivie\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\vivie\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_SpaceQbit.1718922267.00" t="ExcludeRecursive" />
+    <e p="D:\Dev\SpaceQbit\SpaceQbit" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -27,9 +29,6 @@
               <e p="ATTRIBUTION.txt" t="Include" />
             </e>
             <e p="BoltShaderPOI.shader" t="Include" />
-            <e p="icons" t="Include">
-              <e p="ATTRIBUTION.txt" t="Include" />
-            </e>
             <e p="icons_welcome" t="Include">
               <e p="ATTRIBUTION.txt" t="Include" />
             </e>
@@ -132,7 +131,5 @@
         <e p="bin" t="ExcludeRecursive" />
       </e>
     </e>
-    <e p="C:\Users\Erwan\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Erwan\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_SpaceQbit.-629935550.00" t="ExcludeRecursive" />
   </component>
 </project>

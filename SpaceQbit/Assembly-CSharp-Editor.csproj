@@ -75,19 +75,19 @@
     <Compile Include="Assets\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs" />
     <None Include="Assets\bolt\assemblies\editor\protobuf-net.LICENSE.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -323,9 +323,6 @@
     <Reference Include="UnityEditor.iOS.Extensions">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.LinuxStandalone.Extensions">
-      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
@@ -333,67 +330,67 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="bolt">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/bolt.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/bolt.dll</HintPath>
     </Reference>
     <Reference Include="bolt.user">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/bolt.user.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/bolt.user.dll</HintPath>
     </Reference>
     <Reference Include="bolt.compiler">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/editor/bolt.compiler.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/editor/bolt.compiler.dll</HintPath>
     </Reference>
     <Reference Include="bolt.editor">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/editor/bolt.editor.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/editor/bolt.editor.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/editor/Newtonsoft.Json.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/editor/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/editor/protobuf-net.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/editor/protobuf-net.dll</HintPath>
     </Reference>
     <Reference Include="Photon3DotNet">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/photon/Photon3DotNet.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/photon/Photon3DotNet.dll</HintPath>
     </Reference>
     <Reference Include="udpkit.common">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.common.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.common.dll</HintPath>
     </Reference>
     <Reference Include="udpkit">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.dll</HintPath>
     </Reference>
     <Reference Include="udpkit.platform.dotnet">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.dotnet.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.dotnet.dll</HintPath>
     </Reference>
     <Reference Include="udpkit.platform.native_android">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.native_android.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.native_android.dll</HintPath>
     </Reference>
     <Reference Include="udpkit.platform.native_ios">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.native_ios.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.native_ios.dll</HintPath>
     </Reference>
     <Reference Include="udpkit.platform.null">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.null.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.null.dll</HintPath>
     </Reference>
     <Reference Include="udpkit.platform.photon">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.photon.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.photon.dll</HintPath>
     </Reference>
     <Reference Include="JetBrains.Rider.Unity.Editor.Plugin.Repacked">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Assets/Plugins/PhotonWebGL/WebSocket/websocket-sharp.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/Plugins/PhotonWebGL/WebSocket/websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-      <HintPath>C:/Dev/SPACEQBIT_Soutenance2/SpaceQbit/SpaceQbit/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

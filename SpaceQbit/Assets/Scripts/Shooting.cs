@@ -103,7 +103,7 @@ public class Shooting : MonoBehaviour
             _posCanvas = GetComponentInParent<Transform>();
             
             GameObject newOne = Instantiate(Obj); // INSTANTIATE A NEW AMO
-            
+            newOne.SetActive(true);
             newOne.transform.localPosition = _posCanvas.position;
 
             if (!_damageBoosted)
@@ -140,9 +140,10 @@ public class Shooting : MonoBehaviour
 
         for (int i = 0; i < _bullets.Count; i++) // CHECK IF BULLET IS DESTROYED
         {
-            if (_bullets[i].activeSelf == false)
+            if (!_bullets[i].activeSelf)
             {
-                Destroy(_bullets[i]);
+                Destroy(_bullets[i].gameObject);
+                
                 _timeBullets.RemoveAt(i);
                 _bullets.RemoveAt(i);
             }

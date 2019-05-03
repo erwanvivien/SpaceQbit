@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2348714801628442162}
   - component: {fileID: 2348714801628442163}
   - component: {fileID: 2030164946773495363}
-  - component: {fileID: 8650206131659543596}
   m_Layer: 0
   m_Name: Poulazer Sprite
   m_TagString: Untagged
@@ -100,18 +99,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8650206131659543596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2348714801628442169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b229cfcfcd7e5d7448c4bd7bb5947b89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2348714803154724531
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,8 +146,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.94482017, y: 1, z: 0.69293416}
-  m_Center: {x: 0.10068166, y: 0.5, z: -0.08244531}
+  m_Size: {x: 0.94482017, y: 1, z: 0.71003914}
+  m_Center: {x: 0.10068166, y: 0.5, z: 0.07389283}
 --- !u!114 &2348714803154724527
 MonoBehaviour:
   m_ObjectHideFlags: 0
