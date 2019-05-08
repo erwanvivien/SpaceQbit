@@ -27,6 +27,8 @@ public class Search_Target : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _time = 0;
+        
         scale_poule = GetComponentInChildren<Transform>();
         scale_poule_save = scale_poule.localScale;
         
@@ -40,7 +42,6 @@ public class Search_Target : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         _s = _time >= 1.5f ? "poule_attack" : "poule_rest";
         
         foreach (var q in GameObject.FindGameObjectsWithTag("Perso")) // SEEKS FOR EVERY GAMEOBJECT WITH TAG "PERSO" AND TESTS IF THEY ARE CLOSE ENOUGH
@@ -90,7 +91,6 @@ public class Search_Target : MonoBehaviour
                 _target = null;
                 _followTarget.SetTarget(null); // MEANS IT'S TOO FAR
             }
-
         }
 
         anm.Play(_s);

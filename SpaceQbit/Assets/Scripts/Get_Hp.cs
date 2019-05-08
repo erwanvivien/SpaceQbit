@@ -23,9 +23,21 @@ public class Get_Hp : MonoBehaviour
         gameObject.transform.localScale = new Vector3(_life/maxLife * _maxScale.x, _maxScale.y, _maxScale.z);
     }
 
+
     private void Start()
     {
         _life = maxLife;
         _maxScale = gameObject.transform.localScale;
+        if (_maxScale == Vector3.zero)
+        {
+            _maxScale = new Vector3(1, 1, 1);
+        }
     }
+    
+    public void Set(float life)
+    {
+        _life = life;
+        gameObject.transform.localScale = new Vector3(_life/maxLife * _maxScale.x, _maxScale.y, _maxScale.z);
+    }
+
 }

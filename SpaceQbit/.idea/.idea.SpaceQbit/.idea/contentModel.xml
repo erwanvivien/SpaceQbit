@@ -111,6 +111,7 @@
           <e p="SelectOnInput.cs" t="Include" />
           <e p="SetTransparancy.cs" t="Include" />
           <e p="Shooting.cs" t="Include" />
+          <e p="tp_script.cs" t="Include" />
         </e>
         <e p="Sprites" t="Include">
           <e p="Keycodes" t="Include">

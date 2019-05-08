@@ -104,6 +104,7 @@
     <Compile Include="Assets\Scripts\SelectOnInput.cs" />
     <Compile Include="Assets\Scripts\SetTransparancy.cs" />
     <Compile Include="Assets\Scripts\Shooting.cs" />
+    <Compile Include="Assets\Scripts\tp_script.cs" />
     <None Include="Assets\bolt\resources\backgrounds\ATTRIBUTION.txt" />
     <None Include="Assets\bolt\resources\icons_welcome\ATTRIBUTION.txt" />
     <None Include="Assets\bolt\resources\BoltShaderPOI.shader" />
