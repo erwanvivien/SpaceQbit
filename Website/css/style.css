@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
 }
-
+.phone_screen_off {
+  display: none;
+}
 .c-corps-phone {
   width: 100%;
   height: 619px;
@@ -322,4 +324,24 @@ li.dropdown {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+<<<<<<< HEAD
 }
+=======
+  .phone_screen_off {
+    display: block;
+  }
+  .c-gallery-item {
+    margin: auto;
+    padding: 10px;
+    width: image width px;
+    font-size: 80%;
+    text-align: center;
+  }
+  .c-gallery-img {
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding-bottom: 0.5em;
+  }
+}
+>>>>>>> d66d5bed50183c4a1c742a3176bd7de30e5e8c08
