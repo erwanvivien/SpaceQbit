@@ -35,12 +35,13 @@ public class tp_script : MonoBehaviour
     {
         if (other.CompareTag("Frame_Perso"))
         {
-
             _time = 0;
 
             if (_newOne == null)
                 _newOne = Instantiate(gObject);
             _newOne.transform.position = transform.position + Vector3.up * 2;
+            
+            GetComponent<AudioSource>().Play();
         }
     }
 

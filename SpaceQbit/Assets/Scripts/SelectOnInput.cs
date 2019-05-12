@@ -8,7 +8,7 @@ public class SelectOnInput : MonoBehaviour
     public EventSystem eventSystem;
     public GameObject selectedObject;
 
-    private bool buttonSelected;
+    private bool _buttonSelected;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,15 +18,20 @@ public class SelectOnInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetAxisRaw("Vertical") != 0 && buttonSelected == false)
+        if(Input.GetAxisRaw("Vertical") != 0 && _buttonSelected == false)
         {
             eventSystem.SetSelectedGameObject(selectedObject);
-            buttonSelected = true;
+            _buttonSelected = true;
         }
+    }
+
+    private void OnMouseOver()
+    {
+        GetComponent<AudioSource>().Play();
     }
 
     private void OnDisable()
     {
-        buttonSelected = false;
+        _buttonSelected = false;
     }
 }

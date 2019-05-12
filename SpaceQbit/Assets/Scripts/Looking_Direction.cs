@@ -9,6 +9,11 @@ public class Looking_Direction : MonoBehaviour
     [SerializeField] private Animator _anm;
     [SerializeField] private Mouvement_player _player;
 
+    public AudioClip decol;
+    public AudioClip atter;
+
+    private AudioSource _audioSource;
+
     private Vector3 _scaling;
     private Vector3 _posGun;
     private Vector3 _scaleGun;
@@ -23,6 +28,8 @@ public class Looking_Direction : MonoBehaviour
         if(_player == null)
             _player = GameObject.FindWithTag("Frame_Perso").GetComponent<Mouvement_player>();
 
+        _audioSource = GetComponent<AudioSource>();
+        
         _scaling = transform.localScale;
     }
 
@@ -41,6 +48,8 @@ public class Looking_Direction : MonoBehaviour
             {
                 _hasRunned = true;
                 animToPlay = "player_decol";
+                _audioSource.clip = decol;
+                _audioSource.Play();
             }
             else
             {

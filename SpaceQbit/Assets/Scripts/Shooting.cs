@@ -8,6 +8,8 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     public GameObject Obj;
+
+    public AudioSource audio;
     
     private CurrentMenu esc;
 
@@ -130,6 +132,8 @@ public class Shooting : MonoBehaviour
 
             _shotable = false;
             _lastTimeShoot = Time.time;
+            
+            audio.Play();
         }
 
         if (_timeBullets.Count > 0 && (_timeBullets[0] + _durationBullet < Time.time)) // IF BULLET IS THERE MORE THAN _durationBullet (secs)
