@@ -10,13 +10,15 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField]
     private string[] sentences;
 
+    public bool wannaRepeat;
+
     private void OnTriggerEnter(Collider other)
     {
         if (!other.gameObject.CompareTag("Frame_Perso"))
             return;
         
         DialogueManager.instance.Enqueue(sentences);
-        gameObject.SetActive(false);
+        gameObject.SetActive(wannaRepeat);
     }
 }
 
