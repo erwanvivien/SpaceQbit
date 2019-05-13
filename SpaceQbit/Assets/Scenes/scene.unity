@@ -849,6 +849,10 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
+      propertyPath: m_WholeNumbers
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
       propertyPath: m_AnchorMin.x
       value: 1
