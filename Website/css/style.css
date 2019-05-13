@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 }
-.phone_screen_off {
+.phone_screen_gallery {
   display: none;
 }
 .c-corps-phone {
@@ -324,10 +324,8 @@ li.dropdown {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
   }
-<<<<<<< HEAD
-}
-=======
-  .phone_screen_off {
+
+  .phone_screen_gallery {
     display: block;
   }
   .c-gallery-item {
@@ -344,4 +342,3 @@ li.dropdown {
     padding-bottom: 0.5em;
   }
 }
->>>>>>> d66d5bed50183c4a1c742a3176bd7de30e5e8c08
