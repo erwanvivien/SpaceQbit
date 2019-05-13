@@ -1982,6 +1982,7 @@ MonoBehaviour:
   - bla
   - blabla
   - blablabla
+  wannaRepeat: 1
 --- !u!65 &530496941
 BoxCollider:
   m_ObjectHideFlags: 0

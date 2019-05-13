@@ -1015,9 +1015,10 @@ GameObject:
   - component: {fileID: 505529020}
   - component: {fileID: 505529019}
   - component: {fileID: 505529023}
+  - component: {fileID: 505529024}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Menu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1121,6 +1122,21 @@ MonoBehaviour:
   master: {fileID: 1128384780}
   music: {fileID: 140686911}
   sFx: {fileID: 2101121110}
+--- !u!114 &505529024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505529018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e24341a316bfa4aa9ec3bd02d834ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _masterVol: 1
+  _musicVol: 1
+  _sfXVol: 1
 --- !u!1 &551587419
 GameObject:
   m_ObjectHideFlags: 0
@@ -2012,14 +2028,18 @@ PrefabInstance:
     - target: {fileID: 11400000, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1311129905}
+      objectReference: {fileID: 505529024}
     - target: {fileID: 11400000, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_volume
+      value: Music
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
+      propertyPath: m_Value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
       propertyPath: m_AnchorMin.x
@@ -2747,6 +2767,30 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 505529024}
+    - target: {fileID: 11400000, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Master
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
       propertyPath: m_AnchorMin.x
       value: 1
@@ -3402,6 +3446,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1311129906}
   - component: {fileID: 1311129905}
+  - component: {fileID: 1311129907}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Audio
@@ -3519,6 +3564,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1311129907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311129904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 370f722634a0ad84e845428459afe1ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SfxOrMusic: music
 --- !u!1 &1344154709
 GameObject:
   m_ObjectHideFlags: 0
@@ -4404,6 +4462,30 @@ PrefabInstance:
     - target: {fileID: 22400008, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 505529024}
+    - target: {fileID: 11400000, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Sfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 22400000, guid: a568e64af07592b43b459728e2c2c53b, type: 3}
       propertyPath: m_AnchorMin.x
