@@ -14,6 +14,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (!other.gameObject.CompareTag("Frame_Perso"))
             return;
+        
         DialogueManager.instance.Enqueue(sentences);
         gameObject.SetActive(false);
     }

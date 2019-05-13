@@ -125,7 +125,7 @@ public class HideWalls : MonoBehaviour
                 if (previous != null)
                 {
                     Material m = previous.GetComponent<Renderer>().material;
-                    m.color = new Color(m.color.r, m.color.g, m.color.b, 1);
+                    m.color = new Color(m.color.r, m.color.g, m.color.b, 1); 
                     previous.GetComponent<Renderer>().material = m;
                     previous = null;
                 }
