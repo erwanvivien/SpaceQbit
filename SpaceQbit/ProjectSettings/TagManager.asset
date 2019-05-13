@@ -21,6 +21,7 @@ TagManager:
   - Cube
   - Objet
   - Audio
+  - vFX
   layers:
   - Default
   - TransparentFX

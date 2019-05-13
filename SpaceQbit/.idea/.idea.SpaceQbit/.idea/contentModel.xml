@@ -88,6 +88,8 @@
           <e p="Cam_Follow.cs" t="Include" />
           <e p="CooOffset.cs" t="Include" />
           <e p="CurrentMenu.cs" t="Include" />
+          <e p="DialogueManager.cs" t="Include" />
+          <e p="DialogueTrigger.cs" t="Include" />
           <e p="DisapearAfter.cs" t="Include" />
           <e p="Follow_Target.cs" t="Include" />
           <e p="ForEachWalls.cs" t="Include" />
@@ -96,6 +98,7 @@
           <e p="Get_Cooldown_Speed.cs" t="Include" />
           <e p="Get_Hp.cs" t="Include" />
           <e p="GetKeyName.cs" t="Include" />
+          <e p="GetValueSoundOptions.cs" t="Include" />
           <e p="HideWalls.cs" t="Include" />
           <e p="Key.cs" t="Include" />
           <e p="KeyBindArray.cs" t="Include" />
@@ -104,9 +107,11 @@
           <e p="Looking_Direction.cs" t="Include" />
           <e p="Make_to_Screen_Size.cs" t="Include" />
           <e p="Mouvement_player.cs" t="Include" />
+          <e p="OptionsValues.cs" t="Include" />
           <e p="PositionDrone.cs" t="Include" />
           <e p="PotentialKey.cs" t="Include" />
           <e p="QuitOnClick.cs" t="Include" />
+          <e p="SaveOptions.cs" t="Include" />
           <e p="Search_Target.cs" t="Include" />
           <e p="SelectOnInput.cs" t="Include" />
           <e p="SetTransparancy.cs" t="Include" />

@@ -34,8 +34,6 @@ public class Shooting : MonoBehaviour
     private float _timeCooldown;
     private bool _damageBoosted = true;
 
-
-
     private Transform objectToPlace;
 
     public bool GetDamageBoosted()
@@ -93,7 +91,7 @@ public class Shooting : MonoBehaviour
             _shotable = true;
         }
         
-        if (esc.inMenu) // IF IN MENU THEN DO NOTHING
+        if (esc.InMenu()) // IF IN MENU THEN DO NOTHING
         {
             return;
         }
@@ -132,7 +130,7 @@ public class Shooting : MonoBehaviour
 
             _shotable = false;
             _lastTimeShoot = Time.time;
-            
+
             audio.Play();
         }
 
