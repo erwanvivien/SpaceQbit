@@ -5195,10 +5195,20 @@ PrefabInstance:
       propertyPath: audio
       value: 
       objectReference: {fileID: 390852180}
+    - target: {fileID: 2232767540950115886, guid: f1b4a6e0754e3b4f4b1210165a3dd297,
+        type: 3}
+      propertyPath: _bulletSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1711687446812369640, guid: f1b4a6e0754e3b4f4b1210165a3dd297,
         type: 3}
       propertyPath: moveSpeed
-      value: 5
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711687446812369640, guid: f1b4a6e0754e3b4f4b1210165a3dd297,
+        type: 3}
+      propertyPath: moveSpeedDash
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1b4a6e0754e3b4f4b1210165a3dd297, type: 3}

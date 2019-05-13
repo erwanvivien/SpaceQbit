@@ -21,7 +21,8 @@ public class Mouvement_player : MonoBehaviour
 
     private bool _speeding;
     private float _lastTimeMoveSpeed;
-    [SerializeField] private float moveSpeed = 3;
+    [SerializeField] private float moveSpeed = 1;
+    [SerializeField] private float moveSpeedDash = 2;
     [SerializeField] private float durationMoveSpeed = 0.5f;
 
     private KeyCode _lastKeyPressed;
@@ -98,9 +99,11 @@ public class Mouvement_player : MonoBehaviour
             _speeding = true;
         }
 
+        mvt *= moveSpeed;
+
         if (_lastTimeMoveSpeed < durationMoveSpeed && _speeding)
         {
-            transform.position += mvt * dt * moveSpeed;
+            transform.position += mvt * dt * moveSpeedDash;
         }
         else
         {

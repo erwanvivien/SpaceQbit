@@ -8,7 +8,6 @@
 /[Ll]ibrary/
 
 *metadata/
-*exe/
 
 sysinfo.txt
 *.stackdump
