@@ -80,9 +80,11 @@ public class GoldAccount : MonoBehaviour
 
     private void UpDt()
     {
-        _goldText.text = gold.ToString().PadLeft(5, '0');
-        _silverText.text = silver.ToString().PadLeft(2, '0') + "     ";
         _copperText.text = copper.ToString().PadLeft(2, '0');
+
+        _silverText.text = silver.ToString().PadLeft(2, '0');
+        
+        _goldText.text = gold.ToString().PadLeft(5, '0');
     }
 
     private void Update()
