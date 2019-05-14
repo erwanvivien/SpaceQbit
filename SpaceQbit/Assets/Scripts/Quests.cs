@@ -32,8 +32,9 @@ public class Quests : MonoBehaviour
 
         if (type.ToLower() == "validate")
         {
-            QuestManager.instance.quests[questID].Done();
+            QuestManager.instance.quests[questID].Done(); 
             QuestManager.instance.Reprint();
+            done = true;
             gameObject.SetActive(false);
             return;
         }

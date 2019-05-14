@@ -7,9 +7,11 @@ using UnityEngine.UI;
 
 public class QuestManager : MonoBehaviour
 {
-    [SerializeField] private GameObject panel;
-    private Text _textTitle;
-    private Text _textText;
+    [SerializeField] private GameObject[] panel;
+    private Text[] _textTitle;
+    private Text[] _textText;
+
+    [NonSerialized] public bool NeedToReprint;
 
     public static QuestManager instance;
 
@@ -17,9 +19,16 @@ public class QuestManager : MonoBehaviour
 
     private void Start()
     {
-        panel.SetActive(false);
-        _textTitle = panel.GetComponentsInChildren<Text>()[0];
-        _textText = panel.GetComponentsInChildren<Text>()[1];
+        _textText = new Text[panel.Length];
+        _textTitle = new Text[panel.Length];
+        var i = 0;
+
+        foreach (var q in panel)
+        {
+            _textTitle[i] = q.GetComponentsInChildren<Text>()[0];
+            _textText[i] = q.GetComponentsInChildren<Text>()[1];
+            i++;
+        }
     }
 
     private void Awake()
@@ -31,7 +40,7 @@ public class QuestManager : MonoBehaviour
     {
         quests.Add(q.questID, q);
 
-        Reprint();
+        NeedToReprint = true;
     }
 
     public void UpdateKillingQuests(string mobTag)
@@ -50,40 +59,25 @@ public class QuestManager : MonoBehaviour
             }
         }
 
-        if (t)
-        {
-            Reprint();
-        }
-    }
-
-    public void UpdateSpeaktoQuests(string npcTag)
-    {
-        var t = false;
-        npcTag = npcTag.ToLower();
-
-        foreach (var q in quests.Values)
-        {
-            if (q.who.ToLower() == npcTag)
-            {
-                t = true;
-                q.Done();
-            }
-        }
-
-        if (t)
-        {
-            Reprint();
-        }
+        NeedToReprint = t;
     }
 
     public void Reprint()
     {
+        for (var j = 0; j < _textText.Length; j++)
+        {
+            panel[j].SetActive(false);
+        }
+
+        if (DialogueManager.isDialoging)
+        {
+            NeedToReprint = true;
+
+            return;
+        }
+
         var x = quests.Values.ToList();
-        _textText.text = "";
-        _textTitle.text = "";
-        var i = 0;
-        
-        for (; i < (x.Count > 3 ? 3 : x.Count); i++)
+        for (var i = 0; i < x.Count; i++)
         {
             if (x[i].done)
             {
@@ -93,27 +87,51 @@ public class QuestManager : MonoBehaviour
                 continue;
             }
 
+            if (i >= 3) break;
+
+            panel[i].SetActive(true);
+
             var tmp = x[i].type.ToLower();
             switch (tmp)
             {
                 case "kill":
-                    _textTitle.text += "Kill\n\n\n";
-                    _textText.text += "\n" + x[i].howMany + " " + x[i].who + "\n\n";
+                    _textTitle[i].color = Color.red;
+                    _textTitle[i].text = "Kill";
+                    
+                    _textText[i].color = new Color(0.5f, 0, 0);
+                    _textText[i].text = "\n" + x[i].howMany + " " + x[i].who;
                     break;
                 case "speakto":
-                    _textTitle.text += "Speak to :\n\n\n";
-                    _textText.text += "\n" + x[i].who + "\n\n";
+                    _textTitle[i].color = new Color(0, 0.8f, 0.8f);
+                    _textTitle[i].text = "Speak to :";
+                    
+                    _textText[i].color = Color.cyan;
+                    _textText[i].text = "\n" + x[i].who;
                     break;
                 case "goto":
-                    _textTitle.text += "Go to :\n\n\n";
-                    _textText.text += "\n" + x[i].who + "\n\n";
+                    _textTitle[i].color = Color.yellow;
+                    _textTitle[i].text = "Go to :";
+                    _textText[i].color = new Color(0.8f, 0.5f, 0);
+                    _textText[i].text = "\n" + x[i].who;
+                    break;
+                default:
                     break;
             }
         }
 
         if (quests.Values.Count > 3)
         {
-            _textText.text += "and more...";
+            panel[3].SetActive(true);
+            _textTitle[3].text = "and more...";
+        }
+    }
+
+    private void Update()
+    {
+        if (NeedToReprint)
+        {
+            NeedToReprint = false;
+            Reprint();
         }
     }
 }

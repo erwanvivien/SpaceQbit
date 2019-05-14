@@ -8,14 +8,18 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private string[] start;
 
     [SerializeField] private GameObject panel;
-    [SerializeField] private GameObject questPanel;
+    [SerializeField] private GameObject[] questPanels;
 
     public static DialogueManager instance;
 
-    private Queue<string> queue = new Queue<string>();
+    public Queue<string> queue = new Queue<string>();
+    private Text _text;
+
+    public static bool isDialoging;
 
     private void Start()
     {
+        _text = panel.GetComponentInChildren<Text>();
         Enqueue(start);
         panel.SetActive(false);
     }
@@ -29,33 +33,43 @@ public class DialogueManager : MonoBehaviour
     {
         foreach (var str in array)
         {
-            queue.Enqueue(str);
+            Enqueue(str);
         }
     }
 
     public void Enqueue(string s)
     {
         queue.Enqueue(s);
+        isDialoging = true;
     }
+    
+    
 
     public void Update()
     {
         if (!panel.activeSelf && queue.Any())
         {
             panel.SetActive(true);
-            questPanel.SetActive(false);
-            panel.GetComponentInChildren<Text>().text = queue.Dequeue();
+            foreach (var q in questPanels)
+            {
+                q.SetActive(false);
+            }
+            _text.text = queue.Dequeue();
         }
 
         if (panel.activeSelf && Input.GetKeyDown(KeyCode.Space))
         {
             if (!queue.Any())
             {
+                isDialoging = false;
                 panel.SetActive(false);
-                questPanel.SetActive(true);
+                foreach (var q in questPanels)
+                {
+                    q.SetActive(true);
+                }
             }
             else
-                panel.GetComponentInChildren<Text>().text = queue.Dequeue();
+                _text.text = queue.Dequeue();
         }
     }
 }
