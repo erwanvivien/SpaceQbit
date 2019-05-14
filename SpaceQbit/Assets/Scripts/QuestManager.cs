@@ -15,6 +15,8 @@ public class QuestManager : MonoBehaviour
 
     public static QuestManager instance;
 
+    private List<int> idDone = new List<int>();
+
     public Dictionary<int, Quests> quests = new Dictionary<int, Quests>();
 
     private void Start()
@@ -38,7 +40,8 @@ public class QuestManager : MonoBehaviour
 
     public void Add(Quests q)
     {
-        quests.Add(q.questID, q);
+        if(!quests.ContainsKey(q.questID))
+            quests.Add(q.questID, q);
 
         NeedToReprint = true;
     }
@@ -81,6 +84,7 @@ public class QuestManager : MonoBehaviour
         {
             if (x[i].done)
             {
+                idDone.Add(x[i].questID);
                 quests.Remove(x[i].questID);
                 x.RemoveAt(i);
                 i--;
@@ -96,23 +100,23 @@ public class QuestManager : MonoBehaviour
             {
                 case "kill":
                     _textTitle[i].color = Color.red;
-                    _textTitle[i].text = "Kill";
-                    
+                    _textTitle[i].text = "[" + x[i].questID + "] " + "Kill";
+
                     _textText[i].color = new Color(0.5f, 0, 0);
-                    _textText[i].text = "\n" + x[i].howMany + " " + x[i].who;
+                    _textText[i].text = "\n\n" + x[i].howMany + " " + x[i].who;
                     break;
                 case "speakto":
                     _textTitle[i].color = new Color(0, 0.8f, 0.8f);
-                    _textTitle[i].text = "Speak to :";
-                    
+                    _textTitle[i].text = "[" + x[i].questID + "] " + "Speak to";
+
                     _textText[i].color = Color.cyan;
-                    _textText[i].text = "\n" + x[i].who;
+                    _textText[i].text = "\n\n" + x[i].who;
                     break;
                 case "goto":
                     _textTitle[i].color = Color.yellow;
-                    _textTitle[i].text = "Go to :";
+                    _textTitle[i].text = "[" + x[i].questID + "] " + "Go to";
                     _textText[i].color = new Color(0.8f, 0.5f, 0);
-                    _textText[i].text = "\n" + x[i].who;
+                    _textText[i].text = "\n\n" + x[i].who;
                     break;
                 default:
                     break;

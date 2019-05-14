@@ -16,7 +16,9 @@ public class Quests : MonoBehaviour
 
     [SerializeField] private int award;
 
-    public bool done;
+    public bool wannaRepeat;
+    [NonSerialized] public bool done;
+    
 
     private void Start()
     {
@@ -35,7 +37,7 @@ public class Quests : MonoBehaviour
             QuestManager.instance.quests[questID].Done(); 
             QuestManager.instance.Reprint();
             done = true;
-            gameObject.SetActive(false);
+            gameObject.SetActive(wannaRepeat);
             return;
         }
         
@@ -57,7 +59,7 @@ public class Quests : MonoBehaviour
             DialogueManager.instance.Enqueue(tmp);
         }
 
-        gameObject.SetActive(false);
+        gameObject.SetActive(wannaRepeat);
         QuestManager.instance.Add(this);
     }
 

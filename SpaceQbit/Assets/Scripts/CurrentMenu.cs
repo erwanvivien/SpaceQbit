@@ -10,6 +10,7 @@ public class CurrentMenu : MonoBehaviour
     public GameObject mainMenuCanvas;
 
     private Canvas _thisCanvas;
+    private bool inMenu;
     
     public void Save()
     {
@@ -48,6 +49,6 @@ public class CurrentMenu : MonoBehaviour
 
     public bool InMenu()
     {
-        return _thisCanvas.enabled;
+        return DialogueManager.isDialoging || _thisCanvas.enabled;
     }
 }
