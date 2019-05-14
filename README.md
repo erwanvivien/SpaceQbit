@@ -6,4 +6,5 @@ Let's discover and improve SpaceQbit !
 
 A game where every moves count.
 
-Thanks for reading !
+Thanks for reading ! bla bla
+test
