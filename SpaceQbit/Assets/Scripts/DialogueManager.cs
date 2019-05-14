@@ -5,11 +5,10 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    [SerializeField]
-    private string[] start;
+    [SerializeField] private string[] start;
 
-    [SerializeField]
-    private GameObject panel;
+    [SerializeField] private GameObject panel;
+    [SerializeField] private GameObject questPanel;
 
     public static DialogueManager instance;
 
@@ -34,20 +33,29 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public void Enqueue(string s)
+    {
+        queue.Enqueue(s);
+    }
+
     public void Update()
     {
-        if(!panel.activeSelf && queue.Any())
+        if (!panel.activeSelf && queue.Any())
         {
             panel.SetActive(true);
+            questPanel.SetActive(false);
             panel.GetComponentInChildren<Text>().text = queue.Dequeue();
         }
-        if(panel.activeSelf && Input.GetKeyDown(KeyCode.Space))
+
+        if (panel.activeSelf && Input.GetKeyDown(KeyCode.Space))
         {
             if (!queue.Any())
+            {
                 panel.SetActive(false);
+                questPanel.SetActive(true);
+            }
             else
                 panel.GetComponentInChildren<Text>().text = queue.Dequeue();
         }
     }
 }
-

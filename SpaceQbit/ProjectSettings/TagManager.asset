@@ -22,6 +22,7 @@ TagManager:
   - Objet
   - Audio
   - vFX
+  - Poulazer
   layers:
   - Default
   - TransparentFX

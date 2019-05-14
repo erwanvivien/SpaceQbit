@@ -73,6 +73,7 @@
     <Compile Include="Assets\bolt\scripts\BoltNetworkUtils.cs" />
     <Compile Include="Assets\bolt\scripts\BoltRuntimeConfigs.cs" />
     <Compile Include="Assets\bolt\scripts\BoltUnityDebugDrawer.cs" />
+    <Compile Include="Assets\GoldAccount.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
@@ -103,6 +104,8 @@
     <Compile Include="Assets\Scripts\OptionsValues.cs" />
     <Compile Include="Assets\Scripts\PositionDrone.cs" />
     <Compile Include="Assets\Scripts\PotentialKey.cs" />
+    <Compile Include="Assets\Scripts\QuestManager.cs" />
+    <Compile Include="Assets\Scripts\Quests.cs" />
     <Compile Include="Assets\Scripts\QuitOnClick.cs" />
     <Compile Include="Assets\Scripts\SaveOptions.cs" />
     <Compile Include="Assets\Scripts\Search_Target.cs" />

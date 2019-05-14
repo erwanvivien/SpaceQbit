@@ -9,6 +9,8 @@ public class Killable : MonoBehaviour
     [SerializeField] private float _lifeMax = 0;
     [SerializeField] private GameObject _hpBar = null;
 
+    [SerializeField] private string mobTag;
+
     private GameObject _HPs;
     private float _time;
 
@@ -58,6 +60,8 @@ public class Killable : MonoBehaviour
         
         if (_life <= 0)
         {
+            QuestManager.instance.UpdateKillingQuests(mobTag);
+            
             gameObject.SetActive(false);
             Destroy(_HPs);
             Destroy(gameObject);

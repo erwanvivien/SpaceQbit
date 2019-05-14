@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 2348714803154724530}
   m_Layer: 0
   m_Name: POULAZER
-  m_TagString: Untagged
+  m_TagString: Poulazer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,6 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _lifeMax: 20
   _hpBar: {fileID: 5004582320759297981, guid: 1dd7846edf9f25046b98333be7386397, type: 3}
+  mobTag: Poulazer
 --- !u!114 &2348714803154724528
 MonoBehaviour:
   m_ObjectHideFlags: 0
