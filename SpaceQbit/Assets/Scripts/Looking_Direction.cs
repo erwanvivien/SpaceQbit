@@ -36,7 +36,7 @@ public class Looking_Direction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 posMouse = Input.mousePosition;
+        var posMouse = Input.mousePosition;
         string animToPlay;
         
         posMouse.y -= Screen.height / 2f;

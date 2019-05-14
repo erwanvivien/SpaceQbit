@@ -8,7 +8,7 @@ public class PositionDrone : MonoBehaviour
 {
     float GetCooToAngle()
     {
-        Vector3 pos = Input.mousePosition;
+        var pos = Input.mousePosition;
         pos -= new Vector3(Screen.width / 2f, Screen.height / 2f, 0);
         
         return (float) Math.Atan2(pos.y * 1.42f, pos.x) ;
@@ -17,7 +17,7 @@ public class PositionDrone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float angle = GetCooToAngle();
+        var angle = GetCooToAngle();
 
         GameObject o;
         (o = gameObject).transform.position = 

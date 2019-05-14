@@ -46,11 +46,11 @@ public class Search_Target : MonoBehaviour
         
         foreach (var q in GameObject.FindGameObjectsWithTag("Perso")) // SEEKS FOR EVERY GAMEOBJECT WITH TAG "PERSO" AND TESTS IF THEY ARE CLOSE ENOUGH
         {
-            Vector3 tmp = q.transform.position;
-            Vector3 me = transform.position;
+            var tmp = q.transform.position;
+            var me = transform.position;
 
 
-            float distanceSquared = (tmp.x - me.x) * (tmp.x - me.x) + 
+            var distanceSquared = (tmp.x - me.x) * (tmp.x - me.x) + 
                                     (tmp.z - me.z) * (tmp.z - me.z);
             
             if (distanceSquared <= minRange)

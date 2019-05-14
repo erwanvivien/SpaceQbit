@@ -23,7 +23,7 @@ public class Get_Cooldown_Speed : MonoBehaviour
 
     void Update()
     {
-        bool d = _otherScript.GetDashable();
+        var d = _otherScript.GetDashable();
 
         if (!d && _timer <= 0) 
         {

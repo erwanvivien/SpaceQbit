@@ -16,7 +16,7 @@ public class tp_script : MonoBehaviour
     {
         if (other.CompareTag("Frame_Perso"))
         {
-            Get_Hp t = _newOne.GetComponentInChildren<Get_Hp>();
+            var t = _newOne.GetComponentInChildren<Get_Hp>();
             t.Set((3 - _time) / 3 * 100f);
 
             if (_time >= 3)

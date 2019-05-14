@@ -106,7 +106,7 @@ public class HideWalls : MonoBehaviour
                     _time = 0;
                 else if (previous != hit.collider.gameObject)
                 {
-                    Material m = previous.GetComponent<Renderer>().material;
+                    var m = previous.GetComponent<Renderer>().material;
                     m.color = new Color(m.color.r, m.color.g, m.color.b, 1);
                     previous.GetComponent<Renderer>().material = m;
                 }
@@ -115,7 +115,7 @@ public class HideWalls : MonoBehaviour
                 
                 if (_time > timeNeededToTransparent)
                 {
-                    Material m = previous.GetComponent<Renderer>().material;
+                    var m = previous.GetComponent<Renderer>().material;
                     m.color = new Color(m.color.r, m.color.g, m.color.b, 0.3f);
                     previous.GetComponent<Renderer>().material = m;
                 }
@@ -124,7 +124,7 @@ public class HideWalls : MonoBehaviour
             {
                 if (previous != null)
                 {
-                    Material m = previous.GetComponent<Renderer>().material;
+                    var m = previous.GetComponent<Renderer>().material;
                     m.color = new Color(m.color.r, m.color.g, m.color.b, 1); 
                     previous.GetComponent<Renderer>().material = m;
                     previous = null;

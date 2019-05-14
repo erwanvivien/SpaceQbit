@@ -14,7 +14,7 @@ public class Cam_Follow: MonoBehaviour
     
     void LateUpdate()
     {
-        Vector3 targetPosition = Obj.transform.position;
+        var targetPosition = Obj.transform.position;
 
         targetPosition += _offset;
             

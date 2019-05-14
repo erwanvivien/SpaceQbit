@@ -23,7 +23,7 @@ public class Get_Cooldown_Damage : MonoBehaviour
 
     void Update()
     {
-        bool d = _otherScript.GetDamageBoosted();
+        var d = _otherScript.GetDamageBoosted();
 
         if (!d && _timer <= 0) 
         {

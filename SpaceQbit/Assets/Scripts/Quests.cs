@@ -27,16 +27,24 @@ public class Quests : MonoBehaviour
     {
         if (!other.gameObject.CompareTag("Frame_Perso"))
             return;
-
+        
         DialogueManager.instance.Enqueue(sentences);
 
-        int gold = (award / 10000) % 100;
-        int silver = (award % 10000) / 100;
-        int copper = award % 100;
+        if (type.ToLower() == "validate")
+        {
+            QuestManager.instance.quests[questID].Done();
+            QuestManager.instance.Reprint();
+            gameObject.SetActive(false);
+            return;
+        }
+        
+        var gold = (award / 10000) % 100;
+        var silver = (award % 10000) / 100;
+        var copper = award % 100;
 
         if (award > 0)
         {
-            string tmp = "[";
+            var tmp = "[";
             if (gold != 0)
                 tmp += " " + gold + " gold";
             if (silver != 0)

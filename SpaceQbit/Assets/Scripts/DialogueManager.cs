@@ -27,7 +27,7 @@ public class DialogueManager : MonoBehaviour
 
     public void Enqueue(string[] array)
     {
-        foreach (string str in array)
+        foreach (var str in array)
         {
             queue.Enqueue(str);
         }

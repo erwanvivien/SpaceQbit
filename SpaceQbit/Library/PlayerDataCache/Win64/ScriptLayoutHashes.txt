@@ -27,6 +27,7 @@ bf4698a3b70ae92d7166ab31c3de7991 Assembly-CSharp.dll:.BoltPOI
 e7a73f5f78ba6445195ec23b74a1ce2d Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
 99c28fc631021d20825679208e5670d2 Assembly-CSharp.dll:.OptionsValues
 2b604325030363c3f437754997f16d34 Assembly-CSharp.dll:.Bullet_Collision
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.GoldAccount
 cf9f5cf2c3145a37ac07f00e50e460f9 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 5fc094978ce3e3591a7500ed380d854a UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -212,9 +213,8 @@ c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 79f1e4d923cfc803b34c05ae2cb73dac Assembly-CSharp.dll:.DisapearAfter
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
+c5eff99ce7daeec6ee7aa2f7feab22b6 Assembly-CSharp.dll:.ResizePanel
 71bb6a6b6c8f052f948db64c7dd3ca4f udpkit.platform.photon.dll:udpkit.platform.photon.PhotonPingManager
 94d5cbe54c37c8e32000e8feba973f6a Assembly-CSharp.dll:.SaveOptions
-e0bc050579c82b7c113bb9025a14b302 Assembly-CSharp.dll:.Search_Target
 235a1e8275c5d1ab2a1c0f017d90e1b5 Assembly-CSharp.dll:.QuestManager
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.GoldAccount
-c5eff99ce7daeec6ee7aa2f7feab22b6 Assembly-CSharp.dll:.ResizePanel
+e0bc050579c82b7c113bb9025a14b302 Assembly-CSharp.dll:.Search_Target

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.PlayerLoop;
@@ -9,7 +10,7 @@ public class GoldAccount : MonoBehaviour
 {
     public static GoldAccount instance;
 
-    private int gold = 0, silver = 0, copper = 0;
+    private int gold = 0, silver = 0, copper = 0, nbPlay = 0;
 
     private Text _goldText, _silverText, _copperText;
     private AudioSource _source;
@@ -72,15 +73,23 @@ public class GoldAccount : MonoBehaviour
         {
             gold = 99999;
         }
-        
-        _source.Play();
+
+        nbPlay++;
     }
 
-    
+
     private void UpDt()
     {
         _goldText.text = gold.ToString().PadLeft(5, '0');
         _silverText.text = silver.ToString().PadLeft(2, '0') + "     ";
         _copperText.text = copper.ToString().PadLeft(2, '0');
+    }
+
+    private void Update()
+    {
+        if (_source.isPlaying || nbPlay <= 0) return;
+        
+        nbPlay--;
+        _source.Play();
     }
 }

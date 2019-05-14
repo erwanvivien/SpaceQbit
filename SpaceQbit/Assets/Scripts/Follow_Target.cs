@@ -49,8 +49,8 @@ public class Follow_Target : MonoBehaviour
         if (_target != null)
         {
             var position = _target.transform.position;
-            Vector3 tmp = position;
-            Vector3 me = transform.position;
+            var tmp = position;
+            var me = transform.position;
             
             
             _tsfmPoule.localScale = new Vector3(_scalePouleSave.x * (tmp.x - me.x >= 0 ? 1 : -1), _scalePouleSave.y, _scalePouleSave.z);

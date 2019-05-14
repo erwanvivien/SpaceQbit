@@ -33,7 +33,7 @@ public class Bullet_Collision : MonoBehaviour
         {
             return;
         }
-        string tags = other.gameObject.tag;
+        var tags = other.gameObject.tag;
         _collision = true;
 
         switch (tags)
@@ -50,10 +50,10 @@ public class Bullet_Collision : MonoBehaviour
 
                 foreach (var q in GameObject.FindGameObjectsWithTag("Killable"))
                 {
-                    Vector3 transformPosition = q.transform.position;
-                    Vector3 me = transform.position;
+                    var transformPosition = q.transform.position;
+                    var me = transform.position;
 
-                    float distanceSquared = (transformPosition.x - me.x) * (transformPosition.x - me.x) + 
+                    var distanceSquared = (transformPosition.x - me.x) * (transformPosition.x - me.x) + 
                                             (transformPosition.z - me.z) * (transformPosition.z - me.z);
 
                     if (distanceSquared <= 10)

@@ -8,16 +8,18 @@ using UnityEngine.UI;
 public class QuestManager : MonoBehaviour
 {
     [SerializeField] private GameObject panel;
-    private Text _text;
+    private Text _textTitle;
+    private Text _textText;
 
     public static QuestManager instance;
 
-    private Dictionary<int, Quests> quests = new Dictionary<int, Quests>();
+    public Dictionary<int, Quests> quests = new Dictionary<int, Quests>();
 
     private void Start()
     {
         panel.SetActive(false);
-        _text = panel.GetComponentInChildren<Text>();
+        _textTitle = panel.GetComponentsInChildren<Text>()[0];
+        _textText = panel.GetComponentsInChildren<Text>()[1];
     }
 
     private void Awake()
@@ -29,24 +31,16 @@ public class QuestManager : MonoBehaviour
     {
         quests.Add(q.questID, q);
 
-        if (quests.Keys.Count <= 4)
-        {
-            _text.text +=
-                q.type + "\n" + q.howMany + " " + q.who + "\n\n";
-        }
-        else
-        {
-            _text.text += "and more";
-        }
+        Reprint();
     }
 
     public void UpdateKillingQuests(string mobTag)
     {
-        bool t = false;
+        var t = false;
         foreach (var q in quests.Values)
         {
             if (!string.Equals(q.who, mobTag, StringComparison.OrdinalIgnoreCase)) continue;
-            
+
             t = true;
             q.howMany--;
 
@@ -61,12 +55,12 @@ public class QuestManager : MonoBehaviour
             Reprint();
         }
     }
-    
+
     public void UpdateSpeaktoQuests(string npcTag)
     {
         var t = false;
         npcTag = npcTag.ToLower();
-        
+
         foreach (var q in quests.Values)
         {
             if (q.who.ToLower() == npcTag)
@@ -82,25 +76,44 @@ public class QuestManager : MonoBehaviour
         }
     }
 
-    private void Reprint()
+    public void Reprint()
     {
-        var x = quests.Values.ToArray();
-        _text.text = "";
-        for (var i = 0; i < (x.Length >= 4 ? 4 : x.Length); i++)
+        var x = quests.Values.ToList();
+        _textText.text = "";
+        _textTitle.text = "";
+        var i = 0;
+        
+        for (; i < (x.Count > 3 ? 3 : x.Count); i++)
         {
-            if (x[i].done) continue;
-            
-            switch (x[i].type.ToLower())
+            if (x[i].done)
+            {
+                quests.Remove(x[i].questID);
+                x.RemoveAt(i);
+                i--;
+                continue;
+            }
+
+            var tmp = x[i].type.ToLower();
+            switch (tmp)
             {
                 case "kill":
-                    _text.text +=
-                        x[i].type + "\n" + x[i].howMany + " " + x[i].who + "\n\n";
+                    _textTitle.text += "Kill\n\n\n";
+                    _textText.text += "\n" + x[i].howMany + " " + x[i].who + "\n\n";
                     break;
-                default:
-                    _text.text +=
-                        x[i].type + "\n" + x[i].who + "\n\n";
+                case "speakto":
+                    _textTitle.text += "Speak to :\n\n\n";
+                    _textText.text += "\n" + x[i].who + "\n\n";
+                    break;
+                case "goto":
+                    _textTitle.text += "Go to :\n\n\n";
+                    _textText.text += "\n" + x[i].who + "\n\n";
                     break;
             }
+        }
+
+        if (quests.Values.Count > 3)
+        {
+            _textText.text += "and more...";
         }
     }
 }

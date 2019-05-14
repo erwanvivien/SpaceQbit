@@ -77,7 +77,7 @@ public class Shooting : MonoBehaviour
 
     float GetCooToAngle()
     {
-        Vector3 pos = Input.mousePosition;
+        var pos = Input.mousePosition;
         pos -= new Vector3(Screen.width / 2f, Screen.height / 2f, 0);
         
         return (float) Math.Atan2(pos.y * 1.42f, pos.x) * 180 / (float) Math.PI;
@@ -98,11 +98,11 @@ public class Shooting : MonoBehaviour
 
         if (Input.GetMouseButton(0) && _shotable) // INSTANTIATE A NEW AMO ON CLICK - WITH INFO : Who shot? Since When?
         {
-            float angle = GetCooToAngle();
+            var angle = GetCooToAngle();
             
             _posCanvas = GetComponentInParent<Transform>();
             
-            GameObject newOne = Instantiate(Obj); // INSTANTIATE A NEW AMO
+            var newOne = Instantiate(Obj); // INSTANTIATE A NEW AMO
             newOne.SetActive(true);
             newOne.transform.localPosition = _posCanvas.position;
 
@@ -112,7 +112,7 @@ public class Shooting : MonoBehaviour
                 newOne.GetComponent<BoxCollider>().size *= 2;
             }
             
-            Rigidbody rb = newOne.GetComponent<Rigidbody>();
+            var rb = newOne.GetComponent<Rigidbody>();
             
             angle = (angle % 360 + 360) % 360;
             angle = (float) (angle / 180 * Math.PI);
@@ -121,7 +121,7 @@ public class Shooting : MonoBehaviour
                                         0 , 
                                         (float) Math.Sin(angle)) * _bulletSpeed;
 
-            Bullet_Collision bulletCollision = newOne.GetComponent<Bullet_Collision>();
+            var bulletCollision = newOne.GetComponent<Bullet_Collision>();
             bulletCollision.tmp = gameObject.GetComponentsInParent<Transform>()[1].gameObject; // PUTS THE MOVING FRAME AS THE SHOOTER OF THIS AMO
             bulletCollision.SetDamage(_damage);
 
@@ -140,7 +140,7 @@ public class Shooting : MonoBehaviour
             _bullets.RemoveAt(0);
         }
 
-        for (int i = 0; i < _bullets.Count; i++) // CHECK IF BULLET IS DESTROYED
+        for (var i = 0; i < _bullets.Count; i++) // CHECK IF BULLET IS DESTROYED
         {
             if (!_bullets[i].activeSelf)
             {

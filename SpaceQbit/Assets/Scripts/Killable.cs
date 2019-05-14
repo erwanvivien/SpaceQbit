@@ -34,7 +34,7 @@ public class Killable : MonoBehaviour
         _time = 0;
         _life -= dmg;
         
-        RectTransform[] tmp = _HPs.GetComponentsInChildren<RectTransform>();
+        var tmp = _HPs.GetComponentsInChildren<RectTransform>();
         
         tmp[2].localScale = 
             new Vector3(_life/_lifeMax,

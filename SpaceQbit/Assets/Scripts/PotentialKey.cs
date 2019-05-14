@@ -22,7 +22,7 @@ public class PotentialKey : MonoBehaviour
         _array = GetComponentInParent<KeyBindArray>();
         
         
-        KeyCode k = _array._keyBindings[KeyNumber];
+        var k = _array._keyBindings[KeyNumber];
         keyName = k.ToString();
         keyCode = k;
     }

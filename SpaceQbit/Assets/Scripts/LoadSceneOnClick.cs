@@ -17,7 +17,7 @@ public class LoadSceneOnClick : MonoBehaviour
     {
         if (sceneindex != 0)
         {
-            float volume = _audio.GetComponent<AudioSource>().volume;
+            var volume = _audio.GetComponent<AudioSource>().volume;
             float time = 5;
             
             while (time >= 0)

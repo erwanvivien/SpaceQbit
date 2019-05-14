@@ -65,9 +65,9 @@ public class Mouvement_player : MonoBehaviour
             return;
         }
         
-        float dt = Time.deltaTime;
+        var dt = Time.deltaTime;
         
-        Vector3 mvt = Vector3.zero;
+        var mvt = Vector3.zero;
         
         _moving = true;
         
