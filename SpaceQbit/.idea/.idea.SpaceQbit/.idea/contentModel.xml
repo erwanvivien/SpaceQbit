@@ -60,7 +60,6 @@
             <e p="license.txt" t="Include" />
           </e>
         </e>
-        <e p="GoldAccount.cs" t="Include" />
         <e p="NavMeshComponents" t="Include">
           <e p="Editor" t="Include">
             <e p="NavMeshComponentsGUIUtility.cs" t="Include" />
@@ -100,6 +99,7 @@
           <e p="Get_Hp.cs" t="Include" />
           <e p="GetKeyName.cs" t="Include" />
           <e p="GetValueSoundOptions.cs" t="Include" />
+          <e p="GoldAccount.cs" t="Include" />
           <e p="HideWalls.cs" t="Include" />
           <e p="Key.cs" t="Include" />
           <e p="KeyBindArray.cs" t="Include" />
@@ -114,6 +114,7 @@
           <e p="QuestManager.cs" t="Include" />
           <e p="Quests.cs" t="Include" />
           <e p="QuitOnClick.cs" t="Include" />
+          <e p="ResizePanel.cs" t="Include" />
           <e p="SaveOptions.cs" t="Include" />
           <e p="Search_Target.cs" t="Include" />
           <e p="SelectOnInput.cs" t="Include" />

@@ -73,7 +73,6 @@
     <Compile Include="Assets\bolt\scripts\BoltNetworkUtils.cs" />
     <Compile Include="Assets\bolt\scripts\BoltRuntimeConfigs.cs" />
     <Compile Include="Assets\bolt\scripts\BoltUnityDebugDrawer.cs" />
-    <Compile Include="Assets\GoldAccount.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
@@ -93,6 +92,7 @@
     <Compile Include="Assets\Scripts\Get_Hp.cs" />
     <Compile Include="Assets\Scripts\GetKeyName.cs" />
     <Compile Include="Assets\Scripts\GetValueSoundOptions.cs" />
+    <Compile Include="Assets\Scripts\GoldAccount.cs" />
     <Compile Include="Assets\Scripts\HideWalls.cs" />
     <Compile Include="Assets\Scripts\Key.cs" />
     <Compile Include="Assets\Scripts\KeyBindArray.cs" />
@@ -107,6 +107,7 @@
     <Compile Include="Assets\Scripts\QuestManager.cs" />
     <Compile Include="Assets\Scripts\Quests.cs" />
     <Compile Include="Assets\Scripts\QuitOnClick.cs" />
+    <Compile Include="Assets\Scripts\ResizePanel.cs" />
     <Compile Include="Assets\Scripts\SaveOptions.cs" />
     <Compile Include="Assets\Scripts\Search_Target.cs" />
     <Compile Include="Assets\Scripts\SelectOnInput.cs" />

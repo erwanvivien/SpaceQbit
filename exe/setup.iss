@@ -3,25 +3,25 @@
 
 #define MyAppName "SpaceQbit"
 #define MyAppVersion "1"
-#define MyAppPublisher "Sparks Studio"
+#define MyAppPublisher "SparksStudio"
 #define MyAppExeName "SpaceQbit_2.exe"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{46CAC9B9-C43F-41F3-8F3E-F9033BB9DD74}
+AppId={{CB3456BC-CC91-4B6C-A541-E45A8AE6136A}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
 AppPublisher={#MyAppPublisher}
 DefaultDirName={autopf}\{#MyAppName}
-DisableProgramGroupPage=yes
-; The [Icons] "quicklaunchicon" entry uses {userappdata} but its [Tasks] entry has a proper IsAdminInstallMode Check.
-UsedUserAreasWarning=no
+DefaultGroupName={#MyAppName}
+AllowNoIcons=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
+PrivilegesRequiredOverridesAllowed=dialog
 OutputDir=D:\Dev\SpaceQbit\exe
-OutputBaseFilename=SpaceQbitSetup
+OutputBaseFilename=SpaceQbit_Setup
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -31,7 +31,6 @@ Name: "french"; MessagesFile: "compiler:Languages\French.isl"
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
-Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 6.1; Check: not IsAdminInstallMode
 
 [Files]
 Source: "D:\Dev\SpaceQbit\exe\SpaceQbit_2.exe"; DestDir: "{app}"; Flags: ignoreversion
@@ -39,11 +38,10 @@ Source: "D:\Dev\SpaceQbit\exe\*"; DestDir: "{app}"; Flags: ignoreversion recurse
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
-Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
+Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
+Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
 Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
-Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: quicklaunchicon
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
-
 

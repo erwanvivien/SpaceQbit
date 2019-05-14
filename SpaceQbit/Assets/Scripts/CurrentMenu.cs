@@ -21,11 +21,6 @@ public class CurrentMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void SetCanvas(Canvas c)
-    {
-        
-    }
-
     private void Start()
     {
         _thisCanvas = GetComponent<Canvas>();
