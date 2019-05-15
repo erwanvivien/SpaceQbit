@@ -32,8 +32,10 @@ public class SaveGame : MonoBehaviour
             {
                 var q = tmp[index].gameObject.GetComponent<Quests>();
                 output += "" +
+                          q.questID + ':' +
                           q.done + ':' +
-                          q.pickedUp +
+                          q.pickedUp + ':' +
+                          q.howMany +
                           "\n";
             }
 
@@ -108,14 +110,20 @@ public class SaveGame : MonoBehaviour
             {
                 var q = tmp[index].gameObject.GetComponent<Quests>();
                 var x = lines[0].Split(':');
-
-                if (x[0].ToLower() == "true")
-                    q.DoneLoad();
+                q.questID = Int32.Parse(x[0]);
+                
                 if (x[1].ToLower() == "true")
+                {
+                    q.DoneLoad();
+                }
+
+                if (x[2].ToLower() == "true")
                 {
                     tmp[index].gameObject.SetActive(false);
                     q.Activate(true);
                 }
+
+                q.howMany = Int32.Parse(x[3]);
 
                 lines.RemoveAt(0);
             }
@@ -134,6 +142,7 @@ public class SaveGame : MonoBehaviour
                     tmp[index].position = new Vector3(float.Parse(x[1]), float.Parse(x[2]), float.Parse(x[3]));
                     tmp[index].gameObject.GetComponent<Killable>()._life = int.Parse(x[4]);
                 }
+
                 lines.RemoveAt(0);
             }
 
@@ -144,6 +153,8 @@ public class SaveGame : MonoBehaviour
             GoldAccount.instance.gold = Int32.Parse(x[0]);
             GoldAccount.instance.silver = Int32.Parse(x[1]);
             GoldAccount.instance.copper = Int32.Parse(x[2]);
+            
+            GoldAccount.instance.UpDt();
         }
     }
 }

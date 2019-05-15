@@ -81,7 +81,7 @@ public class GoldAccount : MonoBehaviour
     }
 
 
-    private void UpDt()
+    public void UpDt()
     {
         _copperText.text = copper.ToString().PadLeft(2, '0');
 
