@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LoadSceneOnClick : MonoBehaviour
 {
     private GameObject _audio;
+    public bool wannaLoadSave;
 
     private void Start()
     {
@@ -15,6 +16,8 @@ public class LoadSceneOnClick : MonoBehaviour
 
     public void LoadByIndex(int sceneindex)
     {
+        LoadOptions.UsingSave = wannaLoadSave;
+        
         if (sceneindex != 0)
         {
             var volume = _audio.GetComponent<AudioSource>().volume;

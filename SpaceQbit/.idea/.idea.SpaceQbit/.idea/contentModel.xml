@@ -60,7 +60,6 @@
             <e p="license.txt" t="Include" />
           </e>
         </e>
-        <e p="ForeachChildren.cs" t="Include" />
         <e p="NavMeshComponents" t="Include">
           <e p="Editor" t="Include">
             <e p="NavMeshComponentsGUIUtility.cs" t="Include" />
@@ -84,7 +83,6 @@
             </e>
           </e>
         </e>
-        <e p="SaveGame.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Bullet_Collision.cs" t="Include" />
           <e p="Cam_Follow.cs" t="Include" />
@@ -94,6 +92,7 @@
           <e p="DialogueTrigger.cs" t="Include" />
           <e p="DisapearAfter.cs" t="Include" />
           <e p="Follow_Target.cs" t="Include" />
+          <e p="ForeachChildren.cs" t="Include" />
           <e p="ForEachWalls.cs" t="Include" />
           <e p="Get_Coo_Cam.cs" t="Include" />
           <e p="Get_Cooldown_Damage.cs" t="Include" />
@@ -106,6 +105,7 @@
           <e p="Key.cs" t="Include" />
           <e p="KeyBindArray.cs" t="Include" />
           <e p="Killable.cs" t="Include" />
+          <e p="LoadOptions.cs" t="Include" />
           <e p="LoadSceneOnClick.cs" t="Include" />
           <e p="Looking_Direction.cs" t="Include" />
           <e p="Make_to_Screen_Size.cs" t="Include" />
@@ -117,6 +117,7 @@
           <e p="Quests.cs" t="Include" />
           <e p="QuitOnClick.cs" t="Include" />
           <e p="ResizePanel.cs" t="Include" />
+          <e p="SaveGame.cs" t="Include" />
           <e p="SaveOptions.cs" t="Include" />
           <e p="Search_Target.cs" t="Include" />
           <e p="SelectOnInput.cs" t="Include" />

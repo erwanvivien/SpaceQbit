@@ -98,6 +98,7 @@
     <Compile Include="Assets\Scripts\Key.cs" />
     <Compile Include="Assets\Scripts\KeyBindArray.cs" />
     <Compile Include="Assets\Scripts\Killable.cs" />
+    <Compile Include="Assets\Scripts\LoadOptions.cs" />
     <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
     <Compile Include="Assets\Scripts\Looking_Direction.cs" />
     <Compile Include="Assets\Scripts\Make_to_Screen_Size.cs" />

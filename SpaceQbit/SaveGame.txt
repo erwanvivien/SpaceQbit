@@ -1,13 +1,17 @@
-8,838778:0,44:-1,017811
+5,292439:0,44:-4,117726
 
 100
 
-0:kill:Poulazer:1:The grand voyageur asks you to	reclaim the calm and the order	in the whole galaxy.	If you don't mind killing 5 of those	horrible chickens. 	You could get a very neat award:50456:False:False:True
-1:goto:Labyrinth:0:Test1:50456:False:False:True
-3:speakto:The grand white Wizard:0:Test3:50456:True:False:True
-3:validate::0:GGs mate:0:True:False:True
+False:True
+False:True
+False:True
+False:False
 
 True:14,70595:0,05000007:-1,197548:20
+False:9,25453:0,05000007:-0,3934968:0
+False:8,742887:0,05000007:-1,997658:-10
+False:11,47711:0,05000007:1,423902:0
+False:9,118664:0,05000007:-1,109741:-10
 
-5:4:56
+0:0:0
 
