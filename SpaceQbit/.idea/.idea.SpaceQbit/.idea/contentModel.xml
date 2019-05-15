@@ -60,6 +60,7 @@
             <e p="license.txt" t="Include" />
           </e>
         </e>
+        <e p="ForeachChildren.cs" t="Include" />
         <e p="NavMeshComponents" t="Include">
           <e p="Editor" t="Include">
             <e p="NavMeshComponentsGUIUtility.cs" t="Include" />
@@ -83,6 +84,7 @@
             </e>
           </e>
         </e>
+        <e p="SaveGame.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Bullet_Collision.cs" t="Include" />
           <e p="Cam_Follow.cs" t="Include" />

@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\DisapearAfter.cs" />
     <Compile Include="Assets\Scripts\Follow_Target.cs" />
+    <Compile Include="Assets\Scripts\ForeachChildren.cs" />
     <Compile Include="Assets\Scripts\ForEachWalls.cs" />
     <Compile Include="Assets\Scripts\Get_Coo_Cam.cs" />
     <Compile Include="Assets\Scripts\Get_Cooldown_Damage.cs" />
@@ -108,6 +109,7 @@
     <Compile Include="Assets\Scripts\Quests.cs" />
     <Compile Include="Assets\Scripts\QuitOnClick.cs" />
     <Compile Include="Assets\Scripts\ResizePanel.cs" />
+    <Compile Include="Assets\Scripts\SaveGame.cs" />
     <Compile Include="Assets\Scripts\SaveOptions.cs" />
     <Compile Include="Assets\Scripts\Search_Target.cs" />
     <Compile Include="Assets\Scripts\SelectOnInput.cs" />

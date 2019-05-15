@@ -12,16 +12,19 @@ public class Quests : MonoBehaviour
     public string who;
     public int howMany;
 
-    [SerializeField] private string[] sentences;
+    public string[] sentences;
 
-    [SerializeField] private int award;
+    public int award;
 
     public bool wannaRepeat;
     [NonSerialized] public bool done;
+    [NonSerialized] public bool pickedUp;
     
 
     private void Start()
     {
+        QuestManager.allQuests.Add(this);
+
         done = false;
     }
 
@@ -29,12 +32,15 @@ public class Quests : MonoBehaviour
     {
         if (!other.gameObject.CompareTag("Frame_Perso"))
             return;
+        if(QuestManager.instance.idDone.Contains(questID))
+            return;
         
+        pickedUp = true;
         DialogueManager.instance.Enqueue(sentences);
 
         if (type.ToLower() == "validate")
         {
-            QuestManager.instance.quests[questID].Done(); 
+            QuestManager.instance.questsToDo[questID].Done(); 
             QuestManager.instance.Reprint();
             done = true;
             gameObject.SetActive(wannaRepeat);
@@ -49,11 +55,11 @@ public class Quests : MonoBehaviour
         {
             var tmp = "[";
             if (gold != 0)
-                tmp += " " + gold + " gold";
+                tmp += " " + gold + " black market coin";
             if (silver != 0)
-                tmp += " " + silver + " silver";
+                tmp += " " + silver + " gold";
             if (copper != 0)
-                tmp += " " + copper + " copper";
+                tmp += " " + copper + " silver";
             tmp += " ]";
             
             DialogueManager.instance.Enqueue(tmp);

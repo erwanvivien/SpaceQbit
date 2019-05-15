@@ -10,7 +10,10 @@ public class GoldAccount : MonoBehaviour
 {
     public static GoldAccount instance;
 
-    private int gold = 0, silver = 0, copper = 0, nbPlay = 0;
+    public int gold = 0;
+    public int silver = 0;
+    public int copper = 0;
+    private int nbPlay = 0;
 
     private Text _goldText, _silverText, _copperText;
     private AudioSource _source;

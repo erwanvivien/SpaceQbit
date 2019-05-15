@@ -7,8 +7,8 @@ using UnityEngine.Serialization;
 public class Get_Hp : MonoBehaviour
 {
     [SerializeField] private float maxLife = 100;
-    
-    private float _life;
+
+    public float _life;
     private Vector3 _maxScale;
 
     public void Damaged(float dmg)

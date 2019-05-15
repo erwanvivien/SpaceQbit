@@ -28,7 +28,7 @@ end tell'";
         p.Start();
 #endif
 
-        BoltRuntimeSettings settings = BoltRuntimeSettings.instance;
+        var settings = BoltRuntimeSettings.instance;
 
         _serverEndPoint = new UdpEndPoint(UdpIPv4Address.Localhost, (ushort)settings.debugStartPort);
         _clientEndPoint = new UdpEndPoint(UdpIPv4Address.Localhost, 0);

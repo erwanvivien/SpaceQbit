@@ -23,6 +23,8 @@ TagManager:
   - Audio
   - vFX
   - Poulazer
+  - Quest
+  - Enemies
   layers:
   - Default
   - TransparentFX

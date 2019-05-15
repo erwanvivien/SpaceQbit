@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -14,6 +15,8 @@ public class DialogueManager : MonoBehaviour
 
     public Queue<string> queue = new Queue<string>();
     private Text _text;
+
+    private float _time;
 
     public static bool isDialoging;
 
@@ -42,34 +45,42 @@ public class DialogueManager : MonoBehaviour
         queue.Enqueue(s);
         isDialoging = true;
     }
-    
-    
 
     public void Update()
     {
         if (!panel.activeSelf && queue.Any())
         {
+            _time = 0;
             panel.SetActive(true);
             foreach (var q in questPanels)
             {
                 q.SetActive(false);
             }
+
             _text.text = queue.Dequeue();
         }
 
-        if (panel.activeSelf && Input.GetKeyDown(KeyCode.Space))
+        if (panel.activeSelf)
         {
-            if (!queue.Any())
+            if (Input.GetKeyDown(KeyCode.Space) || _time > 3)
             {
-                isDialoging = false;
-                panel.SetActive(false);
-                foreach (var q in questPanels)
+                _time = 0;
+
+                if (!queue.Any())
                 {
-                    q.SetActive(true);
+                    isDialoging = false;
+                    panel.SetActive(false);
+                    foreach (var q in questPanels)
+                    {
+                        q.SetActive(true);
+                    }
                 }
+                else
+                    _text.text = queue.Dequeue();
             }
-            else
-                _text.text = queue.Dequeue();
         }
+
+
+        _time += Time.deltaTime;
     }
 }

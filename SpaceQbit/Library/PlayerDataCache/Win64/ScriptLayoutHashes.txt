@@ -141,7 +141,7 @@ b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Make_to_Screen_Size
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.QuitOnClick
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
-9f85504a3c989228d66064b238391a39 Assembly-CSharp.dll:.Quests
+e93cd9c21ff4328c6043fa039557289d Assembly-CSharp.dll:.Quests
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.BoltDebugStart
 babf713b4aa07efb18c50ea6aa2f50cd Assembly-CSharp.dll:.Get_Hp
 71bb6a6b6c8f052f948db64c7dd3ca4f bolt.user.dll:Bolt.EntityEventListener

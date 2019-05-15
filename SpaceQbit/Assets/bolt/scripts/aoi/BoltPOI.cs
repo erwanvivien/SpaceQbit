@@ -50,7 +50,7 @@ public class BoltPOI : Bolt.EntityBehaviour {
     }
   }
   static Material CreateMaterial(Color c) {
-    Material m = new Material(Resources.Load("BoltShaderPOI", typeof(Shader)) as Shader);
+    var m = new Material(Resources.Load("BoltShaderPOI", typeof(Shader)) as Shader);
     m.hideFlags = HideFlags.HideAndDontSave;
     m.SetColor("_SpecColor", c);
     return m;
@@ -86,7 +86,7 @@ public class BoltPOI : Bolt.EntityBehaviour {
     var aoiDetect = aoi.detectRadius;
     var aoiRelease = aoi.releaseRadius;
 
-    for (int i = 0; i < availablePOIs.Count; ++i) {
+    for (var i = 0; i < availablePOIs.Count; ++i) {
       var poi = availablePOIs[i];
       var poiPos = poi.transform.position;
       var poiRadius = poi.radius;
@@ -103,7 +103,7 @@ public class BoltPOI : Bolt.EntityBehaviour {
   }
 
   static bool OverlapSphere(Vector3 a, Vector3 b, float aRadius, float bRadius) {
-    float r = aRadius + bRadius;
+    var r = aRadius + bRadius;
     return (a - b).sqrMagnitude <= (r * r);
   }
 }

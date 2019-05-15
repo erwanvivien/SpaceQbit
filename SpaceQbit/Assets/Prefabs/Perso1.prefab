@@ -263,7 +263,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.7, y: 0.88, z: 0.64}
+  m_Size: {x: 0.7, y: 0.88, z: 0.7}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1711687446812369640
 MonoBehaviour:
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cooldownDash: 5
-  moveSpeed: 3
+  moveSpeed: 1.5
   moveSpeedDash: 2
   durationMoveSpeed: 0.5
 --- !u!1 &1711687446915669886
@@ -601,6 +601,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3971943252515839846, guid: 5da079bb4a1906049b7f4be8507eddd2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -128.35498
+      objectReference: {fileID: 0}
     - target: {fileID: 1034116132567496830, guid: 5da079bb4a1906049b7f4be8507eddd2,
         type: 3}
       propertyPath: m_Camera
@@ -621,12 +626,7 @@ PrefabInstance:
       propertyPath: m_PlaneDistance
       value: 1.9
       objectReference: {fileID: 0}
-    - target: {fileID: 3971943252515839846, guid: 5da079bb4a1906049b7f4be8507eddd2,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -128.35498
-      objectReference: {fileID: 0}
-    - target: {fileID: 7242744705653965157, guid: 5da079bb4a1906049b7f4be8507eddd2,
+    - target: {fileID: 4797241076566885821, guid: 5da079bb4a1906049b7f4be8507eddd2,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -636,7 +636,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4797241076566885821, guid: 5da079bb4a1906049b7f4be8507eddd2,
+    - target: {fileID: 7242744705653965157, guid: 5da079bb4a1906049b7f4be8507eddd2,
         type: 3}
       propertyPath: m_IsActive
       value: 0

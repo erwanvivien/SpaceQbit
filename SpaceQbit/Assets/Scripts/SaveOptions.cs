@@ -22,7 +22,7 @@ public class SaveOptions : MonoBehaviour
         {
             string s;
             float tmp;
-            bool hasBugged = false;
+            var hasBugged = false;
             if ((s = sr.ReadLine()) != null)
             {
                 if (float.TryParse(s, out tmp))

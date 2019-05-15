@@ -16,7 +16,7 @@ public class Killable : MonoBehaviour
 
     private float _delayShown;
 
-    private float _life;
+    public float _life;
 
     public void Attack(int dmg)
     {
@@ -64,7 +64,7 @@ public class Killable : MonoBehaviour
             
             gameObject.SetActive(false);
             Destroy(_HPs);
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
 
         _time += Time.deltaTime;

@@ -216,14 +216,14 @@ static class BoltDynamicData
 #if UNITY_WSA
         Assembly asm = typeof(BoltLauncher).GetTypeInfo().Assembly;
 #else
-        Assembly asm = Assembly.GetExecutingAssembly();
+        var asm = Assembly.GetExecutingAssembly();
 #endif
 
-        List<STuple<BoltGlobalBehaviourAttribute, Type>> result = new List<STuple<BoltGlobalBehaviourAttribute, Type>>();
+        var result = new List<STuple<BoltGlobalBehaviourAttribute, Type>>();
 
         try
         {
-            foreach (Type type in asm.GetTypes())
+            foreach (var type in asm.GetTypes())
             {
                 if (typeof(MonoBehaviour).IsAssignableFrom(type))
                 {

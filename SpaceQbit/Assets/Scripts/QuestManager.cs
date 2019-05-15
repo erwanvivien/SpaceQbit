@@ -15,10 +15,10 @@ public class QuestManager : MonoBehaviour
 
     public static QuestManager instance;
 
-    private List<int> idDone = new List<int>();
+    public List<int> idDone = new List<int>();
+    public Dictionary<int, Quests> questsToDo = new Dictionary<int, Quests>();
 
-    public Dictionary<int, Quests> quests = new Dictionary<int, Quests>();
-
+    [NonSerialized] public static List<Quests> allQuests = new List<Quests>();
     private void Start()
     {
         _textText = new Text[panel.Length];
@@ -40,8 +40,8 @@ public class QuestManager : MonoBehaviour
 
     public void Add(Quests q)
     {
-        if(!quests.ContainsKey(q.questID))
-            quests.Add(q.questID, q);
+        if(!questsToDo.ContainsKey(q.questID))
+            questsToDo.Add(q.questID, q);
 
         NeedToReprint = true;
     }
@@ -49,7 +49,7 @@ public class QuestManager : MonoBehaviour
     public void UpdateKillingQuests(string mobTag)
     {
         var t = false;
-        foreach (var q in quests.Values)
+        foreach (var q in questsToDo.Values)
         {
             if (!string.Equals(q.who, mobTag, StringComparison.OrdinalIgnoreCase)) continue;
 
@@ -79,13 +79,13 @@ public class QuestManager : MonoBehaviour
             return;
         }
 
-        var x = quests.Values.ToList();
+        var x = questsToDo.Values.ToList();
         for (var i = 0; i < x.Count; i++)
         {
             if (x[i].done)
             {
                 idDone.Add(x[i].questID);
-                quests.Remove(x[i].questID);
+                questsToDo.Remove(x[i].questID);
                 x.RemoveAt(i);
                 i--;
                 continue;
@@ -123,7 +123,7 @@ public class QuestManager : MonoBehaviour
             }
         }
 
-        if (quests.Values.Count > 3)
+        if (questsToDo.Values.Count > 3)
         {
             panel[3].SetActive(true);
             _textTitle[3].text = "and more...";
