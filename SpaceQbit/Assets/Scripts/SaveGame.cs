@@ -94,6 +94,7 @@ public class SaveGame : MonoBehaviour
             var tmp = new Vector3(float.Parse(x[0]), float.Parse(x[1]), float.Parse(x[2]));
 
             GameObject.FindWithTag("Frame_Perso").GetComponent<Transform>().position = tmp;
+            gameObject.GetComponentsInChildren<Transform>()[1].position = tmp + new Vector3(0, 3, -3);
         }
         {
             lines.RemoveAt(0);
