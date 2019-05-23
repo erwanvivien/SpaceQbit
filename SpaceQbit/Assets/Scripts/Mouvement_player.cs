@@ -26,8 +26,6 @@ public class Mouvement_player : MonoBehaviour
     [SerializeField] private float durationMoveSpeed = 0.5f;
 
     private AudioSource _source;
-    [SerializeField] private AudioClip toka;
-    [SerializeField] private AudioClip charge;
     
     private KeyCode _lastKeyPressed;
 
@@ -103,7 +101,6 @@ public class Mouvement_player : MonoBehaviour
             _dashable = false;
             _speeding = true;
 
-            _source.clip = toka;
             _source.Play();
         }
 

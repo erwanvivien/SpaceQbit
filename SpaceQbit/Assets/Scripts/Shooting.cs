@@ -7,9 +7,10 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    public GameObject Obj;
+    public GameObject obj;
 
-    public AudioSource audio;
+    public AudioSource bulletFx;
+    public AudioSource chargeFX;
     
     private CurrentMenu esc;
 
@@ -20,21 +21,21 @@ public class Shooting : MonoBehaviour
     private float _lastTimeShoot;
     private bool _shotable = true;
     
-    [SerializeField] private float _cooldownShoot = 0.5f;
-    [SerializeField] private float _bulletSpeed = 3;
+    [SerializeField] private float cooldownShoot = 0.5f;
+    [SerializeField] private float bulletSpeed = 3;
 
-    [SerializeField] private float _durationBullet = 10;
+    [SerializeField] private float durationBullet = 10;
     
-    [SerializeField] private int _damage = 10;
-    [SerializeField] private float _cooldownBulletSpell = 10f;
-    [SerializeField] private float _durationBulletSpell = 1f;
-    [SerializeField] private int _boostDamageBullet = 3;
+    [SerializeField] private int damage = 10;
+    [SerializeField] private float cooldownBulletSpell = 10f;
+    [SerializeField] private float durationBulletSpell = 1f;
+    [SerializeField] private int boostDamageBullet = 3;
 
     private float _timeDuration;
     private float _timeCooldown;
     private bool _damageBoosted = true;
 
-    private Transform objectToPlace;
+    private Transform _objectToPlace;
 
     public bool GetDamageBoosted()
     {
@@ -43,12 +44,12 @@ public class Shooting : MonoBehaviour
     
     public float GetCooldownBulletSpell()
     {
-        return _cooldownBulletSpell;
+        return cooldownBulletSpell;
     }
 
-    public int GetBoostDamagebullet()
+    public int GetBoostDamageBullet()
     {
-        return _boostDamageBullet;
+        return boostDamageBullet;
     }
     
     public float GetLastTimeShoot()
@@ -58,7 +59,7 @@ public class Shooting : MonoBehaviour
 
     public float GetCooldownShoot()
     {
-        return _cooldownShoot;
+        return cooldownShoot;
     }
 
     public bool GetShootable()
@@ -85,7 +86,7 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
-        if ((_lastTimeShoot + _cooldownShoot < Time.time) &&
+        if ((_lastTimeShoot + cooldownShoot < Time.time) &&
             (!_shotable)) // CHECKS THE COOLDOWN FOR THE SHOOTING
         {
             _shotable = true;
@@ -102,7 +103,7 @@ public class Shooting : MonoBehaviour
             
             _posCanvas = GetComponentInParent<Transform>();
             
-            var newOne = Instantiate(Obj); // INSTANTIATE A NEW AMO
+            var newOne = Instantiate(obj); // INSTANTIATE A NEW AMO
             newOne.SetActive(true);
             newOne.transform.localPosition = _posCanvas.position;
 
@@ -119,22 +120,25 @@ public class Shooting : MonoBehaviour
             
             rb.velocity = new Vector3((float) Math.Cos(angle), 
                                         0 , 
-                                        (float) Math.Sin(angle)) * _bulletSpeed;
+                                        (float) Math.Sin(angle)) * bulletSpeed;
 
             var bulletCollision = newOne.GetComponent<Bullet_Collision>();
             bulletCollision.tmp = gameObject.GetComponentsInParent<Transform>()[1].gameObject; // PUTS THE MOVING FRAME AS THE SHOOTER OF THIS AMO
-            bulletCollision.SetDamage(_damage);
+            bulletCollision.SetDamage(damage);
 
             _bullets.Add(newOne);
             _timeBullets.Add(Time.time);
 
             _shotable = false;
             _lastTimeShoot = Time.time;
-
-            audio.Play();
+            
+            if (!_damageBoosted)
+                chargeFX.Play();
+            else
+                bulletFx.Play();
         }
 
-        if (_timeBullets.Count > 0 && (_timeBullets[0] + _durationBullet < Time.time)) // IF BULLET IS THERE MORE THAN _durationBullet (secs)
+        if (_timeBullets.Count > 0 && (_timeBullets[0] + durationBullet < Time.time)) // IF BULLET IS THERE MORE THAN _durationBullet (secs)
         {
             _timeBullets.RemoveAt(0);
             _bullets.RemoveAt(0);
@@ -155,7 +159,7 @@ public class Shooting : MonoBehaviour
         {
             if (!_damageBoosted)
             {
-                _damage /= _boostDamageBullet;
+                damage /= boostDamageBullet;
                 _damageBoosted = true;
             }
             
@@ -165,9 +169,9 @@ public class Shooting : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R) && _timeCooldown <= 0) // SET UP THE DAMAGE BOOST
         {
             _damageBoosted = false;
-            _timeDuration = _durationBulletSpell;
-            _timeCooldown = _cooldownBulletSpell;
-            _damage *= _boostDamageBullet;
+            _timeDuration = durationBulletSpell;
+            _timeCooldown = cooldownBulletSpell;
+            damage *= boostDamageBullet;
         }
 
         _timeDuration -= Time.deltaTime;
