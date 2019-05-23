@@ -50,7 +50,7 @@ public class SaveGame : MonoBehaviour
                           tmp[index].position.x + ':' +
                           tmp[index].position.y + ':' +
                           tmp[index].position.z + ":" +
-                          tmp[index].gameObject.GetComponent<Killable>()._life +
+                          tmp[index].gameObject.GetComponent<Killable>().life +
                           "\n";
             }
 
@@ -141,7 +141,7 @@ public class SaveGame : MonoBehaviour
                 else
                 {
                     tmp[index].position = new Vector3(float.Parse(x[1]), float.Parse(x[2]), float.Parse(x[3]));
-                    tmp[index].gameObject.GetComponent<Killable>()._life = int.Parse(x[4]);
+                    tmp[index].gameObject.GetComponent<Killable>().life = int.Parse(x[4]);
                 }
 
                 lines.RemoveAt(0);

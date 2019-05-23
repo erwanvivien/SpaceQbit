@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -40,4 +41,11 @@ public class Get_Hp : MonoBehaviour
         gameObject.transform.localScale = new Vector3(_life/maxLife * _maxScale.x, _maxScale.y, _maxScale.z);
     }
 
+    private void Update()
+    {
+        if (_life <= 0)
+        {
+            _life = 0;
+        }
+    }
 }

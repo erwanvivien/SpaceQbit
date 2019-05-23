@@ -25,6 +25,10 @@ public class Mouvement_player : MonoBehaviour
     [SerializeField] private float moveSpeedDash = 2;
     [SerializeField] private float durationMoveSpeed = 0.5f;
 
+    private AudioSource _source;
+    [SerializeField] private AudioClip toka;
+    [SerializeField] private AudioClip charge;
+    
     private KeyCode _lastKeyPressed;
 
     // ----------------------------
@@ -51,6 +55,7 @@ public class Mouvement_player : MonoBehaviour
 
     private void Start()
     {
+        _source = GetComponent<AudioSource>();
         esc = GameObject.FindWithTag("Menu").GetComponent<CurrentMenu>();
     }
 
@@ -84,7 +89,7 @@ public class Mouvement_player : MonoBehaviour
             _moving = false;
         }
                 
-        if (Math.Abs(mvt.x) + Math.Abs(mvt.z) == 1)
+        if (Math.Abs(Math.Abs(mvt.x) + Math.Abs(mvt.z) - 1) < 0.01f)
         {
             mvt *= 1.42f;
         }
@@ -97,6 +102,9 @@ public class Mouvement_player : MonoBehaviour
             _lastTimeMoveSpeed = 0;
             _dashable = false;
             _speeding = true;
+
+            _source.clip = toka;
+            _source.Play();
         }
 
         mvt *= moveSpeed;

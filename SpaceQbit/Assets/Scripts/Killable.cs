@@ -1,69 +1,72 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Bolt;
+﻿using System;
 using UnityEngine;
-using UnityEngine.Serialization;
+using Random = System.Random;
 
 public class Killable : MonoBehaviour
 {
-    [SerializeField] private float _lifeMax = 0;
-    [SerializeField] private GameObject _hpBar = null;
+    [SerializeField] private float lifeMax = 0;
+    [SerializeField] private GameObject hpBar = null;
 
     [SerializeField] private string mobTag;
 
-    private GameObject _HPs;
+    [SerializeField] private int MinGold;
+    [SerializeField] private int MaxGold;
+
+    private GameObject _hPs;
     private float _time;
 
     private float _delayShown;
-
-    public float _life;
+    private Random _rdm = new Random();
+    public float life;
 
     public void Attack(int dmg)
     {
-        if (_HPs == null)
+        if (_hPs == null)
         {
-            _HPs = Instantiate(_hpBar);
+            _hPs = Instantiate(hpBar);
         }
-        _HPs.SetActive(true);
-        
-        _HPs.GetComponent<CooOffset>().SetOffset(new Vector3(0, 
+
+        _hPs.SetActive(true);
+
+        _hPs.GetComponent<CooOffset>().SetOffset(new Vector3(0,
             GetComponent<BoxCollider>().size.x / 2 + 0.2f,
             0));
-        _HPs.GetComponent<CooOffset>().SetGameObj(gameObject);
-        
+        _hPs.GetComponent<CooOffset>().SetGameObj(gameObject);
+
         _time = 0;
-        _life -= dmg;
-        
-        var tmp = _HPs.GetComponentsInChildren<RectTransform>();
-        
-        tmp[2].localScale = 
-            new Vector3(_life/_lifeMax,
+        life -= dmg;
+
+        var tmp = _hPs.GetComponentsInChildren<RectTransform>();
+
+        tmp[2].localScale =
+            new Vector3(life / lifeMax,
                 1,
                 1);
     }
-    
+
     void Start()
     {
         tag = "Killable";
-        _life = _lifeMax;
-        _HPs = null;
+        life = lifeMax;
+        _hPs = null;
         _delayShown = 5;
         _time = 0;
     }
 
     void Update()
     {
-        if (_time > _delayShown && _HPs != null)
+        if (_time > _delayShown && _hPs != null)
         {
-            _HPs.SetActive(false);
+            _hPs.SetActive(false);
         }
-        
-        if (_life <= 0)
+
+        if (life <= 0)
         {
             QuestManager.instance.UpdateKillingQuests(mobTag);
-            
+            GoldAccount.instance.AddGold(_rdm.Next(MinGold, MaxGold));
+
             gameObject.SetActive(false);
-            Destroy(_HPs);
+            Destroy(_hPs);
             //Destroy(gameObject);
         }
 
