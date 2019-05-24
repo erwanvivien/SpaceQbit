@@ -13,6 +13,7 @@ public class GoldAccount : MonoBehaviour
     public int gold = 0;
     public int silver = 0;
     public int copper = 0;
+    public int total = 0;
     private int nbPlay = 0;
 
     private Text _goldText, _silverText, _copperText;
@@ -54,8 +55,24 @@ public class GoldAccount : MonoBehaviour
         UpDt();
     }
 
-    public void RemoveGold(int lessen)
+    public bool RemoveGold(int lessen)
     {
+        if (total < lessen) return false;
+
+        total -= lessen;
+        gold = (total / 10000) % 100;
+        silver = (total % 10000) / 100;
+        copper = total % 100;
+
+        CheckGold();
+        UpDt();
+
+        return true;
+    }
+
+    public bool RemoveGold(int g, int s, int c)
+    {
+        return RemoveGold(g * 10000 + s * 100 + c);
     }
 
     private void CheckGold()
@@ -86,14 +103,15 @@ public class GoldAccount : MonoBehaviour
         _copperText.text = copper.ToString().PadLeft(2, '0');
 
         _silverText.text = silver.ToString().PadLeft(2, '0');
-        
+
         _goldText.text = gold.ToString().PadLeft(5, '0');
     }
 
     private void Update()
     {
+        total = gold * 10000 + silver * 100 + copper;
         if (_source.isPlaying || nbPlay <= 0) return;
-        
+
         nbPlay--;
         _source.Play();
     }

@@ -55,11 +55,14 @@
             </e>
           </e>
         </e>
+        <e p="CharBuffs.cs" t="Include" />
         <e p="Fonts" t="Include">
           <e p="Jupiter" t="Include">
             <e p="license.txt" t="Include" />
           </e>
         </e>
+        <e p="GunBuffs.cs" t="Include" />
+        <e p="MerchantTrigger.cs" t="Include" />
         <e p="NavMeshComponents" t="Include">
           <e p="Editor" t="Include">
             <e p="NavMeshComponentsGUIUtility.cs" t="Include" />

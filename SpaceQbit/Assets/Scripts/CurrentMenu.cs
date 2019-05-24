@@ -10,11 +10,12 @@ public class CurrentMenu : MonoBehaviour
     public GameObject mainMenuCanvas;
 
     private Canvas _thisCanvas;
-    private bool inMenu;
-    
-    public void Save()
+    public static bool _inMenu;
+    public static bool _inVendor;
+
+    public void SetVendor(bool t)
     {
-        
+        _inVendor = t;
     }
 
     public void Quit()
@@ -31,24 +32,19 @@ public class CurrentMenu : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        _inMenu = DialogueManager.isDialoging || _thisCanvas.enabled || _inVendor;
+        if (!Input.GetKeyDown(KeyCode.Escape)) return;
+        
+        if (!_thisCanvas.enabled)
         {
-            if (!_thisCanvas.enabled)
+            _thisCanvas.enabled = true;
+        }
+        else
+        {
+            if (mainMenuCanvas.activeSelf)
             {
-                _thisCanvas.enabled = true;
-            }
-            else
-            {
-                if (mainMenuCanvas.activeSelf)
-                {
-                    _thisCanvas.enabled = false;
-                }
+                _thisCanvas.enabled = false;
             }
         }
-    }
-
-    public bool InMenu()
-    {
-        return DialogueManager.isDialoging || _thisCanvas.enabled;
     }
 }

@@ -59,7 +59,7 @@ public class Mouvement_player : MonoBehaviour
 
     void Update()
     {
-        if (esc.InMenu())
+        if (CurrentMenu._inMenu)
         {
             _moving = false;
             _dashable = true;

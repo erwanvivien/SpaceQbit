@@ -8,12 +8,12 @@ public class GetValueSoundOptions : MonoBehaviour
     public string SfxOrMusic;
     private OptionsValues _optionsValues;
 
-    private AudioSource _source;
+    private AudioSource[] _source;
 
     private void Start()
     {
         _optionsValues = GameObject.FindWithTag("Menu").GetComponent<OptionsValues>();
-        _source = GetComponent<AudioSource>();
+        _source = GetComponents<AudioSource>();
     }
 
     // Update is called once per frame
@@ -21,15 +21,24 @@ public class GetValueSoundOptions : MonoBehaviour
     {
         if (SfxOrMusic.ToLower() == "music")
         {
-            _source.volume = _optionsValues._masterVol * _optionsValues._musicVol;
+            foreach (var q in _source)
+            {
+                q.volume = _optionsValues._masterVol * _optionsValues._musicVol;
+            }
         }
         else if (SfxOrMusic.ToLower() == "sfx")
         {
-            _source.volume = _optionsValues._masterVol * _optionsValues._sfXVol;
+            foreach (var q in _source)
+            {
+                q.volume = _optionsValues._masterVol * _optionsValues._sfXVol;
+            }
         }
         else
         {
-            _source.volume = _optionsValues._masterVol;
+            foreach (var q in _source)
+            {
+                q.volume = _optionsValues._masterVol;
+            }
         }
     }
 }

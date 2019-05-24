@@ -92,7 +92,7 @@ public class Shooting : MonoBehaviour
             _shotable = true;
         }
         
-        if (esc.InMenu()) // IF IN MENU THEN DO NOTHING
+        if (CurrentMenu._inMenu) // IF IN MENU THEN DO NOTHING
         {
             return;
         }
