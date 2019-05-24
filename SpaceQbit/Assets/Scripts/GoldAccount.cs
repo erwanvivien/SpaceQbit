@@ -36,7 +36,7 @@ public class GoldAccount : MonoBehaviour
 
     public void AddGold(int award)
     {
-        gold += (award / 10000) % 100;
+        gold += award / 10000;
         silver += (award % 10000) / 100;
         copper += award % 100;
 

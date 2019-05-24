@@ -1116,7 +1116,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: AddDamageStat
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2071497816}
@@ -1605,6 +1605,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7779102804628876175}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &373190779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1711687446227231800, guid: f1b4a6e0754e3b4f4b1210165a3dd297,
+    type: 3}
+  m_PrefabInstance: {fileID: 1325078186}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &373190783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373190779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d92bd0ec9f14e34ba826f7f29328638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &374215696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1684,19 +1702,13 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374215696}
   m_CullTransparentMesh: 0
---- !u!1 &390852175 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3454248294979824412, guid: f1b4a6e0754e3b4f4b1210165a3dd297,
+--- !u!114 &390852176 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4278597313121560246, guid: f1b4a6e0754e3b4f4b1210165a3dd297,
     type: 3}
   m_PrefabInstance: {fileID: 1325078186}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &390852176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 390852175}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 262d3fc9b120a5e4b8fb93eea36b279d, type: 3}
@@ -6054,7 +6066,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1325078186}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 373190779}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eac14b9324479cc4b896669cd50e3446, type: 3}
@@ -7105,7 +7117,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 390852176}
+      - m_Target: {fileID: 0}
         m_MethodName: AddBulletSpeedStat
         m_Mode: 1
         m_Arguments:
@@ -8889,7 +8901,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 390852176}
+      - m_Target: {fileID: 0}
         m_MethodName: AddTickStat
         m_Mode: 1
         m_Arguments:
@@ -9997,7 +10009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 550e619fbf6dfe845a5a5a56aec4e35a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _canv: {fileID: 1640736603}
+  canv: {fileID: 1640736603}
   t1: {fileID: 457886955}
   t2: {fileID: 1304694027}
   t3: {fileID: 644056049}

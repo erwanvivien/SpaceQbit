@@ -55,14 +55,11 @@
             </e>
           </e>
         </e>
-        <e p="CharBuffs.cs" t="Include" />
         <e p="Fonts" t="Include">
           <e p="Jupiter" t="Include">
             <e p="license.txt" t="Include" />
           </e>
         </e>
-        <e p="GunBuffs.cs" t="Include" />
-        <e p="MerchantTrigger.cs" t="Include" />
         <e p="NavMeshComponents" t="Include">
           <e p="Editor" t="Include">
             <e p="NavMeshComponentsGUIUtility.cs" t="Include" />
@@ -89,6 +86,8 @@
         <e p="Scripts" t="Include">
           <e p="Bullet_Collision.cs" t="Include" />
           <e p="Cam_Follow.cs" t="Include" />
+          <e p="CharBuffs.cs" t="Include" />
+          <e p="cheats.cs" t="Include" />
           <e p="CooOffset.cs" t="Include" />
           <e p="CurrentMenu.cs" t="Include" />
           <e p="DialogueManager.cs" t="Include" />
@@ -104,6 +103,7 @@
           <e p="GetKeyName.cs" t="Include" />
           <e p="GetValueSoundOptions.cs" t="Include" />
           <e p="GoldAccount.cs" t="Include" />
+          <e p="GunBuffs.cs" t="Include" />
           <e p="HideWalls.cs" t="Include" />
           <e p="Key.cs" t="Include" />
           <e p="KeyBindArray.cs" t="Include" />
@@ -112,6 +112,7 @@
           <e p="LoadSceneOnClick.cs" t="Include" />
           <e p="Looking_Direction.cs" t="Include" />
           <e p="Make_to_Screen_Size.cs" t="Include" />
+          <e p="MerchantTrigger.cs" t="Include" />
           <e p="Mouvement_player.cs" t="Include" />
           <e p="OptionsValues.cs" t="Include" />
           <e p="PositionDrone.cs" t="Include" />
