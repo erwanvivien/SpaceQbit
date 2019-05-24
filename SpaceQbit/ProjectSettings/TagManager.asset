@@ -25,6 +25,7 @@ TagManager:
   - Poulazer
   - Quest
   - Enemies
+  - dyingpannel
   layers:
   - Default
   - TransparentFX

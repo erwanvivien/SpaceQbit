@@ -60,6 +60,7 @@
             <e p="license.txt" t="Include" />
           </e>
         </e>
+        <e p="Map.cs" t="Include" />
         <e p="NavMeshComponents" t="Include">
           <e p="Editor" t="Include">
             <e p="NavMeshComponentsGUIUtility.cs" t="Include" />

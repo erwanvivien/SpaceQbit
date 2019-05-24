@@ -73,6 +73,7 @@
     <Compile Include="Assets\bolt\scripts\BoltNetworkUtils.cs" />
     <Compile Include="Assets\bolt\scripts\BoltRuntimeConfigs.cs" />
     <Compile Include="Assets\bolt\scripts\BoltUnityDebugDrawer.cs" />
+    <Compile Include="Assets\Map.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />

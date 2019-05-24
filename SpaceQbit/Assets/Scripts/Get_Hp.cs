@@ -1,16 +1,23 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Mime;
+using UdpKit;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
+using Image = UnityEngine.Experimental.UIElements.Image;
 
 public class Get_Hp : MonoBehaviour
 {
     [SerializeField] private float maxLife = 100;
 
+    public UnityEngine.UI.Image panel;
+
     [NonSerialized] public float Life;
     private Vector3 _maxScale;
+
 
     private float _time;
     [NonSerialized] public float Cooldown;
@@ -24,6 +31,8 @@ public class Get_Hp : MonoBehaviour
 
     private void Start()
     {
+        panel = GameObject.FindWithTag("dyingpannel").GetComponent<UnityEngine.UI.Image>();
+
         Cooldown = 3f;
         Life = maxLife;
         _maxScale = gameObject.transform.localScale;
@@ -47,13 +56,20 @@ public class Get_Hp : MonoBehaviour
         if (_time <= 0)
         {
             _time = Cooldown;
+
+            panel.transform.localScale = new Vector3(0, 1, 1);
             Set(Life + maxLife / 50);
         }
 
         if (Life <= 0)
         {
             GoldAccount.instance.gold /= 10;
-            Life = 0;
+            _time = Cooldown;
+            panel.transform.localScale = new Vector3(1, 1, 1);
+
+            Life = maxLife;
+            GameObject.FindWithTag("Frame_Perso").GetComponent<Transform>().position =
+                new Vector3(Map.posX, Map.posY, Map.posZ);
         }
 
         _time -= Time.deltaTime;

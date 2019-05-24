@@ -6,7 +6,7 @@ using Button = UnityEngine.Experimental.UIElements.Button;
 
 public class cheats : MonoBehaviour
 {
-    private string[] cheatCodes = new[] {"gold", "buff"};
+    private string[] cheatCodes = new[] {"gold", "buff", "die"};
     private string tmp = "";
 
     void Update()
@@ -45,6 +45,9 @@ public class cheats : MonoBehaviour
                         GunBuffs.DamageStat = 50;
                         GunBuffs.TickStat = 50;
                         MerchantTrigger.instance.UpdateText();
+                        break;
+                    case "die" :
+                        GameObject.FindWithTag("HealthBar").GetComponent<Get_Hp>().Set(0);
                         break;
                     /**
                      * ADD CASES : (And in the cheatCodes array
