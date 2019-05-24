@@ -11,11 +11,11 @@ public class MerchantTrigger : MonoBehaviour
     public Text t2;
     public Text t3;
 
-    public static MerchantTrigger instance;
+    public static List<MerchantTrigger> instance;
     
     private void Start()
     {
-        instance = this;
+        instance = new List<MerchantTrigger> {this};
     }
 
     private void OnCollisionEnter(Collision other)

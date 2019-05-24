@@ -1,64 +1,72 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using Button = UnityEngine.Experimental.UIElements.Button;
 
 public class cheats : MonoBehaviour
 {
-    private string[] cheatCodes = new[] {"gold", "buff", "die"};
+    private string[] cheatCodes = {"gold", "buff", "die", "nobuff"};
     private string tmp = "";
 
     void Update()
     {
-        var i = 0;
-        for (; i < tmp.Length; i++)
+        while (tmp != "" && (from element in cheatCodes where element.Contains(tmp) select element).ToList().Count == 0)
         {
-            var f = false;
-            foreach (var q in cheatCodes)
-            {
-                if (tmp[i] == q[i])
-                {
-                    f = true;
-                }
-            }
-
-            if (!f)
-            {
-                tmp = "";
-            }
+            tmp = tmp.Substring(1);
         }
 
-        if (i == tmp.Length)
+        foreach (var q in cheatCodes)
         {
-            foreach (var q in cheatCodes)
+            if (tmp != q) continue;
+
+            switch (tmp)
             {
-                if (tmp != q) continue;
-                
-                switch (tmp)
-                {
-                    case "gold":
-                        GoldAccount.instance.AddGold(1000000);
-                        break;
-                    case "buff":
-                        GunBuffs.SpeedBulletStat = 50;
-                        GunBuffs.DamageStat = 50;
-                        GunBuffs.TickStat = 50;
-                        MerchantTrigger.instance.UpdateText();
-                        break;
-                    case "die" :
-                        GameObject.FindWithTag("HealthBar").GetComponent<Get_Hp>().Set(0);
-                        break;
-                    /**
-                     * ADD CASES : (And in the cheatCodes array
-                     */
-                }
-                tmp = "";
+                case "gold":
+                    GoldAccount.instance.AddGold(1000000);
+                    break;
+                case "buff":
+                    GunBuffs.SpeedBulletStat = 50;
+                    GunBuffs.DamageStat = 50;
+                    GunBuffs.TickStat = 50;
+                    CharBuffs.LifeStat = 50;
+                    CharBuffs.RegenStat = 50;
+                    CharBuffs.CooldownStat = 50;
+                    CharBuffs.SpeedStat = 50;
+                    foreach (var qq in MerchantTrigger.instance)
+                    {
+                        qq.UpdateText();
+                    }
+
+                    break;
+                case "nobuff":
+                    GunBuffs.SpeedBulletStat = 0;
+                    GunBuffs.DamageStat = 0;
+                    GunBuffs.TickStat = 0;
+                    CharBuffs.LifeStat = 0;
+                    CharBuffs.RegenStat = 0;
+                    CharBuffs.CooldownStat = 0;
+                    CharBuffs.SpeedStat = 0;
+                    foreach (var qq in MerchantTrigger.instance)
+                    {
+                        qq.UpdateText();
+                    }
+
+                    break;
+                case "die":
+                    GameObject.FindWithTag("HealthBar").GetComponent<Get_Hp>().Set(0);
+                    break;
+                /**
+                 * ADD CASES : (And in the cheatCodes array
+                 */
+                default:
+                    break;
             }
+
+            tmp = "";
         }
-        
-        
-        
+
         if (Input.GetKeyDown(KeyCode.A))
         {
             tmp += 'a';

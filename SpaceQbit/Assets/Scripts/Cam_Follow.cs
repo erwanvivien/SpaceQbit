@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Cam_Follow: MonoBehaviour
 {
@@ -22,6 +23,6 @@ public class Cam_Follow: MonoBehaviour
             Vector3.SmoothDamp(transform.position, 
                 targetPosition, 
                 ref _b, 
-                0.5f);
+                (float) (0.5 * Math.Pow(0.98f, CharBuffs.SpeedStat)));
     }
 }

@@ -74,7 +74,7 @@ public class Mouvement_player : MonoBehaviour
         
         _moving = true;
         
-        if (_lastTimeDash > _cooldownDash && !_dashable)
+        if (_lastTimeDash > (float) (_cooldownDash * Math.Pow(0.99f, CharBuffs.CooldownStat))&& !_dashable)
         {
             _dashable = true;
             _speeding = false;
@@ -104,7 +104,7 @@ public class Mouvement_player : MonoBehaviour
             _source.Play();
         }
 
-        mvt *= moveSpeed;
+        mvt *= (float) (moveSpeed * Math.Pow(1.03f, CharBuffs.SpeedStat));
 
         if (_lastTimeMoveSpeed < durationMoveSpeed && _speeding)
         {

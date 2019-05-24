@@ -6,28 +6,35 @@ public class CharBuffs : MonoBehaviour
 {
     public static int SpeedStat;
     public static int LifeStat;
-    public static int OtherStat;
+    public static int RegenStat;
+    public static int CooldownStat;
 
-    public static void AddDamageStat()
+    public static void AddSpeedStat()
     {
         if (!Check(100000)) return;
         SpeedStat++;
     }
 
-    public static void AddTickStat()
+    public static void AddLifeStat()
     {
         if (!Check(100000)) return;
         LifeStat++;
     }
 
-    public static void AddOtherStat()
+    public static void AddRegenStat()
     {
         if (!Check(100000)) return;
-        OtherStat++;
+        RegenStat++;
+    }
+    
+    public static void AddCooldownStat()
+    {
+        if (!Check(100000)) return;
+        CooldownStat++;
     }
 
     private static bool Check(int amount)
     {
-        return SpeedStat + LifeStat + OtherStat < 50 && GoldAccount.instance.RemoveGold(amount);
+        return SpeedStat + LifeStat + RegenStat + CooldownStat < 50 && GoldAccount.instance.RemoveGold(amount);
     }
 }

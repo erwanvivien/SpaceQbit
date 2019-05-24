@@ -11,21 +11,19 @@ public class Shooting : MonoBehaviour
 
     public AudioSource bulletFx;
     public AudioSource chargeFX;
-    
-    private CurrentMenu esc;
+
+    private CurrentMenu _esc;
 
     private Transform _posCanvas;
     private List<GameObject> _bullets;
     private List<float> _timeBullets;
-    
+
     private float _lastTimeShoot;
     private bool _shotable = true;
-    
-    [SerializeField] private float cooldownShoot = 0.5f;
-    [SerializeField] private float bulletSpeed = 3;
 
+    [SerializeField] private float cooldownShoot = 0.5f;
+    [SerializeField] private float bulletSpeed = 7;
     [SerializeField] private float durationBullet = 10;
-    
     [SerializeField] private int damage = 10;
     [SerializeField] private float cooldownBulletSpell = 10f;
     [SerializeField] private float durationBulletSpell = 1f;
@@ -41,30 +39,10 @@ public class Shooting : MonoBehaviour
     {
         return _damageBoosted;
     }
-    
+
     public float GetCooldownBulletSpell()
     {
         return cooldownBulletSpell;
-    }
-
-    public int GetBoostDamageBullet()
-    {
-        return boostDamageBullet;
-    }
-    
-    public float GetLastTimeShoot()
-    {
-        return _lastTimeShoot;
-    }
-
-    public float GetCooldownShoot()
-    {
-        return cooldownShoot;
-    }
-
-    public bool GetShootable()
-    {
-        return _shotable;
     }
 
     void Start()
@@ -72,26 +50,26 @@ public class Shooting : MonoBehaviour
         _lastTimeShoot = -2;
         _bullets = new List<GameObject>();
         _timeBullets = new List<float>();
-        
-        esc = GameObject.FindWithTag("Menu").GetComponent<CurrentMenu>();
+
+        _esc = GameObject.FindWithTag("Menu").GetComponent<CurrentMenu>();
     }
 
     float GetCooToAngle()
     {
         var pos = Input.mousePosition;
         pos -= new Vector3(Screen.width / 2f, Screen.height / 2f, 0);
-        
+
         return (float) Math.Atan2(pos.y * 1.42f, pos.x) * 180 / (float) Math.PI;
     }
 
     void Update()
     {
-        if ((_lastTimeShoot + cooldownShoot < Time.time) &&
+        if ((_lastTimeShoot + (float) (cooldownShoot * Math.Pow(0.99f, GunBuffs.TickStat)) < Time.time) &&
             (!_shotable)) // CHECKS THE COOLDOWN FOR THE SHOOTING
         {
             _shotable = true;
         }
-        
+
         if (CurrentMenu._inMenu) // IF IN MENU THEN DO NOTHING
         {
             return;
@@ -100,9 +78,9 @@ public class Shooting : MonoBehaviour
         if (Input.GetMouseButton(0) && _shotable) // INSTANTIATE A NEW AMO ON CLICK - WITH INFO : Who shot? Since When?
         {
             var angle = GetCooToAngle();
-            
+
             _posCanvas = GetComponentInParent<Transform>();
-            
+
             var newOne = Instantiate(obj); // INSTANTIATE A NEW AMO
             newOne.SetActive(true);
             newOne.transform.localPosition = _posCanvas.position;
@@ -112,33 +90,36 @@ public class Shooting : MonoBehaviour
                 newOne.transform.GetChild(0).localScale *= 2;
                 newOne.GetComponent<BoxCollider>().size *= 2;
             }
-            
+
             var rb = newOne.GetComponent<Rigidbody>();
-            
+
             angle = (angle % 360 + 360) % 360;
             angle = (float) (angle / 180 * Math.PI);
-            
-            rb.velocity = new Vector3((float) Math.Cos(angle), 
-                                        0 , 
-                                        (float) Math.Sin(angle)) * bulletSpeed;
+
+            rb.velocity = new Vector3((float) Math.Cos(angle),
+                              0,
+                              (float) Math.Sin(angle)) * (float) (bulletSpeed * Math.Pow(1.008f, GunBuffs.SpeedBulletStat));
 
             var bulletCollision = newOne.GetComponent<Bullet_Collision>();
-            bulletCollision.tmp = gameObject.GetComponentsInParent<Transform>()[1].gameObject; // PUTS THE MOVING FRAME AS THE SHOOTER OF THIS AMO
-            bulletCollision.SetDamage(damage);
+            bulletCollision.tmp =
+                gameObject.GetComponentsInParent<Transform>()[1]
+                    .gameObject; // PUTS THE MOVING FRAME AS THE SHOOTER OF THIS AMO
+            bulletCollision.SetDamage((int) (damage * Math.Pow(1.035f, GunBuffs.DamageStat)));
 
             _bullets.Add(newOne);
             _timeBullets.Add(Time.time);
 
             _shotable = false;
             _lastTimeShoot = Time.time;
-            
+
             if (!_damageBoosted)
                 chargeFX.Play();
             else
                 bulletFx.Play();
         }
 
-        if (_timeBullets.Count > 0 && (_timeBullets[0] + durationBullet < Time.time)) // IF BULLET IS THERE MORE THAN _durationBullet (secs)
+        if (_timeBullets.Count > 0 && (_timeBullets[0] + durationBullet < Time.time)
+        ) // IF BULLET IS THERE MORE THAN _durationBullet (secs)
         {
             _timeBullets.RemoveAt(0);
             _bullets.RemoveAt(0);
@@ -149,12 +130,20 @@ public class Shooting : MonoBehaviour
             if (!_bullets[i].activeSelf)
             {
                 Destroy(_bullets[i].gameObject);
-                
+
                 _timeBullets.RemoveAt(i);
                 _bullets.RemoveAt(i);
             }
         }
-        
+
+        while (_bullets.Count > 20)
+        {
+            Destroy(_bullets[0].gameObject);
+
+            _timeBullets.RemoveAt(0);
+            _bullets.RemoveAt(0);
+        }
+
         if (_timeDuration < 0) // CHECKS IF DAMAGE BOOST IS TO DISABLE
         {
             if (!_damageBoosted)
@@ -162,15 +151,15 @@ public class Shooting : MonoBehaviour
                 damage /= boostDamageBullet;
                 _damageBoosted = true;
             }
-            
+
             _timeDuration = 0;
         }
-        
+
         if (Input.GetKeyDown(KeyCode.R) && _timeCooldown <= 0) // SET UP THE DAMAGE BOOST
         {
             _damageBoosted = false;
             _timeDuration = durationBulletSpell;
-            _timeCooldown = cooldownBulletSpell;
+            _timeCooldown = (float) (cooldownBulletSpell * Math.Pow(0.975, CharBuffs.CooldownStat)) ;
             damage *= boostDamageBullet;
         }
 

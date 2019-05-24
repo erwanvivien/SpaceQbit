@@ -60,7 +60,6 @@
             <e p="license.txt" t="Include" />
           </e>
         </e>
-        <e p="Map.cs" t="Include" />
         <e p="NavMeshComponents" t="Include">
           <e p="Editor" t="Include">
             <e p="NavMeshComponentsGUIUtility.cs" t="Include" />
@@ -113,6 +112,7 @@
           <e p="LoadSceneOnClick.cs" t="Include" />
           <e p="Looking_Direction.cs" t="Include" />
           <e p="Make_to_Screen_Size.cs" t="Include" />
+          <e p="Map.cs" t="Include" />
           <e p="MerchantTrigger.cs" t="Include" />
           <e p="Mouvement_player.cs" t="Include" />
           <e p="OptionsValues.cs" t="Include" />
