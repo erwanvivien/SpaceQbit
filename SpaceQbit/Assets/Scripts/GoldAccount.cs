@@ -60,7 +60,7 @@ public class GoldAccount : MonoBehaviour
         if (total < lessen) return false;
 
         total -= lessen;
-        gold = (total / 10000) % 100;
+        gold = total / 10000;
         silver = (total % 10000) / 100;
         copper = total % 100;
 

@@ -34,11 +34,8 @@ public class cheats : MonoBehaviour
                     CharBuffs.RegenStat = 50;
                     CharBuffs.CooldownStat = 50;
                     CharBuffs.SpeedStat = 50;
-                    foreach (var qq in MerchantTrigger.instance)
-                    {
-                        qq.UpdateText();
-                    }
-
+                    MerchantTriggerGun.instance.UpdateText();
+                    MerchantTriggerChar.instance.UpdateText();
                     break;
                 case "nobuff":
                     GunBuffs.SpeedBulletStat = 0;
@@ -48,11 +45,8 @@ public class cheats : MonoBehaviour
                     CharBuffs.RegenStat = 0;
                     CharBuffs.CooldownStat = 0;
                     CharBuffs.SpeedStat = 0;
-                    foreach (var qq in MerchantTrigger.instance)
-                    {
-                        qq.UpdateText();
-                    }
-
+                    MerchantTriggerGun.instance.UpdateText();
+                    MerchantTriggerChar.instance.UpdateText();
                     break;
                 case "die":
                     GameObject.FindWithTag("HealthBar").GetComponent<Get_Hp>().Set(0);

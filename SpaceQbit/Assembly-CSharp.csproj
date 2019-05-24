@@ -106,7 +106,8 @@
     <Compile Include="Assets\Scripts\Looking_Direction.cs" />
     <Compile Include="Assets\Scripts\Make_to_Screen_Size.cs" />
     <Compile Include="Assets\Scripts\Map.cs" />
-    <Compile Include="Assets\Scripts\MerchantTrigger.cs" />
+    <Compile Include="Assets\Scripts\MerchantTriggerChar.cs" />
+    <Compile Include="Assets\Scripts\MerchantTriggerGun.cs" />
     <Compile Include="Assets\Scripts\Mouvement_player.cs" />
     <Compile Include="Assets\Scripts\OptionsValues.cs" />
     <Compile Include="Assets\Scripts\PositionDrone.cs" />

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -27,7 +28,7 @@ public class Get_Cooldown_Speed : MonoBehaviour
 
         if (!d && _timer <= 0) 
         {
-            _timer = _cooldown;
+            _cooldown = _timer = (float) (_otherScript.GetCooldownDash() * Math.Pow(0.975, CharBuffs.CooldownStat));
         }
 
         if (_timer < 0)

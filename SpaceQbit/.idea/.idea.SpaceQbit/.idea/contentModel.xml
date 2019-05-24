@@ -113,7 +113,8 @@
           <e p="Looking_Direction.cs" t="Include" />
           <e p="Make_to_Screen_Size.cs" t="Include" />
           <e p="Map.cs" t="Include" />
-          <e p="MerchantTrigger.cs" t="Include" />
+          <e p="MerchantTriggerChar.cs" t="Include" />
+          <e p="MerchantTriggerGun.cs" t="Include" />
           <e p="Mouvement_player.cs" t="Include" />
           <e p="OptionsValues.cs" t="Include" />
           <e p="PositionDrone.cs" t="Include" />

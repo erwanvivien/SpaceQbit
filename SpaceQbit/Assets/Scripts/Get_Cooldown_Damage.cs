@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,7 +18,7 @@ public class Get_Cooldown_Damage : MonoBehaviour
     {
         if(_otherScript == null)
             _otherScript = GameObject.FindWithTag("Gun").GetComponent<Shooting>();
-        
+
         _cooldown = _otherScript.GetCooldownBulletSpell();
     }
 
@@ -27,7 +28,7 @@ public class Get_Cooldown_Damage : MonoBehaviour
 
         if (!d && _timer <= 0) 
         {
-            _timer = _cooldown;
+            _cooldown = _timer = (float) (_otherScript.GetCooldownBulletSpell() * Math.Pow(0.975, CharBuffs.CooldownStat));
         }
 
         if (_timer < 0)
@@ -36,7 +37,6 @@ public class Get_Cooldown_Damage : MonoBehaviour
         }
         
         transform.localScale = (new Vector3(_timer / _cooldown * 200f, 200, 1));
-
         _timer -= Time.deltaTime;
     }
 }
