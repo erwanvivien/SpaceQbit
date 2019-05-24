@@ -9,43 +9,53 @@ public class Get_Hp : MonoBehaviour
 {
     [SerializeField] private float maxLife = 100;
 
-    public float _life;
+    [NonSerialized] public float Life;
     private Vector3 _maxScale;
+
+    private float _time;
+    [NonSerialized] public float Cooldown;
 
     public void Damaged(float dmg)
     {
-        _life -= dmg;
-        _life = _life < 0 ? 0 : _life;
-        
-        /*
-         * Need to add the death when life == 0 (Back to main screen)
-         */
-        
-        gameObject.transform.localScale = new Vector3(_life/maxLife * _maxScale.x, _maxScale.y, _maxScale.z);
+        _time = Cooldown;
+        Set(Life - dmg);
     }
 
 
     private void Start()
     {
-        _life = maxLife;
+        Cooldown = 3f;
+        Life = maxLife;
         _maxScale = gameObject.transform.localScale;
         if (_maxScale == Vector3.zero)
         {
             _maxScale = new Vector3(1, 1, 1);
         }
     }
-    
+
     public void Set(float life)
     {
-        _life = life;
-        gameObject.transform.localScale = new Vector3(_life/maxLife * _maxScale.x, _maxScale.y, _maxScale.z);
+        life = life < 0 ? 0 : life;
+        life = life > maxLife ? maxLife : life;
+
+        Life = life;
+        gameObject.transform.localScale = new Vector3(Life / maxLife * _maxScale.x, _maxScale.y, _maxScale.z);
     }
 
     private void Update()
     {
-        if (_life <= 0)
+        if (_time <= 0)
         {
-            _life = 0;
+            _time = Cooldown;
+            Set(Life + maxLife / 50);
         }
+
+        if (Life <= 0)
+        {
+            GoldAccount.instance.gold /= 10;
+            Life = 0;
+        }
+
+        _time -= Time.deltaTime;
     }
 }

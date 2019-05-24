@@ -20,7 +20,7 @@ public class SaveGame : MonoBehaviour
             output += "\n";
 
             output += "" +
-                      GameObject.FindWithTag("HealthBar").GetComponent<Get_Hp>()._life +
+                      GameObject.FindWithTag("HealthBar").GetComponent<Get_Hp>().Life +
                       "\n";
 
             output += "\n";
@@ -100,7 +100,7 @@ public class SaveGame : MonoBehaviour
             lines.RemoveAt(0);
             lines.RemoveAt(0);
 
-            GameObject.FindWithTag("HealthBar").GetComponent<Get_Hp>()._life = int.Parse(lines[0]);
+            GameObject.FindWithTag("HealthBar").GetComponent<Get_Hp>().Life = int.Parse(lines[0]);
         }
         {
             lines.RemoveAt(0);

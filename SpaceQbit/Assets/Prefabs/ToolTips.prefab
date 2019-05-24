@@ -414,6 +414,7 @@ MonoBehaviour:
   - {fileID: 4026748712262686482}
   - {fileID: 6376461395488824830}
   - {fileID: 3798594997235073111}
+  idDone: 
 --- !u!114 &424203565090093121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,6 +936,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c229e7d1063ce5d4689d5f045c510dc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gold: 0
+  silver: 0
+  copper: 0
+  total: 0
 --- !u!114 &678198212530001544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1574,6 +1579,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxLife: 100
+  _life: 100
+  cooldown: 5
 --- !u!1 &5264326645650758501
 GameObject:
   m_ObjectHideFlags: 0
