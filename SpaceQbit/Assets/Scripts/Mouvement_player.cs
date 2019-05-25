@@ -109,9 +109,7 @@ public class Mouvement_player : MonoBehaviour
             mvt *= 1.42f;
         }
         
-        if (((Input.GetKeyDown(KeyCode.LeftShift) || 
-             Input.GetKeyDown(KeyCode.RightShift)) && 
-             _dashable))
+        if (Input.GetKey(KeyBind.GetKeys()["Dash"]) && _dashable)
         {
             _lastTimeDash = 0;
             _lastTimeMoveSpeed = 0;
