@@ -87,6 +87,7 @@
      <Compile Include="Assets\Scripts\GoldAccount.cs" />
      <Compile Include="Assets\Scripts\GunBuffs.cs" />
      <Compile Include="Assets\Scripts\HideWalls.cs" />
+     <Compile Include="Assets\Scripts\KeyBind.cs" />
      <Compile Include="Assets\Scripts\Killable.cs" />
      <Compile Include="Assets\Scripts\LoadOptions.cs" />
      <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />

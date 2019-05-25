@@ -82,19 +82,19 @@ public class Mouvement_player : MonoBehaviour
 
         //mvt += new Vector3(Input.GetAxisRaw("Horizontal"),0, Input.GetAxisRaw("Vertical"));
 
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyBind.GetKeys()["Left"]))
         {
             mvt += Vector3.left;
         }
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKey(KeyBind.GetKeys()["Forward"]))
         {
             mvt += Vector3.forward;
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyBind.GetKeys()["Backward"]))
         {
             mvt += Vector3.back;
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyBind.GetKeys()["Right"]))
         {
             mvt += Vector3.right;
         }
