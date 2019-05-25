@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class KeyBind : MonoBehaviour
 {
-    private static Dictionary<string, KeyCode> keys = new Dictionary<string, KeyCode>();
+    public static Dictionary<string, KeyCode> keys = new Dictionary<string, KeyCode>();
 
     public Text forward, backward, left, right, boost, dash, dialogue, menu;
 

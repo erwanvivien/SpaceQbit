@@ -33,7 +33,7 @@ public class CurrentMenu : MonoBehaviour
     private void Update()
     {
         _inMenu = DialogueManager.isDialoging || _thisCanvas.enabled || _inVendor;
-        if (!Input.GetKeyDown(KeyCode.Escape)) return;
+        if (!Input.GetKeyDown(KeyBind.GetKeys()["Menu"])) return;
         
         if (!_thisCanvas.enabled)
         {
