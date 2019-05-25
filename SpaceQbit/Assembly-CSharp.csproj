@@ -55,12 +55,6 @@
     <Reference Include="UnityEditor">
       <HintPath>C:\Program Files\Unity\Editor\Data\Managed/UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions">
-      <HintPath>C:\Program Files\Unity\Editor\Data\PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions">
-      <HintPath>C:\Program Files\Unity\Editor\Data\PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\bolt\scripts\aoi\BoltAOI.cs" />
@@ -136,19 +130,19 @@
     <None Include="Assets\bolt\license.txt" />
     <None Include="Assets\bolt\release_history.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/chris/SpaceQbit/SpaceQbit/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/chris/SpaceQbit/SpaceQbit/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/chris/SpaceQbit/SpaceQbit/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/chris/SpaceQbit/SpaceQbit/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/chris/SpaceQbit/SpaceQbit/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -352,46 +346,46 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="bolt">
-      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/bolt.dll</HintPath>
+      <HintPath>C:/Users/chris/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/bolt.dll</HintPath>
     </Reference>
     <Reference Include="bolt.user">
-      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/bolt.user.dll</HintPath>
+      <HintPath>C:/Users/chris/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/bolt.user.dll</HintPath>
     </Reference>
     <Reference Include="Photon3DotNet">
-      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/photon/Photon3DotNet.dll</HintPath>
+      <HintPath>C:/Users/chris/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/photon/Photon3DotNet.dll</HintPath>
     </Reference>
     <Reference Include="udpkit.common">
-      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.common.dll</HintPath>
+      <HintPath>C:/Users/chris/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.common.dll</HintPath>
     </Reference>
     <Reference Include="udpkit">
-      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.dll</HintPath>
+      <HintPath>C:/Users/chris/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.dll</HintPath>
     </Reference>
     <Reference Include="udpkit.platform.dotnet">
-      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.dotnet.dll</HintPath>
+      <HintPath>C:/Users/chris/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.dotnet.dll</HintPath>
     </Reference>
     <Reference Include="udpkit.platform.native_android">
-      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.native_android.dll</HintPath>
+      <HintPath>C:/Users/chris/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.native_android.dll</HintPath>
     </Reference>
     <Reference Include="udpkit.platform.native_ios">
-      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.native_ios.dll</HintPath>
+      <HintPath>C:/Users/chris/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.native_ios.dll</HintPath>
     </Reference>
     <Reference Include="udpkit.platform.null">
-      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.null.dll</HintPath>
+      <HintPath>C:/Users/chris/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.null.dll</HintPath>
     </Reference>
     <Reference Include="udpkit.platform.photon">
-      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.photon.dll</HintPath>
+      <HintPath>C:/Users/chris/SpaceQbit/SpaceQbit/Assets/bolt/assemblies/udpkit/udpkit.platform.photon.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Assets/Plugins/PhotonWebGL/WebSocket/websocket-sharp.dll</HintPath>
+      <HintPath>C:/Users/chris/SpaceQbit/SpaceQbit/Assets/Plugins/PhotonWebGL/WebSocket/websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/chris/SpaceQbit/SpaceQbit/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/chris/SpaceQbit/SpaceQbit/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>D:/Dev/SpaceQbit/SpaceQbit/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/chris/SpaceQbit/SpaceQbit/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
