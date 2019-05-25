@@ -79,9 +79,26 @@ public class Mouvement_player : MonoBehaviour
             _dashable = true;
             _speeding = false;
         }
-                
-        mvt += new Vector3(Input.GetAxisRaw("Horizontal"),0, Input.GetAxisRaw("Vertical"));
-        
+
+        //mvt += new Vector3(Input.GetAxisRaw("Horizontal"),0, Input.GetAxisRaw("Vertical"));
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            mvt += Vector3.left;
+        }
+        if (Input.GetKey(KeyCode.Z))
+        {
+            mvt += Vector3.forward;
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            mvt += Vector3.back;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            mvt += Vector3.right;
+        }
+
         if (mvt == Vector3.zero)
         {
             _moving = false;
