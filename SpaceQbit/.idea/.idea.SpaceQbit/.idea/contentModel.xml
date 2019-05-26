@@ -1,63 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\vivie\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\vivie\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_SpaceQbit.1718922267.00" t="ExcludeRecursive" />
-    <e p="D:\Dev\SpaceQbit\SpaceQbit" t="IncludeRecursive">
+    <e p="$USER_HOME$/.Rider2019.1/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.1/system/resharper-host/local/Transient/ReSharperHost/v191/SolutionCaches/_SpaceQbit.-1788362013.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="bolt" t="Include">
-          <e p="assemblies" t="Include">
-            <e p="Editor" t="Include">
-              <e p="protobuf-net.LICENSE.txt" t="Include" />
-            </e>
-          </e>
-          <e p="documentation" t="Include">
-            <e p="DOCUMENTATION.txt" t="Include" />
-          </e>
-          <e p="license.txt" t="Include" />
-          <e p="link.xml" t="Include" />
-          <e p="packages" t="Include">
-            <e p="bolt_packages.txt" t="Include" />
-          </e>
-          <e p="README.txt" t="Include" />
-          <e p="release_history.txt" t="Include" />
-          <e p="resources" t="Include">
-            <e p="backgrounds" t="Include">
-              <e p="ATTRIBUTION.txt" t="Include" />
-            </e>
-            <e p="BoltShaderPOI.shader" t="Include" />
-            <e p="icons_welcome" t="Include">
-              <e p="ATTRIBUTION.txt" t="Include" />
-            </e>
-          </e>
-          <e p="Scripts" t="Include">
-            <e p="aoi" t="Include">
-              <e p="BoltAOI.cs" t="Include" />
-              <e p="BoltPOI.cs" t="Include" />
-            </e>
-            <e p="BoltConsoleWriter.cs" t="Include" />
-            <e p="BoltDebugStart.cs" t="Include" />
-            <e p="BoltDebugStartSettings.cs" t="Include" />
-            <e p="BoltExecutionOrderAttribute.cs" t="Include" />
-            <e p="BoltLauncher.cs" t="Include" />
-            <e p="BoltNetworkUtils.cs" t="Include" />
-            <e p="BoltRuntimeConfigs.cs" t="Include" />
-            <e p="BoltUnityDebugDrawer.cs" t="Include" />
-            <e p="Editor" t="Include">
-              <e p="BoltExecutionOrderManager.cs" t="Include" />
-              <e p="BoltPostProcessor.cs" t="Include" />
-              <e p="BoltWelcome.cs" t="Include" />
-              <e p="BoltWizardWindow.cs" t="Include" />
-              <e p="BoltWizardWindowUtils.cs" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="Fonts" t="Include">
           <e p="Jupiter" t="Include">
-            <e p="license.txt" t="Include" />
+            <e p="LICENSE.txt" t="Include" />
           </e>
         </e>
         <e p="NavMeshComponents" t="Include">
@@ -87,26 +40,23 @@
           <e p="Bullet_Collision.cs" t="Include" />
           <e p="Cam_Follow.cs" t="Include" />
           <e p="CharBuffs.cs" t="Include" />
-          <e p="cheats.cs" t="Include" />
           <e p="CooOffset.cs" t="Include" />
           <e p="CurrentMenu.cs" t="Include" />
           <e p="DialogueManager.cs" t="Include" />
           <e p="DialogueTrigger.cs" t="Include" />
           <e p="DisapearAfter.cs" t="Include" />
           <e p="Follow_Target.cs" t="Include" />
-          <e p="ForeachChildren.cs" t="Include" />
           <e p="ForEachWalls.cs" t="Include" />
+          <e p="ForeachChildren.cs" t="Include" />
+          <e p="GetValueSoundOptions.cs" t="Include" />
           <e p="Get_Coo_Cam.cs" t="Include" />
           <e p="Get_Cooldown_Damage.cs" t="Include" />
           <e p="Get_Cooldown_Speed.cs" t="Include" />
           <e p="Get_Hp.cs" t="Include" />
-          <e p="GetKeyName.cs" t="Include" />
-          <e p="GetValueSoundOptions.cs" t="Include" />
           <e p="GoldAccount.cs" t="Include" />
           <e p="GunBuffs.cs" t="Include" />
           <e p="HideWalls.cs" t="Include" />
-          <e p="Key.cs" t="Include" />
-          <e p="KeyBindArray.cs" t="Include" />
+          <e p="KeyBind.cs" t="Include" />
           <e p="Killable.cs" t="Include" />
           <e p="LoadOptions.cs" t="Include" />
           <e p="LoadSceneOnClick.cs" t="Include" />
@@ -116,9 +66,18 @@
           <e p="MerchantTriggerChar.cs" t="Include" />
           <e p="MerchantTriggerGun.cs" t="Include" />
           <e p="Mouvement_player.cs" t="Include" />
+          <e p="NTW" t="Include">
+            <e p="LoadSceneClient.cs" t="Include" />
+            <e p="LoadSceneServer.cs" t="Include" />
+            <e p="NetworkCallbacks.cs" t="Include" />
+            <e p="PCamera.cs" t="Include" />
+            <e p="PlayerCallbacks.cs" t="Include" />
+            <e p="PlayerObject.cs" t="Include" />
+            <e p="PlayerObjectRegistry.cs" t="Include" />
+            <e p="ServerCallbacks.cs" t="Include" />
+          </e>
           <e p="OptionsValues.cs" t="Include" />
           <e p="PositionDrone.cs" t="Include" />
-          <e p="PotentialKey.cs" t="Include" />
           <e p="QuestManager.cs" t="Include" />
           <e p="Quests.cs" t="Include" />
           <e p="QuitOnClick.cs" t="Include" />
@@ -129,26 +88,71 @@
           <e p="SelectOnInput.cs" t="Include" />
           <e p="SetTransparancy.cs" t="Include" />
           <e p="Shooting.cs" t="Include" />
+          <e p="cheats.cs" t="Include" />
           <e p="tp_script.cs" t="Include" />
         </e>
         <e p="Sprites" t="Include">
           <e p="Keycodes" t="Include">
-            <e p="README.txt" t="Include" />
+            <e p="Readme.txt" t="Include" />
           </e>
           <e p="SF UI" t="Include">
             <e p="Background" t="Include">
-              <e p="license.txt" t="Include" />
+              <e p="LICENSE.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="bolt" t="Include">
+          <e p="README.txt" t="Include" />
+          <e p="assemblies" t="Include">
+            <e p="editor" t="Include">
+              <e p="protobuf-net.LICENSE.txt" t="Include" />
+            </e>
+          </e>
+          <e p="documentation" t="Include">
+            <e p="DOCUMENTATION.txt" t="Include" />
+          </e>
+          <e p="license.txt" t="Include" />
+          <e p="link.xml" t="Include" />
+          <e p="packages" t="Include">
+            <e p="bolt_packages.txt" t="Include" />
+          </e>
+          <e p="release_history.txt" t="Include" />
+          <e p="resources" t="Include">
+            <e p="BoltShaderPOI.shader" t="Include" />
+            <e p="backgrounds" t="Include">
+              <e p="ATTRIBUTION.txt" t="Include" />
+            </e>
+            <e p="icons_welcome" t="Include">
+              <e p="ATTRIBUTION.txt" t="Include" />
+            </e>
+          </e>
+          <e p="scripts" t="Include">
+            <e p="BoltConsoleWriter.cs" t="Include" />
+            <e p="BoltDebugStart.cs" t="Include" />
+            <e p="BoltDebugStartSettings.cs" t="Include" />
+            <e p="BoltExecutionOrderAttribute.cs" t="Include" />
+            <e p="BoltLauncher.cs" t="Include" />
+            <e p="BoltNetworkUtils.cs" t="Include" />
+            <e p="BoltRuntimeConfigs.cs" t="Include" />
+            <e p="BoltUnityDebugDrawer.cs" t="Include" />
+            <e p="aoi" t="Include">
+              <e p="BoltAOI.cs" t="Include" />
+              <e p="BoltPOI.cs" t="Include" />
+            </e>
+            <e p="editor" t="Include">
+              <e p="BoltExecutionOrderManager.cs" t="Include" />
+              <e p="BoltPostProcessor.cs" t="Include" />
+              <e p="BoltWelcome.cs" t="Include" />
+              <e p="BoltWizardWindow.cs" t="Include" />
+              <e p="BoltWizardWindowUtils.cs" t="Include" />
             </e>
           </e>
         </e>
       </e>
-      <e p="Library" t="ExcludeRecursive" />
+      <e p="SpaceQbit.sln" t="IncludeFlat" />
+      <e p="Temp/bin" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
-      <e p="SpaceQbit.sln" t="IncludeFlat" />
-      <e p="Temp" t="ExcludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-      </e>
     </e>
   </component>
 </project>
