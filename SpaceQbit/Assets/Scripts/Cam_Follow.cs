@@ -6,7 +6,7 @@ public class Cam_Follow: MonoBehaviour
     private Vector3 _b = Vector3.zero;
 
     public GameObject Obj;
-    private Vector3 _offset;
+    public static Vector3 _offset;
 
     void Start()
     {

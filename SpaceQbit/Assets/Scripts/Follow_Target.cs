@@ -52,7 +52,6 @@ public class Follow_Target : MonoBehaviour
             var tmp = position;
             var me = transform.position;
             
-            
             _tsfmPoule.localScale = new Vector3(_scalePouleSave.x * (tmp.x - me.x >= 0 ? 1 : -1), _scalePouleSave.y, _scalePouleSave.z);
 
             _nav.SetDestination(position);

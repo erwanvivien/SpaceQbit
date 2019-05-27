@@ -84,7 +84,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2422433788740056665}
   - component: {fileID: 7359308345365365684}
-  - component: {fileID: 3638166942535969709}
+  - component: {fileID: 1580232767344138213}
   m_Layer: 0
   m_Name: HPs
   m_TagString: HP
@@ -134,7 +134,7 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &3638166942535969709
+--- !u!114 &1580232767344138213
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 6625803959489092012}
   - component: {fileID: 4685527175355417139}
   - component: {fileID: 6910716391482301848}
-  - component: {fileID: 8791393649860110043}
+  - component: {fileID: 9189362913303355332}
   m_Layer: 0
   m_Name: Barre
   m_TagString: Untagged
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.40784314, g: 0.94509804, b: 0, a: 1}
+  m_Color: {r: 0.34363034, g: 0.099012084, b: 0.8396226, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &8791393649860110043
+--- !u!114 &9189362913303355332
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6255911518492484747}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14a7d8f89d752144fafa6a2cf806b0ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b3d46c93fb622a49af18db95116e673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxLife: 100
+  maxLife: 100

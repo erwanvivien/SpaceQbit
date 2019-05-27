@@ -21,9 +21,9 @@ public class KeyBind : MonoBehaviour
     }*/
     void Start()
     {
-        keys.Add("Forward", KeyCode.W);
+        keys.Add("Forward", KeyCode.Z);
         keys.Add("Backward", KeyCode.S);
-        keys.Add("Left", KeyCode.A);
+        keys.Add("Left", KeyCode.Q);
         keys.Add("Right", KeyCode.D);
         keys.Add("Boost", KeyCode.R);
         keys.Add("Dash", KeyCode.LeftShift);

@@ -15,10 +15,4 @@ public class ForEachWalls : MonoBehaviour
                 q.material = mat;
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
