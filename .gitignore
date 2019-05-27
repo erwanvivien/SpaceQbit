@@ -19,6 +19,7 @@ sysinfo.txt
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
 [Ee]xported[Oo]bj/
+.idea/
 .vs/
 /*.userprefs
 /*.csproj
@@ -35,6 +36,7 @@ sysinfo.txt
 *.bin
 *.info
 *.log
+*.csproj
 
 # ============ #
 # OS generated #
