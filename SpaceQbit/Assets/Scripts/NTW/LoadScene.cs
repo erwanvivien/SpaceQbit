@@ -2,13 +2,22 @@
 using UdpKit;
 using UnityEngine;
 
-public class LoadSceneServer : Bolt.GlobalEventListener
+public class LoadScene : Bolt.GlobalEventListener
 {
-    private void Start()
-    {
-        BoltLauncher.StartServer();
-    }
+    public bool IsServer;
 
+    public void LoadS_C()
+    {
+        if (IsServer)
+        {
+            BoltLauncher.StartServer();
+        }
+        else
+        {
+            BoltLauncher.StartClient();
+        }
+    }
+    
     public override void BoltStartDone()
     {
         if (BoltNetwork.IsServer)
@@ -16,7 +25,7 @@ public class LoadSceneServer : Bolt.GlobalEventListener
             string matchName = Guid.NewGuid().ToString();
 
             BoltNetwork.SetServerInfo(matchName, null);
-            BoltNetwork.LoadScene("Rscene");
+            BoltNetwork.LoadScene("NtwHub");
         }
     }
 

@@ -36,8 +36,8 @@ public class PlayerObject
 
     Vector3 RandomPosition()
     {
-        float x = Random.Range(-2f, +2f);
-        float z = Random.Range(-2f, +2f);
+        float x = Random.Range(-0.45f, +0.45f);
+        float z = Random.Range(-0.45f, +0.45f);
         return new Vector3(x, 0, z);
     }
 }
