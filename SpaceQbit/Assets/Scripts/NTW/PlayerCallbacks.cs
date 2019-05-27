@@ -1,12 +1,14 @@
-﻿using UnityEngine;
+﻿using System.Threading;
+using UnityEngine;
 
-[BoltGlobalBehaviour("Rscene")]
+[BoltGlobalBehaviour("NtwHub")]
 public class PlayerCallbacks : Bolt.GlobalEventListener
 {
     public override void SceneLoadLocalDone(string map)
     {
         // this just instantiates our player camera,
         // the Instantiate() method is supplied by the BoltSingletonPrefab<T> class
+        Thread.Sleep(500);
         PCamera.Instantiate();
     }
 

@@ -67,10 +67,10 @@
           <e p="MerchantTriggerGun.cs" t="Include" />
           <e p="Mouvement_player.cs" t="Include" />
           <e p="NTW" t="Include">
-            <e p="LoadSceneClient.cs" t="Include" />
-            <e p="LoadSceneServer.cs" t="Include" />
+            <e p="LoadScene.cs" t="Include" />
             <e p="NetworkCallbacks.cs" t="Include" />
             <e p="PCamera.cs" t="Include" />
+            <e p="PMovment.cs" t="Include" />
             <e p="PlayerCallbacks.cs" t="Include" />
             <e p="PlayerObject.cs" t="Include" />
             <e p="PlayerObjectRegistry.cs" t="Include" />

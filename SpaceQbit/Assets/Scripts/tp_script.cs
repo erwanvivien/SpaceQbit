@@ -21,7 +21,8 @@ public class tp_script : MonoBehaviour
 
             if (_time >= 3)
             {
-                if (int.TryParse(sceneToTp, out var o))
+                int o;
+                if (int.TryParse(sceneToTp, out o))
                     SceneManager.LoadScene(o);
                 else
                     SceneManager.LoadScene(sceneToTp);

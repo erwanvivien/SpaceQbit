@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[BoltGlobalBehaviour(BoltNetworkModes.Host, "Rscene")]
+[BoltGlobalBehaviour(BoltNetworkModes.Host, "NtwHub")]
 public class ServerCallbacks : Bolt.GlobalEventListener
 {
     void Awake()
