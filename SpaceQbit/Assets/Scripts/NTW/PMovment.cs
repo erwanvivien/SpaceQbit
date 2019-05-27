@@ -87,19 +87,19 @@ public class PMovment : Bolt.EntityBehaviour<IPlayerState>
 
         //mvt += new Vector3(Input.GetAxisRaw("Horizontal"),0, Input.GetAxisRaw("Vertical"));
 
-        if (Input.GetKey(KeyBind.GetKeys()["Left"]))
+        if (Input.GetKey(KeyBind.keys["Left"]))
         {
             mvt += Vector3.left;
         }
-        if (Input.GetKey(KeyBind.GetKeys()["Forward"]))
+        if (Input.GetKey(KeyBind.keys["Forward"]))
         {
             mvt += Vector3.forward;
         }
-        if (Input.GetKey(KeyBind.GetKeys()["Backward"]))
+        if (Input.GetKey(KeyBind.keys["Backward"]))
         {
             mvt += Vector3.back;
         }
-        if (Input.GetKey(KeyBind.GetKeys()["Right"]))
+        if (Input.GetKey(KeyBind.keys["Right"]))
         {
             mvt += Vector3.right;
         }
@@ -114,7 +114,7 @@ public class PMovment : Bolt.EntityBehaviour<IPlayerState>
             mvt *= 1.42f;
         }
         
-        if (Input.GetKey(KeyBind.GetKeys()["Dash"]) && _dashable)
+        if (Input.GetKey(KeyBind.keys["Dash"]) && _dashable)
         {
             _lastTimeDash = 0;
             _lastTimeMoveSpeed = 0;
