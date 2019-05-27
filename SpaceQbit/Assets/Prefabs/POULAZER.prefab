@@ -163,9 +163,8 @@ MonoBehaviour:
   lifeMax: 20
   hpBar: {fileID: 5004582320759297981, guid: 1dd7846edf9f25046b98333be7386397, type: 3}
   mobTag: Poulazer
-  MinGold: 10
-  MaxGold: 1000
-  life: 0
+  MinGold: 100
+  MaxGold: 10000
 --- !u!114 &2348714803154724528
 MonoBehaviour:
   m_ObjectHideFlags: 0

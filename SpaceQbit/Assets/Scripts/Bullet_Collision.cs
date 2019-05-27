@@ -64,7 +64,6 @@ public class Bullet_Collision : MonoBehaviour
                 
                 gameObject.SetActive(false);
                 return;
-            
             default:
                 _collision = false;
                 return;

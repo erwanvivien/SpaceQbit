@@ -17,7 +17,7 @@ public class Killable : MonoBehaviour
 
     private float _delayShown;
     private Random _rdm = new Random();
-    public float life;
+    [NonSerialized] public float life;
 
     public void Attack(int dmg)
     {

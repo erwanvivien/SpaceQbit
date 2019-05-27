@@ -62,7 +62,7 @@ public class DialogueManager : MonoBehaviour
 
         if (panel.activeSelf)
         {
-            if (Input.GetKeyDown(KeyBind.GetKeys()["Dialogue"]) || _time > 3)
+            if (Input.GetKeyDown(KeyBind.keys["Dialogue"]) || _time > 3)
             {
                 _time = 0;
 

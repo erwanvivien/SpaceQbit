@@ -155,7 +155,7 @@ public class Shooting : MonoBehaviour
             _timeDuration = 0;
         }
 
-        if (Input.GetKeyDown(KeyBind.GetKeys()["Boost"]) && _timeCooldown <= 0) // SET UP THE DAMAGE BOOST
+        if (Input.GetKeyDown(KeyBind.keys["Boost"]) && _timeCooldown <= 0) // SET UP THE DAMAGE BOOST
         {
             _damageBoosted = false;
             _timeDuration = durationBulletSpell;

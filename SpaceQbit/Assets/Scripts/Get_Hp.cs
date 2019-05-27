@@ -46,6 +46,12 @@ public class Get_Hp : MonoBehaviour
         }
     }
 
+    public void Setup()
+    {
+        _maxLifeInGame = maxLife;
+    }
+
+
     public void Set(float life)
     {
         life = life < 0 ? 0 : life;

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,15 +15,15 @@ public class KeyBind : MonoBehaviour
     private Color32 normal = new Color32(39, 171, 249, 255);
     private Color32 selected = new Color32(239, 116, 36, 255);
 
-    public static Dictionary<string, KeyCode> GetKeys()
+    /*public static Dictionary<string, KeyCode> GetKeys()
     {
         return keys;
-    }
+    }*/
     void Start()
     {
-        keys.Add("Forward", KeyCode.W);
+        keys.Add("Forward", KeyCode.Z);
         keys.Add("Backward", KeyCode.S);
-        keys.Add("Left", KeyCode.A);
+        keys.Add("Left", KeyCode.Q);
         keys.Add("Right", KeyCode.D);
         keys.Add("Boost", KeyCode.R);
         keys.Add("Dash", KeyCode.LeftShift);
@@ -39,11 +40,6 @@ public class KeyBind : MonoBehaviour
         menu.text = keys["Menu"].ToString();
     }
 
-    void Update()
-    {
-        
-    }
-
     void OnGUI()
     {
         if (currentKey != null)
@@ -51,11 +47,21 @@ public class KeyBind : MonoBehaviour
             Event e = Event.current;
             if (e.isKey)
             {
-                keys[currentKey.name] = e.keyCode;
-                currentKey.transform.GetChild(0).GetComponent<Text>().text = e.keyCode.ToString();
-                currentKey.GetComponent<Image>().color = normal;
+                if (keys.Values.ToList().Contains(e.keyCode))
+                {
+                    keys[currentKey.name] = keys[currentKey.name];
+                    currentKey.transform.GetChild(0).GetComponent<Text>().text = keys[currentKey.name].ToString();
+                    currentKey.GetComponent<Image>().color = normal;
+                }
+                else
+                {
+                    keys[currentKey.name] = e.keyCode;
+                    currentKey.transform.GetChild(0).GetComponent<Text>().text = e.keyCode.ToString();
+                    currentKey.GetComponent<Image>().color = normal;
+                }
                 currentKey = null;
             }
+
         }
     }
 
