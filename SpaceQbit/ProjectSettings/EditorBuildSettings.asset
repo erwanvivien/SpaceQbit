@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/scene.unity
     guid: 959763281030641468afc78593ef273a
+  - enabled: 1
+    path: Assets/Scenes/NtwHub.unity
+    guid: f5c381e4a133e6f1c82db06c4a26e07c
   m_configObjects: {}
