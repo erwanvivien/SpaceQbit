@@ -139,5 +139,4 @@ public class PMovment : Bolt.EntityBehaviour<IPlayerState>
         _lastTimeDash += dt;
         _lastTimeMoveSpeed += dt;
     }
-}
-        
+} 

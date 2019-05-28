@@ -2,7 +2,7 @@
 
 public class PlayerObject
 {
-    private BoltEntity character;
+    public BoltEntity character;
     public BoltConnection connection;
 
     public bool IsServer => connection == null;
@@ -25,7 +25,7 @@ public class PlayerObject
             }
         }
 
-        character.transform.position = RandomPosition();
+        //character.transform.position = RandomPosition();
     }
 
     Vector3 RandomPosition()

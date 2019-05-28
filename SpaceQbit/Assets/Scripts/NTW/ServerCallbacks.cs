@@ -17,9 +17,4 @@ public class ServerCallbacks : Bolt.GlobalEventListener
     {
         PlayerObjectRegistry.ServerPlayer.Spawn();
     }
-
-    public override void SceneLoadRemoteDone(BoltConnection connection)
-    {
-        PlayerObjectRegistry.GetPlayer(connection).Spawn();
-    }
 }

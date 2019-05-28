@@ -11,21 +11,17 @@ public class LoadScene : Bolt.GlobalEventListener
         if (IsServer)
         {
             BoltLauncher.StartServer();
+            if (BoltNetwork.IsRunning)
+            {
+                string matchName = Guid.NewGuid().ToString();
+
+                BoltNetwork.SetServerInfo(matchName, null);
+                BoltNetwork.LoadScene("NtwHub");
+            }
         }
         else
         {
             BoltLauncher.StartClient();
-        }
-    }
-    
-    public override void BoltStartDone()
-    {
-        if (BoltNetwork.IsServer)
-        {
-            string matchName = Guid.NewGuid().ToString();
-
-            BoltNetwork.SetServerInfo(matchName, null);
-            BoltNetwork.LoadScene("NtwHub");
         }
     }
 
