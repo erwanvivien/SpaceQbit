@@ -2,18 +2,12 @@
 
 public class PlayerObject
 {
-    public BoltEntity character;
+    private BoltEntity character;
     public BoltConnection connection;
 
-    public bool IsServer
-    {
-        get { return connection == null; }
-    }
+    public bool IsServer => connection == null;
 
-    public bool IsClient
-    {
-        get { return connection != null; }
-    }
+    public bool IsClient => connection != null;
 
     public void Spawn()
     {

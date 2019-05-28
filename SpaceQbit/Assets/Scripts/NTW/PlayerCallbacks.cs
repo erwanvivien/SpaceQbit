@@ -1,5 +1,4 @@
 ﻿using System.Threading;
-using UnityEngine;
 
 [BoltGlobalBehaviour("NtwHub")]
 public class PlayerCallbacks : Bolt.GlobalEventListener
@@ -8,7 +7,6 @@ public class PlayerCallbacks : Bolt.GlobalEventListener
     {
         // this just instantiates our player camera,
         // the Instantiate() method is supplied by the BoltSingletonPrefab<T> class
-        Thread.Sleep(500);
         PCamera.Instantiate();
     }
 
