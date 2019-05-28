@@ -5,7 +5,7 @@
 #define MyAppVersion "1"
 #define MyAppPublisher "SparksStudio"
 #define MyAppURL "https://gogo1m10.github.io/SpaceQbit/"
-#define MyAppExeName "SpaceQbit_2.exe"
+#define MyAppExeName "SpaceQbit.exe"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
@@ -13,7 +13,7 @@
 AppId={{57547979-F1F4-4DA6-AE8D-ED22AAFDFF11}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
-;AppVerName={#MyAppName} {#MyAppVersion}
+; AppVerName={#MyAppName} {#MyAppVersion}
 AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
@@ -26,7 +26,7 @@ UsedUserAreasWarning=no
 PrivilegesRequired=lowest
 OutputDir=D:\Dev\SpaceQbit\setuper
 OutputBaseFilename=mysetup_spaceqbit
-; SetupIconFile=D:\Dev\SpaceQbit\setuper\favicon.ico
+SetupIconFile=D:\Dev\SpaceQbit\setuper\favicon.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -40,7 +40,7 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 Name: "quicklaunchicon"; Description: "{cm:CreateQuickLaunchIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked; OnlyBelowVersion: 6.1; Check: not IsAdminInstallMode
 
 [Files]
-Source: "D:\Dev\SpaceQbit\exe\SpaceQbit_2.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "D:\Dev\SpaceQbit\exe\SpaceQbit.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\Dev\SpaceQbit\exe\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
