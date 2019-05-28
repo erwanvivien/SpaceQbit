@@ -10,9 +10,9 @@ public class PlayerCallbacks : Bolt.GlobalEventListener
         PCamera.Instantiate();
     }
 
-    public override void ControlOfEntityGained(BoltEntity entity)
+    public override void ControlOfEntityGained(BoltEntity boltEntity)
     {
         // this tells the player camera to look at the entity we are controlling
-        PCamera.instance.SetTarget(entity);
+        PCamera.instance.SetTarget(boltEntity);
     }
 }
