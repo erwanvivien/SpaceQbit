@@ -5,15 +5,9 @@ public class PlayerObject
     public BoltEntity character;
     public BoltConnection connection;
 
-    public bool IsServer
-    {
-        get { return connection == null; }
-    }
+    public bool IsServer => connection == null;
 
-    public bool IsClient
-    {
-        get { return connection != null; }
-    }
+    public bool IsClient => connection != null;
 
     public void Spawn()
     {
@@ -31,7 +25,7 @@ public class PlayerObject
             }
         }
 
-        character.transform.position = RandomPosition();
+        //character.transform.position = RandomPosition();
     }
 
     Vector3 RandomPosition()
